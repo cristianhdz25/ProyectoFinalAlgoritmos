@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux
-CND_ARTIFACT_NAME_Debug=proyecto_algoritmos_1
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/proyecto_algoritmos_1
+CND_ARTIFACT_NAME_Debug=proyecto_algoritmos
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/proyecto_algoritmos
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux/package
-CND_PACKAGE_NAME_Debug=proyectoalgoritmos1.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/proyectoalgoritmos1.tar
+CND_PACKAGE_NAME_Debug=proyectoalgoritmos.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/proyectoalgoritmos.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux
-CND_ARTIFACT_NAME_Release=proyecto_algoritmos_1
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/proyecto_algoritmos_1
+CND_ARTIFACT_NAME_Release=proyecto_algoritmos
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/proyecto_algoritmos
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux/package
-CND_PACKAGE_NAME_Release=proyectoalgoritmos1.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/proyectoalgoritmos1.tar
+CND_PACKAGE_NAME_Release=proyectoalgoritmos.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/proyectoalgoritmos.tar
 #
 # include compiler specific variables
 #
