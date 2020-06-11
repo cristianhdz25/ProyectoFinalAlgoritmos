@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Aerolinea.o \
 	${OBJECTDIR}/ClaseGrande.o \
 	${OBJECTDIR}/Itinerario.o \
+	${OBJECTDIR}/Validaciones.o \
 	${OBJECTDIR}/VentanaItinerarios.o \
 	${OBJECTDIR}/VentanaPrincipal.o \
 	${OBJECTDIR}/VentanaRegistrar.o \
@@ -83,6 +84,11 @@ ${OBJECTDIR}/Itinerario.o: Itinerario.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Itinerario.o Itinerario.cpp
+
+${OBJECTDIR}/Validaciones.o: Validaciones.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Validaciones.o Validaciones.cpp
 
 ${OBJECTDIR}/VentanaItinerarios.o: VentanaItinerarios.cpp
 	${MKDIR} -p ${OBJECTDIR}

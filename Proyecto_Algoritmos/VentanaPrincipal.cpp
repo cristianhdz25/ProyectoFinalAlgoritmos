@@ -14,13 +14,10 @@ void VentanaPrincipal::init() {
     this->menuArchivo.set_label("Reservar");
     this->menuBar.append(this->menuArchivo);
     this->menuArchivo.set_submenu(this->subMenuArchivo);
-    this->menuRegistrar.set_label("Registrarse");
-    this->menuItinerario.set_label("Itinerarios");
+    this->menuRegistrar.set_label("Reservar");
     
-    this->menuRegistrar.signal_activate().connect(sigc::mem_fun(*this, &VentanaPrincipal::mostrarVentanaRegistrar));        
-    this->menuItinerario.signal_activate().connect(sigc::mem_fun(*this, &VentanaPrincipal::mostrarVentanaItinerario));        
+    this->menuRegistrar.signal_activate().connect(sigc::mem_fun(*this, &VentanaPrincipal::mostrarVentanaRegistrar));           
     this->subMenuArchivo.append(this->menuRegistrar);
-     this->subMenuArchivo.append(this->menuItinerario);
     
     this->ventanaRegistrar=0;
     this->ventanaItinerarios=0;

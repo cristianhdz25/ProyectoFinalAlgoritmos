@@ -3,11 +3,12 @@
 #include "VentanaRegistrar.h"
 #include <bits/stl_tempbuf.h>
 #include "iostream"
+#include "Validaciones.h"
 #include <gtkmm.h>
 
 VentanaRegistrar::VentanaRegistrar() {
-    this->set_size_request(400, 300);
-    this->set_title("Registrar");
+    this->set_size_request(350, 300);
+    this->set_title("Registrarse");
     init();
 }
 
@@ -48,16 +49,42 @@ void VentanaRegistrar::init() {
 }
 
 void VentanaRegistrar::onButtonClickedRegistrar() {
+    Validaciones val;
 
+    if (!this->etEdad.get_text().empty() &&!this->etGenero.get_text().empty() && !this->etNacionalidad.get_text().empty() 
+            && !this->etNombre.get_text().empty()
+            && !this->etPasaporte.get_text().empty()) {
 
-    if (this->ventanaReservar != 0)
-        return;
+        if (val.COMPROBARNUMEROS(this->etEdad.get_text()) && val.COMPROBARNUMEROS(this->etPasaporte.get_text())) {
 
-    this->ventanaReservar = new VentanaReservar();
-    this->ventanaReservar->signal_hide().connect(sigc::mem_fun(*this, &VentanaRegistrar::aboutWinClose));
-    this->ventanaReservar->show();
-    this->hide();
-}
+            if (this->ventanaReservar != 0)
+                return;
+
+            this->ventanaReservar = new VentanaReservar();
+            this->ventanaReservar->signal_hide().connect(sigc::mem_fun(*this, &VentanaRegistrar::aboutWinClose));
+            this->ventanaReservar->show();
+            this->hide();
+        } else {
+              Gtk::MessageDialog dialogo(
+                    *this,
+                    "Error al registrar",
+                    false,
+                    Gtk::MESSAGE_INFO
+                    );
+                    dialogo.set_secondary_text("La edad y el pasaporte son numeros");
+                    dialogo.run();
+        }
+    } else {
+        Gtk::MessageDialog dialogo(
+                    *this,
+                    "Error al registrar",
+                    false,
+                    Gtk::MESSAGE_INFO
+                    );
+                    dialogo.set_secondary_text("Verifique que no hayan espacios en blanco");
+                    dialogo.run();
+    }
+}//registrar
 
 void VentanaRegistrar::onButtonClickedCancelar() {
     this->hide();

@@ -16,17 +16,17 @@ public:
     void onButtonClickedAceptar();
     void onButtonClickedCancelar();
     void onButtonClickedArriba();
+    void mostrarItinerario();
    
 
 private:
-    Gtk::Label lblAerolinea, lblHora;
+    Gtk::Label lblAerolinea;
     Gtk::TextView tvMostrar;
     Gtk::Entry etHora;
     Gtk::Button btnArriba, btnAceptar, btnCancelar;    
     Glib::RefPtr<Gtk::TextBuffer> muestraItinerario;
     Gtk::Fixed fixed;
-    ClaseGrande * claseGrande;
-    
+    ClaseGrande * claseGrande;    
 };
 
 

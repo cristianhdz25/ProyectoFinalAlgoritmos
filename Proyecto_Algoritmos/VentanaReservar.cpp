@@ -39,13 +39,11 @@ void VentanaReservar::init() {
     this->btnAbajo.set_label("Bajar");
     this->btnAbajo.signal_clicked().connect(sigc::mem_fun(*this, &VentanaReservar::onButtonClickedAbajo));
     this->fixed.put(this->btnAbajo, 320, 40);
+ 
+    mostrarItinerario();
+    this->tvMostrar.set_editable(false);
+    this->fixed.put(tvMostrar, 20, 80);
 
-    //    this->muestraItinerario = Gtk::TextBuffer::create();
-    //    muestraItinerario->set_text("Costa Rica - Argentina \n  Salida 11:00h | Llegada 14:00h\n Costa Rica - Guatemala \n  Salida 15:00h | Llegada 19:00h\n");
-    //    this->tvMostrar.set_buffer(muestraItinerario);
-    //    this->tvMostrar.set_editable(false);
-    //    this->fixed.put(tvMostrar, 20, 80);
-    //    
     this->ventanaItinerarios = 0;
 
     this->add(this->fixed);
@@ -63,24 +61,26 @@ void VentanaReservar::onButtonClickedReservar() {
 }
 
 void VentanaReservar::onButtonClickedCancelar() {
-
+    this->hide();
 }
 
 void VentanaReservar::onButtonClickedArriba() {
     this->claseGrande->arriba();
     this->etAerolinea.set_text(this->claseGrande->mostrarAerolinea());
+    mostrarItinerario();
 }//arrriba
 
 void VentanaReservar::onButtonClickedAbajo() {
     this->claseGrande->abajo();
     this->etAerolinea.set_text(this->claseGrande->mostrarAerolinea());
+    mostrarItinerario();
 }//abajo
 
-//void VentanaReservar::mostrarItinerario() {
-//    this->muestraItinerario = Gtk::TextBuffer::create();
-//    muestraItinerario->set_text();
-//    this->tvMostrar.set_buffer(muestraItinerario);
-//}
+void VentanaReservar::mostrarItinerario() {
+    this->muestraItinerario = Gtk::TextBuffer::create();
+    muestraItinerario->set_text(this->claseGrande->mostrarItinerarios());
+    this->tvMostrar.set_buffer(muestraItinerario);
+}
 
 void VentanaReservar::aboutWinClose() {
     this->ventanaItinerarios = 0;

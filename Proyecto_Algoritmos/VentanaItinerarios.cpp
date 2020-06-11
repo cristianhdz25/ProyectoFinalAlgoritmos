@@ -19,17 +19,13 @@ VentanaItinerarios::VentanaItinerarios() {
 }//constructor
 
 void VentanaItinerarios::init() {
-    this->lblAerolinea.set_label("Aerolinea seleccionada :" + this->claseGrande->mostrarAerolinea());
+    this->lblAerolinea.set_label("Aerolinea seleccionada: " + this->claseGrande->mostrarAerolinea());
     this->fixed.put(this->lblAerolinea, 20, 20);
-
-    this->lblHora.set_label(((Itinerario*&)this->claseGrande->getAerolineas().front()->getItinerarios().front())->getRuta());
-    this->fixed.put(this->lblHora, 20, 190);
 
     this->etHora.set_editable(false);
     this->fixed.put(this->etHora, 20, 140);
     if(!this->claseGrande->getAerolineas().front()->getItinerarios().empty())
         this->etHora.set_text(this->claseGrande->mostrarItinerario());
-
 
     this->btnAceptar.set_label("Aceptar");
     this->btnAceptar.signal_clicked().connect(sigc::mem_fun(*this, &VentanaItinerarios::onButtonClickedAceptar));
@@ -43,14 +39,10 @@ void VentanaItinerarios::init() {
     this->btnArriba.signal_clicked().connect(sigc::mem_fun(*this, &VentanaItinerarios::onButtonClickedArriba));
     this->fixed.put(this->btnArriba, 200, 140);
 
-//    this->muestraItinerario = Gtk::TextBuffer::create();
-//    stringstream s;
-//    s << ((Itinerario*&)this->claseGrande->getAerolineas().front()->getItinerarios().front())->getRuta();
-//    muestraItinerario->set_text(s.str());
-//    this->tvMostrar.set_buffer(muestraItinerario);
-//    this->tvMostrar.set_editable(false);
-//    this->fixed.put(tvMostrar, 20, 40);
-
+    mostrarItinerario();
+    this->tvMostrar.set_editable(false);
+    this->fixed.put(tvMostrar, 20, 40);
+   
     this->add(this->fixed);
     this->show_all_children();
 }//init
@@ -63,8 +55,13 @@ void VentanaItinerarios::onButtonClickedCancelar() {
     this->hide();
 }
 
+void VentanaItinerarios::mostrarItinerario() {
+    this->muestraItinerario = Gtk::TextBuffer::create();
+    muestraItinerario->set_text(this->claseGrande->mostrarItinerarios());
+    this->tvMostrar.set_buffer(muestraItinerario);
+}
+
 void VentanaItinerarios::onButtonClickedArriba() {
     this->claseGrande->subirItinerario();
     this->etHora.set_text(this->claseGrande->mostrarItinerario());
-    cout << "Entra al boton" << endl;
 }//un button

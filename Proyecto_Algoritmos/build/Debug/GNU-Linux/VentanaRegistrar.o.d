@@ -1143,7 +1143,8 @@ build/Debug/GNU-Linux/VentanaRegistrar.o: VentanaRegistrar.cpp \
  /usr/include/gtkmm-3.0/gtkmm/uimanager.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
  /usr/include/gtkmm-3.0/gtkmm/volumebutton.h VentanaReservar.h \
- VentanaItinerarios.h ClaseGrande.h Aerolinea.h Itinerario.h
+ VentanaItinerarios.h ClaseGrande.h Aerolinea.h Itinerario.h \
+ Validaciones.h
 
 VentanaRegistrar.h:
 
@@ -3540,3 +3541,5 @@ ClaseGrande.h:
 Aerolinea.h:
 
 Itinerario.h:
+
+Validaciones.h:
