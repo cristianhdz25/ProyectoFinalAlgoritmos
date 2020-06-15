@@ -39,6 +39,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/ClaseGrande.o \
 	${OBJECTDIR}/Itinerario.o \
 	${OBJECTDIR}/Validaciones.o \
+	${OBJECTDIR}/VentanaAdmin.o \
+	${OBJECTDIR}/VentanaGestionar.o \
 	${OBJECTDIR}/VentanaItinerarios.o \
 	${OBJECTDIR}/VentanaPrincipal.o \
 	${OBJECTDIR}/VentanaRegistrar.o \
@@ -89,6 +91,16 @@ ${OBJECTDIR}/Validaciones.o: Validaciones.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Validaciones.o Validaciones.cpp
+
+${OBJECTDIR}/VentanaAdmin.o: VentanaAdmin.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/VentanaAdmin.o VentanaAdmin.cpp
+
+${OBJECTDIR}/VentanaGestionar.o: VentanaGestionar.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/VentanaGestionar.o VentanaGestionar.cpp
 
 ${OBJECTDIR}/VentanaItinerarios.o: VentanaItinerarios.cpp
 	${MKDIR} -p ${OBJECTDIR}

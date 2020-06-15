@@ -1,4 +1,4 @@
-build/Debug/GNU-Linux/main.o: main.cpp VentanaPrincipal.h \
+build/Debug/GNU-Linux/VentanaAdmin.o: VentanaAdmin.cpp VentanaAdmin.h \
  /usr/include/gtkmm-3.0/gtkmm.h /usr/include/glibmm-2.4/glibmm.h \
  /usr/lib/x86_64-linux-gnu/glibmm-2.4/include/glibmmconfig.h \
  /usr/include/glibmm-2.4/glibmm/thread.h /usr/include/glib-2.0/glib.h \
@@ -1141,11 +1141,9 @@ build/Debug/GNU-Linux/main.o: main.cpp VentanaPrincipal.h \
  /usr/include/gtkmm-3.0/gtkmm/treestore.h \
  /usr/include/gtkmm-3.0/gtkmm/uimanager.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
- /usr/include/gtkmm-3.0/gtkmm/volumebutton.h VentanaRegistrar.h \
- VentanaReservar.h VentanaItinerarios.h ClaseGrande.h Aerolinea.h \
- Itinerario.h VentanaAdmin.h VentanaGestionar.h
+ /usr/include/gtkmm-3.0/gtkmm/volumebutton.h VentanaGestionar.h
 
-VentanaPrincipal.h:
+VentanaAdmin.h:
 
 /usr/include/gtkmm-3.0/gtkmm.h:
 
@@ -3530,19 +3528,5 @@ VentanaPrincipal.h:
 /usr/include/gtkmm-3.0/gtkmm/viewport.h:
 
 /usr/include/gtkmm-3.0/gtkmm/volumebutton.h:
-
-VentanaRegistrar.h:
-
-VentanaReservar.h:
-
-VentanaItinerarios.h:
-
-ClaseGrande.h:
-
-Aerolinea.h:
-
-Itinerario.h:
-
-VentanaAdmin.h:
 
 VentanaGestionar.h:
