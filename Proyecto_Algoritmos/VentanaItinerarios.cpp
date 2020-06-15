@@ -48,7 +48,7 @@ void VentanaItinerarios::init() {
 }//init
 
 void VentanaItinerarios::onButtonClickedAceptar() {
-
+    
 }
 
 void VentanaItinerarios::onButtonClickedCancelar() {

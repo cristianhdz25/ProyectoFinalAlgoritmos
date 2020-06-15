@@ -14,6 +14,8 @@
         <itemPath>Itinerario.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="GUI" projectFiles="true">
+        <itemPath>VentanaAdmin.h</itemPath>
+        <itemPath>VentanaGestionar.h</itemPath>
         <itemPath>VentanaItinerarios.h</itemPath>
         <itemPath>VentanaPrincipal.h</itemPath>
         <itemPath>VentanaRegistrar.h</itemPath>
@@ -36,6 +38,8 @@
         <itemPath>Itinerario.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="GUI" projectFiles="true">
+        <itemPath>VentanaAdmin.cpp</itemPath>
+        <itemPath>VentanaGestionar.cpp</itemPath>
         <itemPath>VentanaItinerarios.cpp</itemPath>
         <itemPath>VentanaPrincipal.cpp</itemPath>
         <itemPath>VentanaRegistrar.cpp</itemPath>
@@ -92,6 +96,14 @@
       </item>
       <item path="Validaciones.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="VentanaAdmin.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="VentanaAdmin.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="VentanaGestionar.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="VentanaGestionar.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="VentanaItinerarios.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="VentanaItinerarios.h" ex="false" tool="3" flavor2="0">
@@ -146,6 +158,14 @@
       <item path="Validaciones.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Validaciones.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="VentanaAdmin.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="VentanaAdmin.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="VentanaGestionar.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="VentanaGestionar.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="VentanaItinerarios.cpp" ex="false" tool="1" flavor2="0">
       </item>
