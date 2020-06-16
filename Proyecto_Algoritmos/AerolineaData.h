@@ -13,14 +13,20 @@
 
 #ifndef AEROLINEADATA_H
 #define AEROLINEADATA_H
+#include <vector>
+#include <bits/stl_vector.h>
+
+#include "Aerolinea.h"
 
 class AerolineaData {
 public:
     AerolineaData();
-    AerolineaData(const AerolineaData& orig);
     virtual ~AerolineaData();
+    void setAerolineas(vector<Aerolinea*> aerolineas);
+    vector<Aerolinea*> getAerolineas() const;
 private:
-
+    
+    vector<Aerolinea*> aerolineas;
 };
 
 #endif /* AEROLINEADATA_H */
