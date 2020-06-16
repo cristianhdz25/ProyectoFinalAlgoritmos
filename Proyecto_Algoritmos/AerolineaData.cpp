@@ -54,6 +54,11 @@ void AerolineaData::initItinerarios(){
     this->aerolineas.push_back(aux);
 }
 
+
+void AerolineaData::registrarAerolinea(Aerolinea* aerolinea){
+    this->aerolineas.push_back(aerolinea);
+}//registrarAerolinea
+
 AerolineaData::~AerolineaData(){
     
 }

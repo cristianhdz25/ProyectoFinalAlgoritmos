@@ -36,9 +36,13 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Aerolinea.o \
+	${OBJECTDIR}/AerolineaBusiness.o \
 	${OBJECTDIR}/AerolineaData.o \
 	${OBJECTDIR}/ClaseGrande.o \
 	${OBJECTDIR}/Itinerario.o \
+	${OBJECTDIR}/UsuarioAdministrador.o \
+	${OBJECTDIR}/UsuarioAdministradorBusiness.o \
+	${OBJECTDIR}/UsuarioAdministradorData.o \
 	${OBJECTDIR}/Validaciones.o \
 	${OBJECTDIR}/VentanaAdmin.o \
 	${OBJECTDIR}/VentanaGestionar.o \
@@ -78,6 +82,11 @@ ${OBJECTDIR}/Aerolinea.o: Aerolinea.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Aerolinea.o Aerolinea.cpp
 
+${OBJECTDIR}/AerolineaBusiness.o: AerolineaBusiness.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AerolineaBusiness.o AerolineaBusiness.cpp
+
 ${OBJECTDIR}/AerolineaData.o: AerolineaData.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -92,6 +101,21 @@ ${OBJECTDIR}/Itinerario.o: Itinerario.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Itinerario.o Itinerario.cpp
+
+${OBJECTDIR}/UsuarioAdministrador.o: UsuarioAdministrador.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/UsuarioAdministrador.o UsuarioAdministrador.cpp
+
+${OBJECTDIR}/UsuarioAdministradorBusiness.o: UsuarioAdministradorBusiness.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/UsuarioAdministradorBusiness.o UsuarioAdministradorBusiness.cpp
+
+${OBJECTDIR}/UsuarioAdministradorData.o: UsuarioAdministradorData.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/UsuarioAdministradorData.o UsuarioAdministradorData.cpp
 
 ${OBJECTDIR}/Validaciones.o: Validaciones.cpp
 	${MKDIR} -p ${OBJECTDIR}

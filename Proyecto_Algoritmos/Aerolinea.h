@@ -11,18 +11,16 @@ class Aerolinea {
 public:
     Aerolinea(string nombre);
     virtual ~Aerolinea();
-
-    void setItinerarios(queue<Itinerario*> itinerarios);
-    queue<Itinerario*> getItinerarios();
-
+    
     void subirItinerario();
-
-    void setNombre(string nombre);
-
-    string getNombre() const;
     string mostrarItinerario();
     string mostrarItinerarios();
-
+    void agregarItinerario(Itinerario* itinerario);
+    
+    void setItinerarios(queue<Itinerario*> itinerarios);
+    queue<Itinerario*> getItinerarios();
+    void setNombre(string nombre);
+    string getNombre() const;
     string toString();
 private:
     string nombre;

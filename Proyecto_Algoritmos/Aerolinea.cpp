@@ -8,7 +8,12 @@ Aerolinea::Aerolinea(string nombre) {
     this->nombre = nombre;   
 }//constructor
 
+Aerolinea::~Aerolinea() {
+}
+
 void Aerolinea::subirItinerario(){
+    if(this->itinerarios.empty())
+        return;
     Itinerario* aux=this->itinerarios.front();
     this->itinerarios.pop();
     this->itinerarios.push(aux);
@@ -34,8 +39,9 @@ string Aerolinea::mostrarItinerarios() {
 }//mostrarItinerarios
 
 
-Aerolinea::~Aerolinea() {
-}
+void Aerolinea::agregarItinerario(Itinerario* itinerario){
+    this->itinerarios.push(itinerario);
+}//agregarItinerario
 
 void Aerolinea::setItinerarios(queue<Itinerario*> itinerarios) {
     this->itinerarios = itinerarios;
