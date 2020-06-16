@@ -19,11 +19,12 @@
 
 class AerolineaData {
 public:
-    
+    static AerolineaData* getInstance();
     virtual ~AerolineaData();
     
-    static AerolineaData* getInstance();
     void initItinerarios();
+    void registrarAerolinea(Aerolinea* aerolinea);   
+    
     void setAerolineas(list<Aerolinea*> aerolineas);
     list<Aerolinea*> getAerolineas() const;
     

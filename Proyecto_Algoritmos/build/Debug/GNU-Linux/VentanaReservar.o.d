@@ -353,7 +353,8 @@ build/Debug/GNU-Linux/VentanaReservar.o: VentanaReservar.cpp \
  /usr/include/gtkmm-3.0/gtkmm/uimanager.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
  /usr/include/gtkmm-3.0/gtkmm/volumebutton.h VentanaItinerarios.h \
- ClaseGrande.h Aerolinea.h Itinerario.h
+ ClaseGrande.h Aerolinea.h Itinerario.h AerolineaBusiness.h \
+ AerolineaData.h
 
 VentanaReservar.h:
 
@@ -1080,3 +1081,7 @@ ClaseGrande.h:
 Aerolinea.h:
 
 Itinerario.h:
+
+AerolineaBusiness.h:
+
+AerolineaData.h:

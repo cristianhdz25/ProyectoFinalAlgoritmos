@@ -4,6 +4,7 @@
 #include <list>
 #include <queue> 
 #include "Aerolinea.h"
+#include "AerolineaBusiness.h"
 
 using namespace std;
 
@@ -13,21 +14,21 @@ public:
     static ClaseGrande* getInstance();//constructor singleton
     virtual ~ClaseGrande();
     
-    void setAerolineas(list<Aerolinea*> aerolineas);
-    list<Aerolinea*> getAerolineas();
-    void arriba();
-    void abajo();
-
     string mostrarAerolinea();
     string mostrarItinerario();
     string mostrarItinerarios();
     void subirItinerario();
-    
-   
     void arribaItinerario();
-
+    void registrarAerolinea(Aerolinea* aerolinea);
+   
+    void setAerolineas(list<Aerolinea*> aerolineas);
+    list<Aerolinea*> getAerolineas();
+    void arriba();
+    void abajo();
+    
 private:
     list<Aerolinea*> aerolineas;
+    AerolineaBusiness* aerolineaBusiness;
     static ClaseGrande* instance;
 };
 

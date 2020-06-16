@@ -353,7 +353,7 @@ build/Debug/GNU-Linux/VentanaItinerarios.o: VentanaItinerarios.cpp \
  /usr/include/gtkmm-3.0/gtkmm/uimanager.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
  /usr/include/gtkmm-3.0/gtkmm/volumebutton.h ClaseGrande.h Aerolinea.h \
- Itinerario.h
+ Itinerario.h AerolineaBusiness.h AerolineaData.h
 
 VentanaItinerarios.h:
 
@@ -1078,3 +1078,7 @@ ClaseGrande.h:
 Aerolinea.h:
 
 Itinerario.h:
+
+AerolineaBusiness.h:
+
+AerolineaData.h:

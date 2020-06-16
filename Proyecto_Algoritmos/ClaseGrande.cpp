@@ -6,8 +6,8 @@
 using namespace std;
 
 ClaseGrande::ClaseGrande() {
-    AerolineaData* aerolineaData=AerolineaData::getInstance();
-    this->aerolineas=aerolineaData->getAerolineas();
+    this->aerolineaBusiness=new AerolineaBusiness();
+    this->aerolineas=this->aerolineaBusiness->getAerolineas();
 }//constructor
 
 ClaseGrande* ClaseGrande::getInstance() {
@@ -21,6 +21,13 @@ ClaseGrande* ClaseGrande::getInstance() {
 }//getInstance
 
 ClaseGrande::~ClaseGrande() {
+}
+
+//Método para registrar una aerolinea
+
+void ClaseGrande::registrarAerolinea(Aerolinea* aerolinea){
+    this->aerolineaBusiness->registrarAerolinea(aerolinea);
+    this->aerolineas=this->aerolineaBusiness->getAerolineas();
 }
 
 string ClaseGrande::mostrarAerolinea() {

@@ -5,14 +5,18 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="f3" displayName="Business" projectFiles="true">
+        <itemPath>AerolineaBusiness.h</itemPath>
+        <itemPath>UsuarioAdministradorBusiness.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f4" displayName="Data" projectFiles="true">
         <itemPath>AerolineaData.h</itemPath>
+        <itemPath>UsuarioAdministradorData.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="Domain" projectFiles="true">
         <itemPath>Aerolinea.h</itemPath>
         <itemPath>ClaseGrande.h</itemPath>
         <itemPath>Itinerario.h</itemPath>
+        <itemPath>UsuarioAdministrador.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="GUI" projectFiles="true">
         <itemPath>VentanaAdmin.h</itemPath>
@@ -34,14 +38,18 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="f6" displayName="Business" projectFiles="true">
+        <itemPath>AerolineaBusiness.cpp</itemPath>
+        <itemPath>UsuarioAdministradorBusiness.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f5" displayName="Data" projectFiles="true">
         <itemPath>AerolineaData.cpp</itemPath>
+        <itemPath>UsuarioAdministradorData.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Domain" projectFiles="true">
         <itemPath>Aerolinea.cpp</itemPath>
         <itemPath>ClaseGrande.cpp</itemPath>
         <itemPath>Itinerario.cpp</itemPath>
+        <itemPath>UsuarioAdministrador.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="GUI" projectFiles="true">
         <itemPath>VentanaAdmin.cpp</itemPath>
@@ -90,6 +98,10 @@
       </item>
       <item path="Aerolinea.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="AerolineaBusiness.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AerolineaBusiness.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="AerolineaData.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="AerolineaData.h" ex="false" tool="3" flavor2="0">
@@ -101,6 +113,18 @@
       <item path="Itinerario.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Itinerario.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="UsuarioAdministrador.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="UsuarioAdministrador.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="UsuarioAdministradorBusiness.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="UsuarioAdministradorBusiness.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="UsuarioAdministradorData.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="UsuarioAdministradorData.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Validaciones.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -157,6 +181,10 @@
       </item>
       <item path="Aerolinea.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="AerolineaBusiness.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AerolineaBusiness.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="AerolineaData.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="AerolineaData.h" ex="false" tool="3" flavor2="0">
@@ -168,6 +196,18 @@
       <item path="Itinerario.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Itinerario.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="UsuarioAdministrador.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="UsuarioAdministrador.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="UsuarioAdministradorBusiness.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="UsuarioAdministradorBusiness.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="UsuarioAdministradorData.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="UsuarioAdministradorData.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Validaciones.cpp" ex="false" tool="1" flavor2="0">
       </item>
