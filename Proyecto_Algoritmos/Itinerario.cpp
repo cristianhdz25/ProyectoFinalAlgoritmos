@@ -6,8 +6,9 @@
 
 using namespace std;
 
-Itinerario::Itinerario(string ruta, string hora) {
-    this->ruta = ruta;
+Itinerario::Itinerario(string origen, string destino, string hora) {
+    this->origen = origen;
+    this->destino = destino;    
     this->hora = hora;
 }//constructor
 
@@ -18,21 +19,29 @@ void Itinerario::setHora(string hora) {
     this->hora = hora;
 }
 
- string Itinerario::getHora() const {
+string Itinerario::getHora() const {
     return hora;
 }
 
-void Itinerario::setRuta(string ruta) {
-    this->ruta = ruta;
+void Itinerario::setDestino(string destino) {
+    this->destino = destino;
 }
 
-string Itinerario::getRuta() const {
-    return ruta;
+string Itinerario::getDestino() const {
+    return destino;
+}
+
+void Itinerario::setOrigen(string origen) {
+    this->origen = origen;
+}
+
+string Itinerario::getOrigen() const {
+    return origen;
 }
 
 string Itinerario::toString() {
     stringstream s;
 
-    s <<this->ruta<<" -> " << this->hora;
+    s << this->origen << "-" << this->destino <<" -> " << this->hora;
     return s.str();
 }//toString
