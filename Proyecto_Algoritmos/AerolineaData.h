@@ -13,6 +13,9 @@
 
 #ifndef AEROLINEADATA_H
 #define AEROLINEADATA_H
+#include <list>
+
+#include "Aerolinea.h"
 
 class AerolineaData {
 public:
@@ -20,7 +23,7 @@ public:
     AerolineaData(const AerolineaData& orig);
     virtual ~AerolineaData();
 private:
-
+    list<Aerolinea>* aerolineas;
 };
 
 #endif /* AEROLINEADATA_H */
