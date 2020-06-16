@@ -16,9 +16,14 @@
 AerolineaData::AerolineaData() {
 }
 
-AerolineaData::AerolineaData(const AerolineaData& orig) {
+AerolineaData::~AerolineaData() {
 }
 
-AerolineaData::~AerolineaData() {
+void AerolineaData::setAerolineas(vector<Aerolinea*> aerolineas) {
+    this->aerolineas = aerolineas;
+}
+
+vector<Aerolinea*> AerolineaData::getAerolineas() const {
+    return aerolineas;
 }
 
