@@ -11,13 +11,10 @@ class ClaseGrande {
 public:
     ClaseGrande();
     static ClaseGrande* getInstance();//constructor singleton
-    
     virtual ~ClaseGrande();
     
-    void initItinerarios();
-    
     void setAerolineas(list<Aerolinea*> aerolineas);
-    list<Aerolinea*> getAerolineas() const;
+    list<Aerolinea*> getAerolineas();
     void arriba();
     void abajo();
 
