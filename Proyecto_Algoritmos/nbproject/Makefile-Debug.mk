@@ -43,6 +43,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/ClaseGrande.o \
 	${OBJECTDIR}/Grafo.o \
 	${OBJECTDIR}/Itinerario.o \
+	${OBJECTDIR}/Pais.o \
 	${OBJECTDIR}/UsuarioAdministrador.o \
 	${OBJECTDIR}/UsuarioAdministradorBusiness.o \
 	${OBJECTDIR}/UsuarioAdministradorData.o \
@@ -120,6 +121,11 @@ ${OBJECTDIR}/Itinerario.o: Itinerario.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Itinerario.o Itinerario.cpp
+
+${OBJECTDIR}/Pais.o: Pais.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Pais.o Pais.cpp
 
 ${OBJECTDIR}/UsuarioAdministrador.o: UsuarioAdministrador.cpp
 	${MKDIR} -p ${OBJECTDIR}
