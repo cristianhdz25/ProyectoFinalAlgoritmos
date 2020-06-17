@@ -1144,7 +1144,7 @@ build/Debug/GNU-Linux/VentanaRegistrar.o: VentanaRegistrar.cpp \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
  /usr/include/gtkmm-3.0/gtkmm/volumebutton.h VentanaReservar.h \
  VentanaItinerarios.h ClaseGrande.h Aerolinea.h Itinerario.h Avion.h \
- AerolineaBusiness.h AerolineaData.h Validaciones.h
+ Pais.h AerolineaBusiness.h AerolineaData.h Validaciones.h
 
 VentanaRegistrar.h:
 
@@ -3543,6 +3543,8 @@ Aerolinea.h:
 Itinerario.h:
 
 Avion.h:
+
+Pais.h:
 
 AerolineaBusiness.h:
 

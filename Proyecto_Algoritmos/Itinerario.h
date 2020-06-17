@@ -1,25 +1,28 @@
 #ifndef ITINERARIO_H
 #define ITINERARIO_H
 #include "Avion.h"
+#include "Pais.h"
 #include <string>
 
 using namespace std;
 
 class Itinerario {
 public:
-    Itinerario(string origen, string destino, string hora,Avion * avion);
+    Itinerario(Pais* origen, Pais* destino, string hora,Avion * avion);
     virtual ~Itinerario();
     void setHora(string hora);
     string getHora() const;
-    void setOrigen(string origen);
-    string getOrigen() const;
-    void setDestino(string destino);
-    string getDestino() const;
+    void setOrigen(Pais* origen);
+    Pais* getOrigen() const;
+    void setDestino(Pais* destino);
+    Pais* getDestino() const;
     string toString();
     void setAvion(Avion* avion);
     Avion* getAvion() const;
 private:
-    string origen, destino, hora;
+    Pais* origen;
+    Pais * destino;
+    string hora;
     Avion * avion;
 };
 

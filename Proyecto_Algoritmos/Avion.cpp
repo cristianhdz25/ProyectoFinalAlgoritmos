@@ -40,5 +40,10 @@ string Avion::getNamePlane() const {
     return namePlane;
 }
 
+string Avion::toString(){
+    stringstream s;
 
+    s <<"Avion: "<< this->namePlane << "Espacios: " << this->quantity;
+    return s.str();
+}
 
