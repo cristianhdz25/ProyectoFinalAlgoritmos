@@ -1,8 +1,5 @@
-build/Debug/GNU-Linux/Aerolinea.o: Aerolinea.cpp Aerolinea.h Itinerario.h \
- Avion.h
+build/Debug/GNU-Linux/Aerolinea.o: Aerolinea.cpp Aerolinea.h Itinerario.h
 
 Aerolinea.h:
 
 Itinerario.h:
-
-Avion.h:

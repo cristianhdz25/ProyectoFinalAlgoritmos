@@ -1,5 +1,3 @@
-build/Debug/GNU-Linux/Itinerario.o: Itinerario.cpp Itinerario.h Avion.h
+build/Debug/GNU-Linux/Itinerario.o: Itinerario.cpp Itinerario.h
 
 Itinerario.h:
-
-Avion.h:

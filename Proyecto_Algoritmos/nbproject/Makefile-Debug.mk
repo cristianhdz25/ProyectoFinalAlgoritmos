@@ -39,7 +39,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/AerolineaBusiness.o \
 	${OBJECTDIR}/AerolineaData.o \
 	${OBJECTDIR}/Arista.o \
-	${OBJECTDIR}/Avion.o \
 	${OBJECTDIR}/ClaseGrande.o \
 	${OBJECTDIR}/Grafo.o \
 	${OBJECTDIR}/Itinerario.o \
@@ -100,11 +99,6 @@ ${OBJECTDIR}/Arista.o: Arista.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Arista.o Arista.cpp
-
-${OBJECTDIR}/Avion.o: Avion.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Avion.o Avion.cpp
 
 ${OBJECTDIR}/ClaseGrande.o: ClaseGrande.cpp
 	${MKDIR} -p ${OBJECTDIR}
