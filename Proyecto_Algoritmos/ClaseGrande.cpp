@@ -32,13 +32,6 @@ void ClaseGrande::registrarAerolinea(Aerolinea* aerolinea){
 
 //método para registrar un itinerario
 
-void ClaseGrande::registrarItinerario(Itinerario* itinerario) {
-
-    
-    
-    
-}//registrarItinerario
-
 
 string ClaseGrande::mostrarAerolinea() {
     return this->aerolineas.front()->toString();
@@ -67,7 +60,6 @@ void ClaseGrande::abajo() {
     this->aerolineas.pop_back();
     this->aerolineas.push_front(aux);
 }//abajo
-
 
 
 void ClaseGrande::setAerolineas(list<Aerolinea*> aerolineas) {
