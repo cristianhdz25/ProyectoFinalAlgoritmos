@@ -14,13 +14,16 @@
 #ifndef VERTICE_H
 #define VERTICE_H
 
-#include <list>
+#include <vector>
+
+#include "Pais.h"
 
 class Vertice {
 public:
-    Vertice();
-//    list<> listaAristas;
-   // list<> listaPesos;
+    Vertice(Pais* pais);
+    Pais* pais;
+    vector<Vertice*> listaAristas;
+    vector<int> listaPesos;
 private:
 
 };
