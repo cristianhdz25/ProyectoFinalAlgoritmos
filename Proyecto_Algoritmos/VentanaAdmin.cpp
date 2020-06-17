@@ -1,7 +1,5 @@
 
 #include "VentanaAdmin.h"
-#include "UsuarioAdministradorBusiness.h"
-#include "UsuarioAdministrador.h"
 #include <gtkmm-3.0/gtkmm/window.h>
 #include <gtkmm.h>
 #include <bits/stl_tempbuf.h>
@@ -14,68 +12,40 @@
 using namespace std;
 
 VentanaAdmin::VentanaAdmin() {
-    this->set_size_request(220, 230);
-    this->set_title("Administrador");
+    this->set_size_request(350, 300);
+    this->set_title("Cuenta de Administrador");
     init();
 }//constructor
 
 void VentanaAdmin::init() {
     this->lblPassword.set_text("Password");
-    this->fixed.put(this->lblPassword, 20, 80);
-//    this->etPassword.set_width_chars(8);
-    this->fixed.put(this->etPassword, 20, 100);
+    this->fixed.put(this->lblPassword, 50, 50);
+    this->etPassword.set_width_chars(8);
+    this->fixed.put(this->etPassword, 50, 95);
 
-    this->btAceptar.set_label("Get in");
+    this->btAceptar.set_label("get in");
     this->btAceptar.signal_clicked().connect(sigc::mem_fun(*this, &VentanaAdmin::clickedIn));
     this->fixed.put(this->btAceptar, 125, 140);
     this->ventanaGestionar = 0;
 
     this->lblUserName.set_label("UserName");
-//    this->etPassword.set_width_chars(8);
-    this->fixed.put(this->lblUserName, 20, 20);
-    this->fixed.put(this->etUserName, 20, 40);
+    this->etPassword.set_width_chars(8);
+    this->fixed.put(this->lblUserName, 150, 50);
 
+    this->fixed.put(this->etUserName, 150, 95);
+    
+    
     this->add(this->fixed);
     this->show_all_children();
 }//init
 
 void VentanaAdmin::clickedIn() {
+    if (this->ventanaGestionar != 0)
+        return;
 
-    if (!this->etPassword.get_text().empty() &&!this->etUserName.get_text().empty()) {
-
-        UsuarioAdministrador* uA = new UsuarioAdministrador(this->etPassword.get_text(), this->etUserName.get_text());
-        UsuarioAdministradorBusiness uBusiness;
-        
-        if (uBusiness.iniciarSesionAdministrador(uA)) {
-
-            if (this->ventanaGestionar != 0)
-                return;
-
-            this->ventanaGestionar = new VentanaGestionar();
-            this->ventanaGestionar->signal_hide().connect(sigc::mem_fun(*this, &VentanaAdmin::aboutWinClose));
-            this->ventanaGestionar->show();
-
-
-        } else {
-            Gtk::MessageDialog dialogo(
-                    *this,
-                    "Error al registrar",
-                    false,
-                    Gtk::MESSAGE_INFO
-                    );
-            dialogo.set_secondary_text("Usuario o contraseña invalido");
-            dialogo.run();
-        }
-    } else {
-        Gtk::MessageDialog dialogo(
-                *this,
-                "Error al registrar",
-                false,
-                Gtk::MESSAGE_INFO
-                );
-        dialogo.set_secondary_text("Espacios en blanco");
-        dialogo.run();
-    }
+    this->ventanaGestionar = new VentanaGestionar();
+    this->ventanaGestionar->signal_hide().connect(sigc::mem_fun(*this, &VentanaAdmin::aboutWinClose));
+    this->ventanaGestionar->show();
 }//clickedIn
 
 void VentanaAdmin::aboutWinClose() {
