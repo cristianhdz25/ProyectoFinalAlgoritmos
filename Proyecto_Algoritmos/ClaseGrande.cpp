@@ -28,7 +28,17 @@ ClaseGrande::~ClaseGrande() {
 void ClaseGrande::registrarAerolinea(Aerolinea* aerolinea){
     this->aerolineaBusiness->registrarAerolinea(aerolinea);
     this->aerolineas=this->aerolineaBusiness->getAerolineas();
-}
+}//registrarAerolinea
+
+//método para registrar un itinerario
+
+void ClaseGrande::registrarItinerario(Itinerario* itinerario) {
+
+    
+    
+    
+}//registrarItinerario
+
 
 string ClaseGrande::mostrarAerolinea() {
     return this->aerolineas.front()->toString();

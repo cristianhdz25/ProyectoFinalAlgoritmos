@@ -13,9 +13,9 @@ public:
     void clickedIn();
     void aboutWinClose();
 private:
-    Gtk::Entry etPassword;
+    Gtk::Entry etPassword,etUserName;
     Gtk::Button btAceptar;
-    Gtk::Label lblPassword;
+    Gtk::Label lblPassword,lblUserName;
     Gtk::Fixed fixed;
     VentanaGestionar* ventanaGestionar;
 };

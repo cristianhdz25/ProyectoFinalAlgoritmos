@@ -38,7 +38,9 @@ OBJECTFILES= \
 	${OBJECTDIR}/Aerolinea.o \
 	${OBJECTDIR}/AerolineaBusiness.o \
 	${OBJECTDIR}/AerolineaData.o \
+	${OBJECTDIR}/Arista.o \
 	${OBJECTDIR}/ClaseGrande.o \
+	${OBJECTDIR}/Grafo.o \
 	${OBJECTDIR}/Itinerario.o \
 	${OBJECTDIR}/UsuarioAdministrador.o \
 	${OBJECTDIR}/UsuarioAdministradorBusiness.o \
@@ -50,6 +52,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/VentanaPrincipal.o \
 	${OBJECTDIR}/VentanaRegistrar.o \
 	${OBJECTDIR}/VentanaReservar.o \
+	${OBJECTDIR}/Vertice.o \
 	${OBJECTDIR}/main.o
 
 
@@ -92,10 +95,20 @@ ${OBJECTDIR}/AerolineaData.o: AerolineaData.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AerolineaData.o AerolineaData.cpp
 
+${OBJECTDIR}/Arista.o: Arista.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Arista.o Arista.cpp
+
 ${OBJECTDIR}/ClaseGrande.o: ClaseGrande.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ClaseGrande.o ClaseGrande.cpp
+
+${OBJECTDIR}/Grafo.o: Grafo.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Grafo.o Grafo.cpp
 
 ${OBJECTDIR}/Itinerario.o: Itinerario.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -151,6 +164,11 @@ ${OBJECTDIR}/VentanaReservar.o: VentanaReservar.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/VentanaReservar.o VentanaReservar.cpp
+
+${OBJECTDIR}/Vertice.o: Vertice.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Vertice.o Vertice.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
