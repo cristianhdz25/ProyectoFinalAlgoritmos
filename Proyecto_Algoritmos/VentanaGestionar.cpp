@@ -8,10 +8,13 @@
 #include <gtkmm-3.0/gtkmm/textbuffer.h> 
 #include <sstream>
 #include "string.h"
+#include "AerolineaBusiness.h"
+#include "ClaseGrande.h"
 
 VentanaGestionar::VentanaGestionar() {
     this->set_size_request(600, 600);
-    init();
+    this->claseGrande = ClaseGrande::getInstance();
+    init();  
 }//constructor
 
 void VentanaGestionar::init() {
@@ -40,7 +43,7 @@ void VentanaGestionar::clickedNewAirline() {
 
     this->btAdd.set_label("Add");
     this-> fixedAirline.put(this->btAdd, 80, 150);
-    //this->btAdd.signal_clicked().connect(sigc::mem_fun(*this, &VentanaGestionar::clickedAddAirline));
+    this->btAdd.signal_clicked().connect(sigc::mem_fun(*this, &VentanaGestionar::clickedAddAirline));
 
     this->add(this->fixedAirline);
     this->show_all_children();
@@ -63,9 +66,20 @@ void VentanaGestionar::clickedNewItinerarie() {
 
     this->btAdd.set_label("Add");
     this->fixedItineraries.put(this->btAdd, 100, 210);
-   // this->btAdd.signal_clicked().connect(sigc::mem_fun(*this, &VentanaGestionar::clickedAddtinerarie));
+    this->btAdd.signal_clicked().connect(sigc::mem_fun(*this, &VentanaGestionar::clickedAddtinerarie));
     
     this->add(this->fixedItineraries);
     this->show_all_children();
 }//clickedNewItinerarie
 
+void VentanaGestionar::clickedAddAirline() {
+    if(!(this->etName.get_text().empty())){
+       this->claseGrande->registrarAerolinea(new Aerolinea(this->etName.get_text()));
+    
+    }//if
+    
+}//clickedAddAirline
+
+void VentanaGestionar::clickedAddtinerarie() {
+
+}//clickedAddtinerarie

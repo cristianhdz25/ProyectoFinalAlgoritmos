@@ -19,15 +19,22 @@ VentanaAdmin::VentanaAdmin() {
 
 void VentanaAdmin::init() {
     this->lblPassword.set_text("Password");
-    this->fixed.put(this->lblPassword, 125, 50);
-
-    this->fixed.put(this->etPassword, 125, 95);
+    this->fixed.put(this->lblPassword, 50, 50);
+    this->etPassword.set_width_chars(8);
+    this->fixed.put(this->etPassword, 50, 95);
 
     this->btAceptar.set_label("get in");
     this->btAceptar.signal_clicked().connect(sigc::mem_fun(*this, &VentanaAdmin::clickedIn));
     this->fixed.put(this->btAceptar, 125, 140);
     this->ventanaGestionar = 0;
 
+    this->lblUserName.set_label("UserName");
+    this->etPassword.set_width_chars(8);
+    this->fixed.put(this->lblUserName, 150, 50);
+
+    this->fixed.put(this->etUserName, 150, 95);
+    
+    
     this->add(this->fixed);
     this->show_all_children();
 }//init

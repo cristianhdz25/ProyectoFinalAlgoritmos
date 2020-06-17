@@ -20,7 +20,7 @@ public:
     void subirItinerario();
     void arribaItinerario();
     void registrarAerolinea(Aerolinea* aerolinea);
-   
+    void registrarItinerario(Itinerario* itinerario);
     void setAerolineas(list<Aerolinea*> aerolineas);
     list<Aerolinea*> getAerolineas();
     void arriba();

@@ -13,14 +13,15 @@
 
 #include "AerolineaData.h"
 #include <iostream>
+#include <set>
 using namespace std;
 
 AerolineaData::AerolineaData() {
-    this->aerolineas.push_back(new Aerolinea("Aerolinea VueltoPenzoil"));
-    this->aerolineas.push_back(new Aerolinea("Aerolinea VueltoAchiote"));
-    this->aerolineas.push_back(new Aerolinea("Aerolinea VueltoZorritone"));
+//    this->aerolineas.push_back(new Aerolinea("Aerolinea VueltoPenzoil"));
+//    this->aerolineas.push_back(new Aerolinea("Aerolinea VueltoAchiote"));
+//    this->aerolineas.push_back(new Aerolinea("Aerolinea VueltoZorritone"));
     this->initItinerarios();
-}
+}//constructor
 
 void AerolineaData::initItinerarios(){
     Aerolinea *aux= this->aerolineas.front();
@@ -56,12 +57,17 @@ void AerolineaData::initItinerarios(){
 
 
 void AerolineaData::registrarAerolinea(Aerolinea* aerolinea){
-    this->aerolineas.push_back(aerolinea);
+    this->aerolineas.push_front(aerolinea);
 }//registrarAerolinea
+
+//void AerolineaData::agregarItinerario(Itinerario* itinerario) {
+//    this->aerolineas.front()->
+//}//agregarItinerario
+
 
 AerolineaData::~AerolineaData(){
     
-}
+}//destructor
 
 AerolineaData* AerolineaData::getInstance() {
     if (instance == 0) {

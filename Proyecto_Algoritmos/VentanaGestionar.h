@@ -4,6 +4,8 @@
 #define VENTANAGESTIONAR_H
 #include <gtkmm.h>
 
+#include "AerolineaBusiness.h"
+#include "ClaseGrande.h"
 class VentanaGestionar : public Gtk::Window{
 public:
     VentanaGestionar();
@@ -22,6 +24,8 @@ private:
     Gtk::Label lblName,lblSalida,lblDestination,lblSchedule;
     Gtk::Entry etName,etSalida,etDestination,etSchedule;
     Gtk::Button btAdd,btnAddItinerarie;
+    
+    ClaseGrande * claseGrande; 
 };
 
 #endif /* VENTANAGESTIONAR_H */

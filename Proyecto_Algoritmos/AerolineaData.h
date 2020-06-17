@@ -24,12 +24,13 @@ public:
     
     void initItinerarios();
     void registrarAerolinea(Aerolinea* aerolinea);   
-    
+    void agregarItinerario(Itinerario* itinerario);
     void setAerolineas(list<Aerolinea*> aerolineas);
     list<Aerolinea*> getAerolineas() const;
     
 private:
     AerolineaData();
+    Aerolinea* aerolinea;
     list<Aerolinea*> aerolineas;
     static AerolineaData* instance;
 };

@@ -14,9 +14,12 @@
       </logicalFolder>
       <logicalFolder name="f1" displayName="Domain" projectFiles="true">
         <itemPath>Aerolinea.h</itemPath>
+        <itemPath>Arista.h</itemPath>
         <itemPath>ClaseGrande.h</itemPath>
+        <itemPath>Grafo.h</itemPath>
         <itemPath>Itinerario.h</itemPath>
         <itemPath>UsuarioAdministrador.h</itemPath>
+        <itemPath>Vertice.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="GUI" projectFiles="true">
         <itemPath>VentanaAdmin.h</itemPath>
@@ -47,9 +50,12 @@
       </logicalFolder>
       <logicalFolder name="f2" displayName="Domain" projectFiles="true">
         <itemPath>Aerolinea.cpp</itemPath>
+        <itemPath>Arista.cpp</itemPath>
         <itemPath>ClaseGrande.cpp</itemPath>
+        <itemPath>Grafo.cpp</itemPath>
         <itemPath>Itinerario.cpp</itemPath>
         <itemPath>UsuarioAdministrador.cpp</itemPath>
+        <itemPath>Vertice.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="GUI" projectFiles="true">
         <itemPath>VentanaAdmin.cpp</itemPath>
@@ -106,9 +112,17 @@
       </item>
       <item path="AerolineaData.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Arista.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Arista.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="ClaseGrande.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ClaseGrande.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Grafo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Grafo.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Itinerario.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -153,6 +167,10 @@
       <item path="VentanaReservar.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="VentanaReservar.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Vertice.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Vertice.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -189,9 +207,17 @@
       </item>
       <item path="AerolineaData.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Arista.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Arista.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="ClaseGrande.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ClaseGrande.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Grafo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Grafo.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Itinerario.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -236,6 +262,10 @@
       <item path="VentanaReservar.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="VentanaReservar.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Vertice.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Vertice.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

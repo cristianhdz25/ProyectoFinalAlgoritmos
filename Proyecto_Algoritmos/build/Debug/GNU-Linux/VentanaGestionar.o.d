@@ -1142,7 +1142,8 @@ build/Debug/GNU-Linux/VentanaGestionar.o: VentanaGestionar.cpp \
  /usr/include/gtkmm-3.0/gtkmm/treestore.h \
  /usr/include/gtkmm-3.0/gtkmm/uimanager.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
- /usr/include/gtkmm-3.0/gtkmm/volumebutton.h
+ /usr/include/gtkmm-3.0/gtkmm/volumebutton.h AerolineaBusiness.h \
+ AerolineaData.h Aerolinea.h Itinerario.h ClaseGrande.h
 
 VentanaGestionar.h:
 
@@ -3529,3 +3530,13 @@ VentanaGestionar.h:
 /usr/include/gtkmm-3.0/gtkmm/viewport.h:
 
 /usr/include/gtkmm-3.0/gtkmm/volumebutton.h:
+
+AerolineaBusiness.h:
+
+AerolineaData.h:
+
+Aerolinea.h:
+
+Itinerario.h:
+
+ClaseGrande.h:
