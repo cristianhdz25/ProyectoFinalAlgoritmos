@@ -12,61 +12,59 @@
  */
 
 #include "AerolineaData.h"
+#include "Avion.h"
 #include <iostream>
 #include <set>
 using namespace std;
 
 AerolineaData::AerolineaData() {
-//    this->aerolineas.push_back(new Aerolinea("Aerolinea VueltoPenzoil"));
-//    this->aerolineas.push_back(new Aerolinea("Aerolinea VueltoAchiote"));
-//    this->aerolineas.push_back(new Aerolinea("Aerolinea VueltoZorritone"));
-//    this->initItinerarios();
+    this->aerolineas.push_back(new Aerolinea("VueltoPenzoil"));
+    this->aerolineas.push_back(new Aerolinea("VueltoAchiote"));
+    this->aerolineas.push_back(new Aerolinea("VueltoZorritone"));
+    //    this->initItinerarios();
 }//constructor
 
-void AerolineaData::initItinerarios(){
-    Aerolinea *aux= this->aerolineas.front();
+void AerolineaData::initItinerarios() {
+    Aerolinea *aux = this->aerolineas.front();
+    Avion * avion = new Avion("Boeing 737", 80);
     queue<Itinerario*> itinerarios1;
-    itinerarios1.push(new Itinerario("CR","MX", "7am-10am"));
-    itinerarios1.push(new Itinerario("CR","PT", "10am-1pm"));
-    itinerarios1.push(new Itinerario("CR","CHI", "3pm-6pm"));
-    itinerarios1.push(new Itinerario("CR","PN", "3pm-6pm"));
+    itinerarios1.push(new Itinerario("CR", "MX", "7am-10am", avion));
+    itinerarios1.push(new Itinerario("CR", "PT", "10am-1pm", avion));
+    itinerarios1.push(new Itinerario("CR", "CHI", "3pm-6pm", avion));
+    itinerarios1.push(new Itinerario("CR", "PN", "3pm-6pm", avion));
     this->aerolineas.front()->setItinerarios(itinerarios1);
     this->aerolineas.pop_front();
     this->aerolineas.push_back(aux);
-    
-    aux= this->aerolineas.front();
+
+    aux = this->aerolineas.front();
+    Avion * avion1 = new Avion("Boeing 787", 50);
     queue<Itinerario*> itinerarios2;
-    itinerarios2.push(new Itinerario("CR","MX", "7am-10am"));
-    itinerarios2.push(new Itinerario("CR","EU", "10am-1pm"));
-    itinerarios2.push(new Itinerario("CR","ARG", "3pm-6pm"));
-    itinerarios2.push(new Itinerario("CR","PN", "3pm-6pm"));
+    itinerarios2.push(new Itinerario("CR", "MX", "7am-10am", avion1));
+    itinerarios2.push(new Itinerario("CR", "EU", "10am-1pm", avion1));
+    itinerarios2.push(new Itinerario("CR", "ARG", "3pm-6pm", avion1));
+    itinerarios2.push(new Itinerario("CR", "PN", "3pm-6pm", avion1));
     this->aerolineas.front()->setItinerarios(itinerarios2);
     this->aerolineas.pop_front();
     this->aerolineas.push_back(aux);
-    
-    aux= this->aerolineas.front();
+
+    aux = this->aerolineas.front();
+    Avion * avion2 = new Avion("Boeing 747", 60);
     queue<Itinerario*> itinerarios3;
-    itinerarios3.push(new Itinerario("CR","MX", "7am-10am"));
-    itinerarios3.push(new Itinerario("CR","NIC", "10am-1pm"));
-    itinerarios3.push(new Itinerario("CR","USA", "3pm-6pm"));
-    itinerarios3.push(new Itinerario("CR","POR", "3pm-6pm"));
+    itinerarios3.push(new Itinerario("CR", "MX", "7am-10am", avion2));
+    itinerarios3.push(new Itinerario("CR", "NIC", "10am-1pm", avion2));
+    itinerarios3.push(new Itinerario("CR", "USA", "3pm-6pm", avion2));
+    itinerarios3.push(new Itinerario("CR", "POR", "3pm-6pm", avion2));
     this->aerolineas.front()->setItinerarios(itinerarios3);
     this->aerolineas.pop_front();
     this->aerolineas.push_back(aux);
 }
 
-
-void AerolineaData::registrarAerolinea(Aerolinea* aerolinea){
+void AerolineaData::registrarAerolinea(Aerolinea* aerolinea) {
     this->aerolineas.push_front(aerolinea);
 }//registrarAerolinea
 
-//void AerolineaData::agregarItinerario(Itinerario* itinerario) {
-//    this->aerolineas.front()->
-//}//agregarItinerario
+AerolineaData::~AerolineaData() {
 
-
-AerolineaData::~AerolineaData(){
-    
 }//destructor
 
 AerolineaData* AerolineaData::getInstance() {
@@ -88,4 +86,4 @@ list<Aerolinea*> AerolineaData::getAerolineas() const {
 }
 
 
-AerolineaData* AerolineaData::instance=0;
+AerolineaData* AerolineaData::instance = 0;

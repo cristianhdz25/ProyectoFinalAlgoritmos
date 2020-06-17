@@ -6,13 +6,15 @@
 
 using namespace std;
 
-Itinerario::Itinerario(string origen, string destino, string hora) {
+Itinerario::Itinerario(string origen, string destino, string hora, Avion * avion) {
+    this->avion = avion;
     this->origen = origen;
     this->destino = destino;    
     this->hora = hora;
 }//constructor
 
 Itinerario::~Itinerario() {
+
 }
 
 void Itinerario::setHora(string hora) {
@@ -44,4 +46,12 @@ string Itinerario::toString() {
 
     s << this->origen << "-" << this->destino <<" -> " << this->hora;
     return s.str();
+}
+
+void Itinerario::setAvion(Avion* avion) {
+    this->avion = avion;
+}
+
+Avion* Itinerario::getAvion() const {
+    return avion;
 }//toString
