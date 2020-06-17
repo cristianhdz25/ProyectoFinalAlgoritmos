@@ -20,7 +20,7 @@ AerolineaData::AerolineaData() {
 //    this->aerolineas.push_back(new Aerolinea("Aerolinea VueltoPenzoil"));
 //    this->aerolineas.push_back(new Aerolinea("Aerolinea VueltoAchiote"));
 //    this->aerolineas.push_back(new Aerolinea("Aerolinea VueltoZorritone"));
-    this->initItinerarios();
+//    this->initItinerarios();
 }//constructor
 
 void AerolineaData::initItinerarios(){
