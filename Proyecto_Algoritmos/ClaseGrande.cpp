@@ -62,7 +62,6 @@ void ClaseGrande::abajo() {
 }//abajo
 
 
-
 void ClaseGrande::setAerolineas(list<Aerolinea*> aerolineas) {
     this->aerolineas = aerolineas;
 }

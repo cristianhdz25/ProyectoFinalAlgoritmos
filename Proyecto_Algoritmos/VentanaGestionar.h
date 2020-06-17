@@ -6,35 +6,26 @@
 
 #include "AerolineaBusiness.h"
 #include "ClaseGrande.h"
-
-class VentanaGestionar : public Gtk::Window {
+class VentanaGestionar : public Gtk::Window{
 public:
     VentanaGestionar();
     void init();
     void clickedNewAirline();
-    void clickedActualizar();
+    void clickedNewItinerarie();
     void clickedAddtinerarie();
     void clickedAddAirline();
-    void clickedUp();
-    void clickedActualizarAerolinea();
-    void clickedUpItineraries();
 private:
     Gtk::MenuBar menuBar;
     Gtk::MenuItem menuArchivo;
     Gtk::Menu subMenuArchivo;
-    Gtk::ImageMenuItem menuNewAirline, menuActualizar;
-    Gtk::Fixed fixedAirline, fixedActualizar;
-
-    Gtk::Label lblName, lblSalida, lblDestination, lblSchedule,
-    lblItinerario, lblAvion, lblEspacios;
-    Gtk::Entry etName, etSalida, etDestination, etSchedule,
-    etItinerario, etAvion, etEspacios;
-    Gtk::Button btAdd, btnAddItinerarie, btCancel, btSubir,
-    btSubirItinerario, btnActulizar;
-
-    queue<Itinerario*> tempItinerario;
-
-    ClaseGrande * claseGrande;
+    Gtk::ImageMenuItem menuNewAirline,menuNewItinerarie;
+    Gtk::Fixed fixedAirline,fixedItineraries;
+    
+    Gtk::Label lblName,lblSalida,lblDestination,lblSchedule;
+    Gtk::Entry etName,etSalida,etDestination,etSchedule;
+    Gtk::Button btAdd,btnAddItinerarie;
+    
+    ClaseGrande * claseGrande; 
 };
 
 #endif /* VENTANAGESTIONAR_H */

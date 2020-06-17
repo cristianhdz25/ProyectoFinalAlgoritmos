@@ -10,7 +10,6 @@ using namespace std;
 class Aerolinea {
 public:
     Aerolinea(string nombre);
-    Aerolinea();
     virtual ~Aerolinea();
     
     void subirItinerario();

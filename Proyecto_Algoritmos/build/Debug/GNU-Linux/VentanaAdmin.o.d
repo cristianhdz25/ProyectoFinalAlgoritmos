@@ -1142,8 +1142,9 @@ build/Debug/GNU-Linux/VentanaAdmin.o: VentanaAdmin.cpp VentanaAdmin.h \
  /usr/include/gtkmm-3.0/gtkmm/uimanager.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
  /usr/include/gtkmm-3.0/gtkmm/volumebutton.h VentanaGestionar.h \
- AerolineaBusiness.h AerolineaData.h Aerolinea.h Itinerario.h \
- ClaseGrande.h
+ AerolineaBusiness.h AerolineaData.h Aerolinea.h Itinerario.h Avion.h \
+ ClaseGrande.h UsuarioAdministradorBusiness.h UsuarioAdministradorData.h \
+ UsuarioAdministrador.h
 
 VentanaAdmin.h:
 
@@ -3541,4 +3542,12 @@ Aerolinea.h:
 
 Itinerario.h:
 
+Avion.h:
+
 ClaseGrande.h:
+
+UsuarioAdministradorBusiness.h:
+
+UsuarioAdministradorData.h:
+
+UsuarioAdministrador.h:

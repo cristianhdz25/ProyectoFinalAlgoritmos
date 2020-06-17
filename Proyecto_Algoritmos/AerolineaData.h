@@ -24,9 +24,10 @@ public:
     
     void initItinerarios();
     void registrarAerolinea(Aerolinea* aerolinea);   
+    void agregarItinerario(Itinerario* itinerario);
     void setAerolineas(list<Aerolinea*> aerolineas);
     list<Aerolinea*> getAerolineas() const;
-    void actualizarAerolinea(Aerolinea* aerolinea);
+    
 private:
     AerolineaData();
     Aerolinea* aerolinea;

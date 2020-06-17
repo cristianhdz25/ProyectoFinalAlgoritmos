@@ -8,11 +8,6 @@ Aerolinea::Aerolinea(string nombre) {
     this->nombre = nombre;   
 }//constructor
 
-Aerolinea::Aerolinea() {
-       
-}//constructor
-
-
 Aerolinea::~Aerolinea() {
 }
 
