@@ -5,6 +5,7 @@
 #include "iostream"
 #include "Validaciones.h"
 #include <gtkmm.h>
+#include "Client.h"
 
 VentanaRegistrar::VentanaRegistrar() {
     this->set_size_request(350, 300);
