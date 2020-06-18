@@ -28,7 +28,7 @@ public:
     vector<Vertice*> grafo;
     
     int getPosicion(Vertice* vertice);
-    void agragarAristaYPeso(Vertice* vertice1, Vertice* vertice2, int peso);
+    void agregarAristaYPeso(Vertice* vertice1, Vertice* vertice2, int peso);
     bool existeArista(Vertice* vertice1, Vertice* vertice2);
     bool exist(Vertice* vertice);
     

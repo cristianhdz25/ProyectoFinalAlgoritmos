@@ -41,6 +41,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Arista.o \
 	${OBJECTDIR}/Avion.o \
 	${OBJECTDIR}/ClaseGrande.o \
+	${OBJECTDIR}/Client.o \
 	${OBJECTDIR}/Grafo.o \
 	${OBJECTDIR}/Itinerario.o \
 	${OBJECTDIR}/Pais.o \
@@ -111,6 +112,11 @@ ${OBJECTDIR}/ClaseGrande.o: ClaseGrande.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ClaseGrande.o ClaseGrande.cpp
+
+${OBJECTDIR}/Client.o: Client.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Client.o Client.cpp
 
 ${OBJECTDIR}/Grafo.o: Grafo.cpp
 	${MKDIR} -p ${OBJECTDIR}
