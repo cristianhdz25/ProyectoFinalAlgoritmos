@@ -14,6 +14,9 @@ int main(int argc, char** argv) {
     Grafo grafo;
     grafo.agragarAristaYPeso(new Vertice(new Pais("CR")),new Vertice(new Pais("PN")),10);
     grafo.agragarAristaYPeso(new Vertice(new Pais("EU")),new Vertice(new Pais("PN")),52);
+    grafo.agragarAristaYPeso(new Vertice(new Pais("PN")),new Vertice(new Pais("COL")),82);
+    grafo.agragarAristaYPeso(new Vertice(new Pais("CR")),new Vertice(new Pais("COL")),152);
+    grafo.agragarAristaYPeso(new Vertice(new Pais("CR")),new Vertice(new Pais("COL")),152);
     cout<<grafo.toString()<<endl;
     
     /*
