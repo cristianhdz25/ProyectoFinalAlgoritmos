@@ -3,6 +3,14 @@
 Grafo::Grafo() {
 }
 
+Grafo* Grafo::getInstance() {
+    if (instance == 0) {
+        instance = new Grafo();
+    }//if
+    return instance;
+}//getInstance
+
+
 int Grafo::getPosicion(Vertice* vertice) {
     for (int i = 0; i < this->grafo.size(); i++) {
         if (vertice->pais->getNombre() == this->grafo.at(i)->pais->getNombre())
@@ -23,18 +31,13 @@ bool Grafo::existeArista(Vertice* vertice1, Vertice* vertice2){
 bool Grafo::exist(Vertice* vertice) {
     if (this->grafo.empty()) {
         cout << "no existen vertices" << endl;
-
     }//if
     for (int i = 0; i < this->grafo.size(); i++) {
         if (this->grafo.at(i)->pais->getNombre() == vertice->pais->getNombre()) {
-
             return true;
-
         }//if
     }//for
-
     return false;
-
 }//exist
 
 void Grafo::agregarAristaYPeso(Vertice* vertice1, Vertice* vertice2, int peso) {
@@ -69,12 +72,9 @@ string Grafo::toString() {
         s << this->grafo.at(i)->pais->getNombre() << " :" << endl;
         for (int j = 0; j < this->grafo.at(i)->listaAristas.size(); j++) {
             s << this->grafo.at(i)->listaAristas.at(j)->pais->getNombre() << endl;
-
         }//for
-
     }//for
-
-
     return s.str();
-
 }//toString
+
+Grafo * Grafo::instance=0;

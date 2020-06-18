@@ -16,6 +16,7 @@
 #include <list>
 
 #include "Aerolinea.h"
+#include "Grafo.h"
 
 class AerolineaData {
 public:
@@ -32,6 +33,7 @@ private:
     AerolineaData();
     Aerolinea* aerolinea;
     list<Aerolinea*> aerolineas;
+    Grafo * grafo;
     static AerolineaData* instance;
 };
 
