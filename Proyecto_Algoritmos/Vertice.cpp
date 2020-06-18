@@ -1,8 +1,8 @@
 
 #include "Vertice.h"
 
-Vertice::Vertice() {
-    
-}//vertice
+Vertice::Vertice(Pais* pais) {
+    this->pais=pais;
+}//constructor
 
 
