@@ -17,7 +17,7 @@ ClaseGrande* ClaseGrande::getInstance() {
 
     }//if
     return instance;
-
+    
 }//getInstance
 
 ClaseGrande::~ClaseGrande() {

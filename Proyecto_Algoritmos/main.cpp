@@ -10,7 +10,7 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-    
+    /*
     Grafo grafo;
     grafo.agregarAristaYPeso(new Vertice(new Pais("CR")),new Vertice(new Pais("PN")),10);
     grafo.agregarAristaYPeso(new Vertice(new Pais("EU")),new Vertice(new Pais("PN")),52);
@@ -18,8 +18,8 @@ int main(int argc, char** argv) {
     grafo.agregarAristaYPeso(new Vertice(new Pais("CR")),new Vertice(new Pais("COL")),152);
     grafo.agregarAristaYPeso(new Vertice(new Pais("CR")),new Vertice(new Pais("COL")),152);
     cout<<grafo.toString()<<endl;
+    */
     
-    /*
         Glib::RefPtr<Gtk::Application> app =
                 Gtk::Application::create(argc, argv, "flag2");
     
@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
         ventana.set_title("Ventana Principal");
     
         return app->run(ventana);
-     */
+     
 //Aerolinea* aerolinea=new Aerolinea("A");
 //cout<<"1"<<((Itinerario*)aerolinea->getItinerarios().front())->toString()<<endl;
 //aerolinea->arribaItinerarios();

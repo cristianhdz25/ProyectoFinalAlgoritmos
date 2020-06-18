@@ -29,9 +29,6 @@ bool Grafo::existeArista(Vertice* vertice1, Vertice* vertice2){
 }//existe arista
 
 bool Grafo::exist(Vertice* vertice) {
-    if (this->grafo.empty()) {
-        cout << "no existen vertices" << endl;
-    }//if
     for (int i = 0; i < this->grafo.size(); i++) {
         if (this->grafo.at(i)->pais->getNombre() == vertice->pais->getNombre()) {
             return true;
