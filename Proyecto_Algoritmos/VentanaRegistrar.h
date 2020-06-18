@@ -26,7 +26,7 @@ public:
     void onButtonClickedRegistrar();
     void onButtonClickedCancelar();
     void aboutWinClose();
-
+   
 private:
     Gtk::Label lblEdad;
     Gtk::Label lblNombre;

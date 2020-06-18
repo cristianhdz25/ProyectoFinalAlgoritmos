@@ -1,5 +1,5 @@
-build/Debug/GNU-Linux/VentanaItinerarios.o: VentanaItinerarios.cpp \
- VentanaItinerarios.h /usr/include/gtkmm-3.0/gtkmm.h \
+build/Debug/GNU-Linux/VentanaReservar.o: VentanaReservar.cpp \
+ VentanaReservar.h /usr/include/gtkmm-3.0/gtkmm.h \
  /usr/include/glibmm-2.4/glibmm.h /usr/include/glibmm-2.4/glibmm/thread.h \
  /usr/include/glibmm-2.4/glibmm/threads.h \
  /usr/include/glibmm-2.4/glibmm/balancedtree.h \
@@ -352,10 +352,11 @@ build/Debug/GNU-Linux/VentanaItinerarios.o: VentanaItinerarios.cpp \
  /usr/include/gtkmm-3.0/gtkmm/treestore.h \
  /usr/include/gtkmm-3.0/gtkmm/uimanager.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
- /usr/include/gtkmm-3.0/gtkmm/volumebutton.h ClaseGrande.h Aerolinea.h \
- Itinerario.h Avion.h Pais.h AerolineaBusiness.h AerolineaData.h Client.h
+ /usr/include/gtkmm-3.0/gtkmm/volumebutton.h VentanaItinerarios.h \
+ ClaseGrande.h Aerolinea.h Itinerario.h Avion.h Pais.h \
+ AerolineaBusiness.h AerolineaData.h Client.h
 
-VentanaItinerarios.h:
+VentanaReservar.h:
 
 /usr/include/gtkmm-3.0/gtkmm.h:
 
@@ -1072,6 +1073,8 @@ VentanaItinerarios.h:
 /usr/include/gtkmm-3.0/gtkmm/viewport.h:
 
 /usr/include/gtkmm-3.0/gtkmm/volumebutton.h:
+
+VentanaItinerarios.h:
 
 ClaseGrande.h:
 

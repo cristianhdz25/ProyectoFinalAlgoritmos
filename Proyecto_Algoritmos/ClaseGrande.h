@@ -5,6 +5,7 @@
 #include <queue> 
 #include "Aerolinea.h"
 #include "AerolineaBusiness.h"
+#include "Client.h"
 
 using namespace std;
 
@@ -25,11 +26,12 @@ public:
     list<Aerolinea*> getAerolineas();
     void arriba();
     void abajo();
-    
+     void registrarCliente(Client* client);
 private:
     list<Aerolinea*> aerolineas;
     AerolineaBusiness* aerolineaBusiness;
     static ClaseGrande* instance;
+    vector<Client*> listaCliente;
 };
 
 #endif /* CLASEGRANDE_H */

@@ -1144,7 +1144,7 @@ build/Debug/GNU-Linux/VentanaPrincipal.o: VentanaPrincipal.cpp \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
  /usr/include/gtkmm-3.0/gtkmm/volumebutton.h VentanaRegistrar.h \
  VentanaReservar.h VentanaItinerarios.h ClaseGrande.h Aerolinea.h \
- Itinerario.h Avion.h Pais.h AerolineaBusiness.h AerolineaData.h \
+ Itinerario.h Avion.h Pais.h AerolineaBusiness.h AerolineaData.h Client.h \
  VentanaAdmin.h VentanaGestionar.h
 
 VentanaPrincipal.h:
@@ -3552,6 +3552,8 @@ Pais.h:
 AerolineaBusiness.h:
 
 AerolineaData.h:
+
+Client.h:
 
 VentanaAdmin.h:
 
