@@ -29,6 +29,8 @@ public:
     
     int getPosicion(Vertice* vertice);
     void agragarAristaYPeso(Vertice* vertice1, Vertice* vertice2, int peso);
+    bool existeArista(Vertice* vertice1, Vertice* vertice2);
+    bool exist(Vertice* vertice);
     
     string toString();
     
