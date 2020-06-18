@@ -45,6 +45,7 @@ private:
 
     Gtk::Fixed fixed;
     VentanaReservar * ventanaReservar;
+    ClaseGrande * claseGrande;
 };
 
 #endif /* VENTANAREGISTRAR_H */
