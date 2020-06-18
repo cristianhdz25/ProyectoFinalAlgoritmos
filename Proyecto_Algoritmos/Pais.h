@@ -8,19 +8,30 @@
  * File:   Pais.h
  * Author: cristia
  *
- * Created on 16 de junio de 2020, 10:08 PM
+ * Created on 16 de junio de 2020, 10:50 PM
  */
 
 #ifndef PAIS_H
 #define PAIS_H
+#include <string> 
+#include <iostream>
+#include <iosfwd>
+#include <sstream>
+#include <vector>
+
+using namespace std;
 
 class Pais {
 public:
-    Pais();
-    Pais(const Pais& orig);
-    virtual ~Pais();
+    Pais(string nombre);
+    void setRestricciones(vector<string>* restricciones);
+    vector<string>* getRestricciones() const;
+    void setNombre(string nombre);
+    string getNombre() const;
+    string toString();
 private:
-
+    string nombre;
+    vector<string>* restricciones;
 };
 
 #endif /* PAIS_H */

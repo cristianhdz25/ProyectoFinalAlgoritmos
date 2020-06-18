@@ -26,7 +26,7 @@ public:
     void onButtonClickedRegistrar();
     void onButtonClickedCancelar();
     void aboutWinClose();
-
+   
 private:
     Gtk::Label lblEdad;
     Gtk::Label lblNombre;
@@ -45,6 +45,7 @@ private:
 
     Gtk::Fixed fixed;
     VentanaReservar * ventanaReservar;
+    ClaseGrande * claseGrande;
 };
 
 #endif /* VENTANAREGISTRAR_H */

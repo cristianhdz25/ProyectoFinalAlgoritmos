@@ -13,6 +13,7 @@
 
 #include "AerolineaData.h"
 #include "Avion.h"
+#include "Pais.h"
 #include <iostream>
 #include <set>
 using namespace std;
@@ -21,39 +22,53 @@ AerolineaData::AerolineaData() {
     this->aerolineas.push_back(new Aerolinea("VueltoPenzoil"));
     this->aerolineas.push_back(new Aerolinea("VueltoAchiote"));
     this->aerolineas.push_back(new Aerolinea("VueltoZorritone"));
-    //    this->initItinerarios();
+    this->initItinerarios();
+    this->grafo = Grafo::getInstance();
 }//constructor
 
 void AerolineaData::initItinerarios() {
     Aerolinea *aux = this->aerolineas.front();
-    Avion * avion = new Avion("Boeing 737", 80);
+
     queue<Itinerario*> itinerarios1;
-    itinerarios1.push(new Itinerario("CR", "MX", "7am-10am", avion));
-    itinerarios1.push(new Itinerario("CR", "PT", "10am-1pm", avion));
-    itinerarios1.push(new Itinerario("CR", "CHI", "3pm-6pm", avion));
-    itinerarios1.push(new Itinerario("CR", "PN", "3pm-6pm", avion));
+    itinerarios1.push(new Itinerario(new Pais("CR"), new Pais("MX"), "7am-10am", new Avion("Boeing 737", 80)));
+    itinerarios1.push(new Itinerario(new Pais("CR"), new Pais("PR"), "10am-1pm", new Avion("Boeing 747", 50)));
+    itinerarios1.push(new Itinerario(new Pais("CR"), new Pais("PN"), "3pm-6pm", new Avion("Boeing 787", 70)));
+    itinerarios1.push(new Itinerario(new Pais("CR"), new Pais("COL"), "3pm-6pm", new Avion("Boeing 737", 80)));
+
+    this->grafo->agregarAristaYPeso(new Vertice(new Pais("CR")), new Vertice(new Pais("MX")), 3);
+    this->grafo->agregarAristaYPeso(new Vertice(new Pais("CR")), new Vertice(new Pais("PR")), 3);
+    this->grafo->agregarAristaYPeso(new Vertice(new Pais("CR")), new Vertice(new Pais("PN")), 3);
+    this->grafo->agregarAristaYPeso(new Vertice(new Pais("CR")), new Vertice(new Pais("COL")), 3);
     this->aerolineas.front()->setItinerarios(itinerarios1);
     this->aerolineas.pop_front();
     this->aerolineas.push_back(aux);
 
     aux = this->aerolineas.front();
-    Avion * avion1 = new Avion("Boeing 787", 50);
     queue<Itinerario*> itinerarios2;
-    itinerarios2.push(new Itinerario("CR", "MX", "7am-10am", avion1));
-    itinerarios2.push(new Itinerario("CR", "EU", "10am-1pm", avion1));
-    itinerarios2.push(new Itinerario("CR", "ARG", "3pm-6pm", avion1));
-    itinerarios2.push(new Itinerario("CR", "PN", "3pm-6pm", avion1));
+    itinerarios2.push(new Itinerario(new Pais("PN"), new Pais("MX"), "7am-10am", new Avion("Boeing 787", 90)));
+    itinerarios2.push(new Itinerario(new Pais("COL"), new Pais("PR"), "10am-1pm", new Avion("Boeing 747", 70)));
+    itinerarios2.push(new Itinerario(new Pais("USA"), new Pais("PN"), "3pm-6pm", new Avion("Boeing 747", 70)));
+    itinerarios2.push(new Itinerario(new Pais("GUA"), new Pais("COL"), "3pm-6pm", new Avion("Boeing 737", 50)));
+
+    this->grafo->agregarAristaYPeso(new Vertice(new Pais("PN")), new Vertice(new Pais("MX")), 3);
+    this->grafo->agregarAristaYPeso(new Vertice(new Pais("COL")), new Vertice(new Pais("PR")), 3);
+    this->grafo->agregarAristaYPeso(new Vertice(new Pais("USA")), new Vertice(new Pais("PN")), 3);
+    this->grafo->agregarAristaYPeso(new Vertice(new Pais("GUA")), new Vertice(new Pais("COL")), 3);
     this->aerolineas.front()->setItinerarios(itinerarios2);
     this->aerolineas.pop_front();
     this->aerolineas.push_back(aux);
 
     aux = this->aerolineas.front();
-    Avion * avion2 = new Avion("Boeing 747", 60);
     queue<Itinerario*> itinerarios3;
-    itinerarios3.push(new Itinerario("CR", "MX", "7am-10am", avion2));
-    itinerarios3.push(new Itinerario("CR", "NIC", "10am-1pm", avion2));
-    itinerarios3.push(new Itinerario("CR", "USA", "3pm-6pm", avion2));
-    itinerarios3.push(new Itinerario("CR", "POR", "3pm-6pm", avion2));
+    itinerarios3.push(new Itinerario(new Pais("CR"), new Pais("URU"), "7am-10am", new Avion("Boeing 747", 60)));
+    itinerarios3.push(new Itinerario(new Pais("PR"), new Pais("ITA"), "10am-1pm", new Avion("Boeing 737", 80)));
+    itinerarios3.push(new Itinerario(new Pais("CR"), new Pais("POR"), "3pm-6pm", new Avion("Boeing 747", 70)));
+    itinerarios3.push(new Itinerario(new Pais("NIC"), new Pais("ECU"), "3pm-6pm", new Avion("Boeing 787", 90)));
+
+    this->grafo->agregarAristaYPeso(new Vertice(new Pais("CR")), new Vertice(new Pais("URU")), 3);
+    this->grafo->agregarAristaYPeso(new Vertice(new Pais("PR")), new Vertice(new Pais("ITA")), 3);
+    this->grafo->agregarAristaYPeso(new Vertice(new Pais("CR")), new Vertice(new Pais("POR")), 3);
+    this->grafo->agregarAristaYPeso(new Vertice(new Pais("NIC")), new Vertice(new Pais("ECU")), 3);
     this->aerolineas.front()->setItinerarios(itinerarios3);
     this->aerolineas.pop_front();
     this->aerolineas.push_back(aux);

@@ -27,7 +27,7 @@ public:
     int getQuantity() const;
     void setNamePlane(string namePlane);
     string getNamePlane() const;  
-    
+    string toString();
 private:
     string namePlane;
     int quantity;

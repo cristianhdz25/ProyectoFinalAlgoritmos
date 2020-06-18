@@ -61,6 +61,10 @@ void ClaseGrande::abajo() {
     this->aerolineas.push_front(aux);
 }//abajo
 
+void ClaseGrande::registrarCliente(Client* client) {
+    this->listaCliente.push_back(client);
+}//registrarCliente
+
 
 void ClaseGrande::setAerolineas(list<Aerolinea*> aerolineas) {
     this->aerolineas = aerolineas;

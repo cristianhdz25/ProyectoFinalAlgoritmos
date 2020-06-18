@@ -5,10 +5,12 @@
 #include "iostream"
 #include "Validaciones.h"
 #include <gtkmm.h>
+#include "Client.h"
 
 VentanaRegistrar::VentanaRegistrar() {
     this->set_size_request(350, 300);
     this->set_title("Registrarse");
+    this->claseGrande = ClaseGrande::getInstance();
     init();
 }
 
@@ -49,13 +51,18 @@ void VentanaRegistrar::init() {
 }
 
 void VentanaRegistrar::onButtonClickedRegistrar() {
+
     Validaciones val;
 
-    if (!this->etEdad.get_text().empty() &&!this->etGenero.get_text().empty() && !this->etNacionalidad.get_text().empty() 
+    if (!this->etEdad.get_text().empty() &&!this->etGenero.get_text().empty() && !this->etNacionalidad.get_text().empty()
             && !this->etNombre.get_text().empty()
             && !this->etPasaporte.get_text().empty()) {
 
         if (val.COMPROBARNUMEROS(this->etEdad.get_text()) && val.COMPROBARNUMEROS(this->etPasaporte.get_text())) {
+
+            Client* client = new Client(this->etEdad.get_text(), this->etNombre.get_text(), this->etGenero.get_text(), this->etPasaporte.get_text(), this->etNacionalidad.get_text());
+            this->claseGrande->registrarCliente(client);
+
 
             if (this->ventanaReservar != 0)
                 return;
@@ -65,24 +72,24 @@ void VentanaRegistrar::onButtonClickedRegistrar() {
             this->ventanaReservar->show();
             this->hide();
         } else {
-              Gtk::MessageDialog dialogo(
+            Gtk::MessageDialog dialogo(
                     *this,
                     "Error al registrar",
                     false,
                     Gtk::MESSAGE_INFO
                     );
-                    dialogo.set_secondary_text("La edad y el pasaporte son numeros");
-                    dialogo.run();
+            dialogo.set_secondary_text("La edad y el pasaporte son numeros");
+            dialogo.run();
         }
     } else {
         Gtk::MessageDialog dialogo(
-                    *this,
-                    "Error al registrar",
-                    false,
-                    Gtk::MESSAGE_INFO
-                    );
-                    dialogo.set_secondary_text("Verifique que no hayan espacios en blanco");
-                    dialogo.run();
+                *this,
+                "Error al registrar",
+                false,
+                Gtk::MESSAGE_INFO
+                );
+        dialogo.set_secondary_text("Verifique que no hayan espacios en blanco");
+        dialogo.run();
     }
 }//registrar
 
