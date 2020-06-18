@@ -16,6 +16,7 @@
 VentanaGestionar::VentanaGestionar() {
     this->set_size_request(600, 600);
     this->claseGrande = ClaseGrande::getInstance();
+    this->grafo = Grafo::getInstance();
     init();
 }//constructor
 
@@ -53,7 +54,7 @@ void VentanaGestionar::clickedNewAirline() {
     this->lblAvion.set_label("Nombre de Avion");
     this->fixedAirline.put(this->lblAvion, 300, 230);
     this->fixedAirline.put(this->etAvion, 300, 250);
-    
+
     this->lblEspacios.set_label("Espacios del avión");
     this->fixedAirline.put(this->lblEspacios, 300, 280);
     this->fixedAirline.put(this->etEspacios, 300, 300);
@@ -83,11 +84,13 @@ void VentanaGestionar::clickedAddtinerarie() {
     if (!(this->etSalida.get_text().empty()) &&
             !(this->etDestination.get_text().empty())&&
             !(this->etSchedule.get_text().empty())) {
-        
-        Avion* tempA=new Avion(this->etAvion.get_text(),stoi(this->etEspacios.get_text()));
-        
-        tempItinerario.push(new Itinerario(new Pais(this->etSalida.get_text()),(new Pais(this->etDestination.get_text())),
-                this->etItinerario.get_text(),tempA));
+
+        Avion* tempA = new Avion(this->etAvion.get_text(), stoi(this->etEspacios.get_text()));
+
+        tempItinerario.push(new Itinerario(new Pais(this->etSalida.get_text()), (new Pais(this->etDestination.get_text())),
+                this->etItinerario.get_text(), tempA));
+        this->grafo->agregarAristaYPeso(new Vertice(new Pais(this->etSalida.get_text())), new Vertice(new Pais(this->etDestination.get_text())), 3);
+
         this->etSalida.set_text("");
         this->etDestination.set_text("");
         this->etSchedule.set_text("");
@@ -118,7 +121,7 @@ void VentanaGestionar::clickedActualizarAerolinea() {
 
 void VentanaGestionar::clickedUpItineraries() {
     this->claseGrande->subirItinerario();
-    
+
 }//clickedUpItineraries
 
 void VentanaGestionar::clickedActualizar() {
@@ -132,7 +135,7 @@ void VentanaGestionar::clickedActualizar() {
     this->lblItinerario.set_label("Seleccione itinerario para actualizar");
     this->fixedActualizar.put(this->lblItinerario, 50, 195);
     this->fixedActualizar.put(this->etItinerario, 50, 220);
-    
+
     this->btnActulizar.set_label("Actualizar");
     this-> fixedActualizar.put(this->btnActulizar, 300, 400);
     this->btnActulizar.signal_clicked().connect(sigc::mem_fun(*this, &VentanaGestionar::clickedActualizarAerolinea));
@@ -144,7 +147,7 @@ void VentanaGestionar::clickedActualizar() {
     this->lblEspacios.set_label("Espacios del avión");
     this->fixedActualizar.put(this->lblEspacios, 300, 280);
     this->fixedActualizar.put(this->etEspacios, 300, 300);
-    
+
     this->btSubir.set_label("Subir");
     this-> fixedActualizar.put(this->btSubir, 50, 150);
     this->btSubir.signal_clicked().connect(sigc::mem_fun(*this, &VentanaGestionar::clickedUp));

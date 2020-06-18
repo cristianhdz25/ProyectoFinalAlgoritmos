@@ -35,6 +35,7 @@ private:
     queue<Itinerario*> tempItinerario;
 
     ClaseGrande * claseGrande;
+    Grafo * grafo;
 };
 
 #endif /* VENTANAGESTIONAR_H */
