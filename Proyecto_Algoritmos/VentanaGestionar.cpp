@@ -62,15 +62,20 @@ void VentanaGestionar::clickedNewAirline() {
     this->lblSalida.set_label("Salida");
     this->fixedAirline.put(this->lblSalida, 300, 55);
     this->fixedAirline.put(this->etSalida, 300, 90);
-
+    
     this->lblDestination.set_label("Destination");
     this->fixedAirline.put(this->lblDestination, 300, 120);
     this->fixedAirline.put(this->etDestination, 300, 145);
-
-    this->lblSchedule.set_label("Schedule");
+    
+    this->lblSchedule.set_label("Horarios");
     this->fixedAirline.put(this->lblSchedule, 300, 175);
     this->fixedAirline.put(this->etSchedule, 300, 200);
 
+      
+    this->lblPeso.set_label("Duración del vuelo");
+    this->fixedAirline.put(this->lblPeso, 300, 325);
+    this->fixedAirline.put(this->etPeso, 300, 350);
+    
     this->lblName.set_label("New Airline");
     this->fixedAirline.put(this->lblName, 80, 90);
     this->fixedAirline.put(this->etName, 80, 115);
@@ -89,7 +94,8 @@ void VentanaGestionar::clickedAddtinerarie() {
 
         tempItinerario.push(new Itinerario(new Pais(this->etSalida.get_text()), (new Pais(this->etDestination.get_text())),
                 this->etItinerario.get_text(), tempA));
-        this->grafo->agregarAristaYPeso(new Vertice(new Pais(this->etSalida.get_text())), new Vertice(new Pais(this->etDestination.get_text())), 3);
+        this->grafo->agregarAristaYPeso(new Vertice(new Pais(this->etSalida.get_text())),
+                new Vertice(new Pais(this->etDestination.get_text())), atoi(this->etPeso.get_text().c_str()));
 
         this->etSalida.set_text("");
         this->etDestination.set_text("");

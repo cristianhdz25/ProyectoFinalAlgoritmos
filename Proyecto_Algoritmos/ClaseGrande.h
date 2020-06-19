@@ -12,9 +12,9 @@ using namespace std;
 class ClaseGrande {
 public:
     ClaseGrande();
-    static ClaseGrande* getInstance();//constructor singleton
+    static ClaseGrande* getInstance(); //constructor singleton
     virtual ~ClaseGrande();
-    
+
     string mostrarAerolinea();
     string mostrarItinerario();
     string mostrarItinerarios();
@@ -26,12 +26,15 @@ public:
     list<Aerolinea*> getAerolineas();
     void arriba();
     void abajo();
-     void registrarCliente(Client* client);
+    void registrarCliente(Client* client);
+    void moverVertices();
+    void mostrarVertices();
 private:
     list<Aerolinea*> aerolineas;
     AerolineaBusiness* aerolineaBusiness;
     static ClaseGrande* instance;
     vector<Client*> listaCliente;
+    Grafo* grafo;
 };
 
 #endif /* CLASEGRANDE_H */

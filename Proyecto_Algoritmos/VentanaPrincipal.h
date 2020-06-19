@@ -17,6 +17,9 @@
 
 #include "VentanaRegistrar.h"
 #include "VentanaAdmin.h"
+#include "VentanaMostrarVuelos.h"
+#include "Drawing.h"
+#include "VentanaDibujo.h"
 
 class VentanaPrincipal : public Gtk::Window {
 public:
@@ -27,17 +30,21 @@ public:
     void aboutWinClose();
     void mostrarVentanaItinerario();
     void clickedOpenAdmin();
+    void mostrarVentanaVuelos();
 private:
     Gtk::MenuBar menuBar;
     Gtk::MenuItem menuArchivo;
     Gtk::Menu subMenuArchivo;
-    Gtk::ImageMenuItem menuRegistrar,menuAdmin;   
+    Gtk::ImageMenuItem menuRegistrar,menuAdmin,menuVuelo;   
     
     
     Gtk::Fixed fixed; // contenedor
     VentanaRegistrar* ventanaRegistrar;
     VentanaItinerarios* ventanaItinerarios;
     VentanaAdmin* ventanaAdmin;
+    VentanaMostrarVuelos* ventanaMostrarVuelo;
+    Drawing* drawing;
+    VentanaDibujo* ventanaDibujo;
 };
 
 #endif /* VENTANAPRINCIPAL_H */

@@ -26,13 +26,14 @@ class Grafo {
 public:
     Grafo();
     vector<Vertice*> grafo;
-
     static Grafo* getInstance(); //constructor singleton
     int getPosicion(Vertice* vertice);
     void agregarAristaYPeso(Vertice* vertice1, Vertice* vertice2, int peso);
     bool existeArista(Vertice* vertice1, Vertice* vertice2);
     bool exist(Vertice* vertice);
-
+    void moverVertices(int posicion);
+    string mostrarVertices(int posicion);
+    void draw(const Cairo::RefPtr<Cairo::Context>& cr);
     string toString();
 
 private:
