@@ -17,15 +17,15 @@ void Aerolinea::subirItinerario(){
     Itinerario* aux=this->itinerarios.front();
     this->itinerarios.pop();
     this->itinerarios.push(aux);
-}
+}//subirItinerarie
 
 string Aerolinea::mostrarItinerario() {
     if(!this->itinerarios.empty())
         return this->itinerarios.front()->toString();
     else
         return "No hay";
-}
-
+}//mostrarItinerario
+ 
 string Aerolinea::mostrarItinerarios() {
     if(this->itinerarios.empty())
         return "No hay";

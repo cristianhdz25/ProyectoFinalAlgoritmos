@@ -6,8 +6,9 @@
 using namespace std;
 
 ClaseGrande::ClaseGrande() {
-    this->aerolineaBusiness=new AerolineaBusiness();
-    this->aerolineas=this->aerolineaBusiness->getAerolineas();
+    this->aerolineaBusiness = new AerolineaBusiness();
+    this->aerolineas = this->aerolineaBusiness->getAerolineas();
+    this->grafo = Grafo::getInstance();
 }//constructor
 
 ClaseGrande* ClaseGrande::getInstance() {
@@ -17,7 +18,7 @@ ClaseGrande* ClaseGrande::getInstance() {
 
     }//if
     return instance;
-    
+
 }//getInstance
 
 ClaseGrande::~ClaseGrande() {
@@ -25,27 +26,26 @@ ClaseGrande::~ClaseGrande() {
 
 //Método para registrar una aerolinea
 
-void ClaseGrande::registrarAerolinea(Aerolinea* aerolinea){
+void ClaseGrande::registrarAerolinea(Aerolinea* aerolinea) {
     this->aerolineaBusiness->registrarAerolinea(aerolinea);
-    this->aerolineas=this->aerolineaBusiness->getAerolineas();
+    this->aerolineas = this->aerolineaBusiness->getAerolineas();
 }//registrarAerolinea
 
 //método para registrar un itinerario
-
 
 string ClaseGrande::mostrarAerolinea() {
     return this->aerolineas.front()->toString();
 }//mostrarAerolinea
 
-string ClaseGrande::mostrarItinerario(){
+string ClaseGrande::mostrarItinerario() {
     return this->aerolineas.front()->mostrarItinerario();
 }//mostrarItinerario
 
-string ClaseGrande::mostrarItinerarios(){
+string ClaseGrande::mostrarItinerarios() {
     return this->aerolineas.front()->mostrarItinerarios();
 }//mostrarItinerarios
 
-void ClaseGrande::subirItinerario(){
+void ClaseGrande::subirItinerario() {
     this->aerolineas.front()->subirItinerario();
 }//subirItinerario
 
@@ -65,6 +65,13 @@ void ClaseGrande::registrarCliente(Client* client) {
     this->listaCliente.push_back(client);
 }//registrarCliente
 
+void ClaseGrande::moverVertices() {
+
+}//moverVertices
+
+void ClaseGrande::mostrarVertices() {
+   
+}//mostrarVertice
 
 void ClaseGrande::setAerolineas(list<Aerolinea*> aerolineas) {
     this->aerolineas = aerolineas;
@@ -74,4 +81,4 @@ list<Aerolinea*> ClaseGrande::getAerolineas() {
     return aerolineas;
 }
 
-ClaseGrande* ClaseGrande::instance=0;
+ClaseGrande* ClaseGrande::instance = 0;

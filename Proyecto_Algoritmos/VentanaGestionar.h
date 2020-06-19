@@ -26,9 +26,9 @@ private:
     Gtk::Fixed fixedAirline, fixedActualizar;
 
     Gtk::Label lblName, lblSalida, lblDestination, lblSchedule,
-    lblItinerario, lblAvion, lblEspacios;
+    lblItinerario, lblAvion, lblEspacios,lblPeso;
     Gtk::Entry etName, etSalida, etDestination, etSchedule,
-    etItinerario, etAvion, etEspacios;
+    etItinerario, etAvion, etEspacios,etPeso;
     Gtk::Button btAdd, btnAddItinerarie, btCancel, btSubir,
     btSubirItinerario, btnActulizar;
 

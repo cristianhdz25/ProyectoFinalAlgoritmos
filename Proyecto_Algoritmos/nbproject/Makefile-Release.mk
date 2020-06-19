@@ -42,6 +42,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Avion.o \
 	${OBJECTDIR}/ClaseGrande.o \
 	${OBJECTDIR}/Client.o \
+	${OBJECTDIR}/Drawing.o \
 	${OBJECTDIR}/Grafo.o \
 	${OBJECTDIR}/Itinerario.o \
 	${OBJECTDIR}/Pais.o \
@@ -50,8 +51,10 @@ OBJECTFILES= \
 	${OBJECTDIR}/UsuarioAdministradorData.o \
 	${OBJECTDIR}/Validaciones.o \
 	${OBJECTDIR}/VentanaAdmin.o \
+	${OBJECTDIR}/VentanaDibujo.o \
 	${OBJECTDIR}/VentanaGestionar.o \
 	${OBJECTDIR}/VentanaItinerarios.o \
+	${OBJECTDIR}/VentanaMostrarVuelos.o \
 	${OBJECTDIR}/VentanaPrincipal.o \
 	${OBJECTDIR}/VentanaRegistrar.o \
 	${OBJECTDIR}/VentanaReservar.o \
@@ -77,11 +80,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proyecto_algoritmos
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proyecto_algoritmos_copy
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proyecto_algoritmos: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proyecto_algoritmos_copy: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proyecto_algoritmos ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proyecto_algoritmos_copy ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/Aerolinea.o: Aerolinea.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -117,6 +120,11 @@ ${OBJECTDIR}/Client.o: Client.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Client.o Client.cpp
+
+${OBJECTDIR}/Drawing.o: Drawing.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Drawing.o Drawing.cpp
 
 ${OBJECTDIR}/Grafo.o: Grafo.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -158,6 +166,11 @@ ${OBJECTDIR}/VentanaAdmin.o: VentanaAdmin.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/VentanaAdmin.o VentanaAdmin.cpp
 
+${OBJECTDIR}/VentanaDibujo.o: VentanaDibujo.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/VentanaDibujo.o VentanaDibujo.cpp
+
 ${OBJECTDIR}/VentanaGestionar.o: VentanaGestionar.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -167,6 +180,11 @@ ${OBJECTDIR}/VentanaItinerarios.o: VentanaItinerarios.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/VentanaItinerarios.o VentanaItinerarios.cpp
+
+${OBJECTDIR}/VentanaMostrarVuelos.o: VentanaMostrarVuelos.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/VentanaMostrarVuelos.o VentanaMostrarVuelos.cpp
 
 ${OBJECTDIR}/VentanaPrincipal.o: VentanaPrincipal.cpp
 	${MKDIR} -p ${OBJECTDIR}

@@ -1,11 +1,12 @@
 #include "Client.h"
 
-Client::Client(string age, string name, string gender, string numPassport, string nationality) {
+Client::Client(string age, string name, string gender, string numPassport, string nationality/*,Aerolinea* aerolinea*/) {
     this->age=age;
     this->name=name;
     this->gender=gender;
     this->numPassport=numPassport;
     this->nationality=nationality;
+    this->aerolinea=aerolinea;
 }//constructor
 
 void Client::SetNationality(string nationality) {
@@ -48,3 +49,19 @@ string Client::GetAge() const {
     return age;
 }
 
+void Client::SetAerolinea(Aerolinea* aerolinea) {
+    this->aerolinea = aerolinea;
+}
+
+Aerolinea* Client::GetAerolinea() const {
+    return aerolinea;
+}
+
+string Client::toString() {
+    stringstream s;
+    
+    s<<this->age<<this->name<<this->gender<<this->numPassport<<this->nationality<<this->aerolinea;
+    
+    return s.str();
+    
+}//toString
