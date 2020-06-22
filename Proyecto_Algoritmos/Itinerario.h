@@ -17,6 +17,7 @@ public:
     void setDestino(Pais* destino);
     Pais* getDestino() const;
     string toString();
+    string toString2();
     void setAvion(Avion* avion);
     Avion* getAvion() const;
 private:

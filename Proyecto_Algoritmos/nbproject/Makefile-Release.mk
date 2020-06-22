@@ -54,11 +54,12 @@ OBJECTFILES= \
 	${OBJECTDIR}/VentanaDibujo.o \
 	${OBJECTDIR}/VentanaGestionar.o \
 	${OBJECTDIR}/VentanaItinerarios.o \
-	${OBJECTDIR}/VentanaMostrarVuelos.o \
 	${OBJECTDIR}/VentanaPrincipal.o \
 	${OBJECTDIR}/VentanaRegistrar.o \
 	${OBJECTDIR}/VentanaReservar.o \
 	${OBJECTDIR}/Vertice.o \
+	${OBJECTDIR}/WindowConfig.o \
+	${OBJECTDIR}/WindowLogin.o \
 	${OBJECTDIR}/main.o
 
 
@@ -181,11 +182,6 @@ ${OBJECTDIR}/VentanaItinerarios.o: VentanaItinerarios.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/VentanaItinerarios.o VentanaItinerarios.cpp
 
-${OBJECTDIR}/VentanaMostrarVuelos.o: VentanaMostrarVuelos.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/VentanaMostrarVuelos.o VentanaMostrarVuelos.cpp
-
 ${OBJECTDIR}/VentanaPrincipal.o: VentanaPrincipal.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -205,6 +201,16 @@ ${OBJECTDIR}/Vertice.o: Vertice.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Vertice.o Vertice.cpp
+
+${OBJECTDIR}/WindowConfig.o: WindowConfig.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/WindowConfig.o WindowConfig.cpp
+
+${OBJECTDIR}/WindowLogin.o: WindowLogin.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/WindowLogin.o WindowLogin.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}

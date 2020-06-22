@@ -36,7 +36,7 @@ void VentanaPrincipal::init() {
     this->itemActualizar.set_label("Actualizar vuelo");
     this->itemEliminar.set_label("Eliminar vuelo");
     //-----//
-    this->itemAdmin.set_label("Actualizar vuelo");
+    this->itemAdmin.set_label("Modo administrador");
     this->itemVuelo.set_label("Trafico aereo");
 
     //Sesion
@@ -72,6 +72,8 @@ void VentanaPrincipal::init() {
     this->itemVuelo.signal_activate().connect(sigc::mem_fun(*this, &VentanaPrincipal::mostrarVentanaVuelos));
     this->subMenuAdmin.append(this->itemVuelo);
 
+    this->windowConfig = 0;
+    this->windowLogin = 0;
     this->ventanaReservar = 0;
     this->ventanaDibujo = 0;
     this->ventanaAdmin = 0;
@@ -81,6 +83,7 @@ void VentanaPrincipal::init() {
     this->show_all_children();
 }//init
 //Sesion
+
 void VentanaPrincipal::mostrarVentanaRegistrar() {
 
     if (this->ventanaRegistrar != 0)
@@ -92,11 +95,21 @@ void VentanaPrincipal::mostrarVentanaRegistrar() {
 }//mostrarVentanaRegistrar
 
 void VentanaPrincipal::showWindowLogin() {
+    if (this->windowLogin != 0)
+        return;
 
+    this->windowLogin = new WindowLogin();
+    this->windowLogin->signal_hide().connect(sigc::mem_fun(*this, &VentanaPrincipal::aboutWinClose));
+    this->windowLogin->show();
 }
 
 void VentanaPrincipal::showWindowConfig() {
+    if (this->windowConfig != 0)
+        return;
 
+    this->windowConfig = new WindowConfig();
+    this->windowConfig->signal_hide().connect(sigc::mem_fun(*this, &VentanaPrincipal::aboutWinClose));
+    this->windowConfig->show();
 }
 
 void VentanaPrincipal::exit() {
@@ -104,6 +117,7 @@ void VentanaPrincipal::exit() {
 }
 
 //Gestion
+
 void VentanaPrincipal::showWindowReserve() {
     if (this->ventanaReservar != 0)
         return;
@@ -140,17 +154,6 @@ void VentanaPrincipal::mostrarVentanaVuelos() {
     this->ventanaDibujo->signal_hide().connect(sigc::mem_fun(*this, &VentanaPrincipal::aboutWinClose));
     this->ventanaDibujo->show();
 }//mostrarVuelo
-
-
-
-//void VentanaPrincipal::mostrarVentanaItinerario() {
-//    if (this->ventanaItinerarios != 0)
-//        return;
-//
-//    this->ventanaItinerarios = new VentanaItinerarios();
-//    this->ventanaItinerarios->signal_hide().connect(sigc::mem_fun(*this, &VentanaPrincipal::aboutWinClose));
-//    this->ventanaItinerarios->show();
-//}//mostrarVentanaItinerario
 
 void VentanaPrincipal::aboutWinClose() {
     this->ventanaReservar = 0;

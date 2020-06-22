@@ -1,21 +1,14 @@
 #include "Client.h"
 
-Client::Client(string age, string name, string gender, string numPassport, string nationality/*,Aerolinea* aerolinea*/) {
+Client::Client(string age, string name, string gender, string numPassport, string password, Pais* nationality) {
     this->age=age;
     this->name=name;
     this->gender=gender;
     this->numPassport=numPassport;
     this->nationality=nationality;
-    this->aerolinea=aerolinea;
+    this->password=password;
+    this->travel=NULL;
 }//constructor
-
-void Client::SetNationality(string nationality) {
-    this->nationality = nationality;
-}
-
-string Client::GetNationality() const {
-    return nationality;
-}
 
 void Client::SetNumPassport(string numPassport) {
     this->numPassport = numPassport;
@@ -49,19 +42,22 @@ string Client::GetAge() const {
     return age;
 }
 
-void Client::SetAerolinea(Aerolinea* aerolinea) {
-    this->aerolinea = aerolinea;
+void Client::SetTravel(Itinerario* travel) {
+    this->travel = travel;
 }
 
-Aerolinea* Client::GetAerolinea() const {
-    return aerolinea;
+Itinerario* Client::GetTravel() const {
+    return travel;
 }
 
-string Client::toString() {
-    stringstream s;
-    
-    s<<this->age<<this->name<<this->gender<<this->numPassport<<this->nationality<<this->aerolinea;
-    
-    return s.str();
-    
-}//toString
+void Client::SetNationality(Pais* nationality) {
+    this->nationality = nationality;
+}
+
+Pais* Client::GetNationality() const {
+    return nationality;
+}
+
+void Client::SetPassword(string password) {
+    this->password = password;
+}
