@@ -23,26 +23,32 @@
 
 class VentanaPrincipal : public Gtk::Window {
 public:
-    
+
     VentanaPrincipal();
     void init();
     void mostrarVentanaRegistrar();
     void aboutWinClose();
     void mostrarVentanaItinerario();
+    void showWindowLogin();
+    void showWindowConfig();
+    void showWindowUpdate();
+    void showWindowDelete();
+    void showWindowReserve();
     void clickedOpenAdmin();
     void mostrarVentanaVuelos();
+    void exit();
 private:
     Gtk::MenuBar menuBar;
-    Gtk::MenuItem menuArchivo;
-    Gtk::Menu subMenuArchivo;
-    Gtk::ImageMenuItem menuRegistrar,menuAdmin,menuVuelo;   
-    
-    
+    Gtk::MenuItem menuSesion, menuGestion, menuAdmin;
+    Gtk::Menu subMenuSesion, subMenuGestion, subMenuAdmin;
+    Gtk::ImageMenuItem itemRegistrar, itemLogin, itemConfig, itemSalir, itemReserve, itemActualizar, itemEliminar, itemAdmin, itemVuelo;
+
+
     Gtk::Fixed fixed; // contenedor
     VentanaRegistrar* ventanaRegistrar;
     VentanaItinerarios* ventanaItinerarios;
     VentanaAdmin* ventanaAdmin;
-    VentanaMostrarVuelos* ventanaMostrarVuelo;
+    VentanaReservar * ventanaReservar;
     Drawing* drawing;
     VentanaDibujo* ventanaDibujo;
 };
