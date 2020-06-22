@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Proyecto_Algoritmos_copy
+PROJECTNAME=Proyecto_Algoritmos
 
 # Active Configuration
 DEFAULTCONF=Debug

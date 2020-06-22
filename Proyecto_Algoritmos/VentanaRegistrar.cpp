@@ -62,15 +62,6 @@ void VentanaRegistrar::onButtonClickedRegistrar() {
 
             Client* client = new Client(this->etEdad.get_text(), this->etNombre.get_text(), this->etGenero.get_text(), this->etPasaporte.get_text(), this->etNacionalidad.get_text());
             this->claseGrande->registrarCliente(client);
-
-
-            if (this->ventanaReservar != 0)
-                return;
-
-            this->ventanaReservar = new VentanaReservar();
-            this->ventanaReservar->signal_hide().connect(sigc::mem_fun(*this, &VentanaRegistrar::aboutWinClose));
-            this->ventanaReservar->show();
-            this->hide();
         } else {
             Gtk::MessageDialog dialogo(
                     *this,
