@@ -21,7 +21,7 @@ void Aerolinea::subirItinerario(){
 
 string Aerolinea::mostrarItinerario() {
     if(!this->itinerarios.empty())
-        return this->itinerarios.front()->toString();
+        return this->itinerarios.front()->toString2();
     else
         return "No hay";
 }//mostrarItinerario

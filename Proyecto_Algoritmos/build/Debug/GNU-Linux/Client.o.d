@@ -1,12 +1,12 @@
-build/Debug/GNU-Linux/Client.o: Client.cpp Client.h Aerolinea.h \
- Itinerario.h Avion.h Pais.h
+build/Debug/GNU-Linux/Client.o: Client.cpp Client.h Pais.h Aerolinea.h \
+ Itinerario.h Avion.h
 
 Client.h:
+
+Pais.h:
 
 Aerolinea.h:
 
 Itinerario.h:
 
 Avion.h:
-
-Pais.h:

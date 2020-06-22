@@ -17,9 +17,10 @@
 
 #include "VentanaRegistrar.h"
 #include "VentanaAdmin.h"
-#include "VentanaMostrarVuelos.h"
 #include "Drawing.h"
 #include "VentanaDibujo.h"
+#include "WindowLogin.h"
+#include "WindowConfig.h"
 
 class VentanaPrincipal : public Gtk::Window {
 public:
@@ -49,8 +50,10 @@ private:
     VentanaItinerarios* ventanaItinerarios;
     VentanaAdmin* ventanaAdmin;
     VentanaReservar * ventanaReservar;
+    WindowLogin * windowLogin;
     Drawing* drawing;
     VentanaDibujo* ventanaDibujo;
+    WindowConfig * windowConfig;
 };
 
 #endif /* VENTANAPRINCIPAL_H */

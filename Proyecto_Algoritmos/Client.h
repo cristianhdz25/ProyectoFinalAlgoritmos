@@ -2,15 +2,16 @@
 #define CLIENT_H
 
 #include <string>
+#include <iostream>
+#include "Pais.h"
 
 #include "Aerolinea.h"
 
 using namespace std;
 class Client {
 public:
-    Client(string age, string name, string gender, string numPassport, string nationality/*,Aerolinea* aerolinea*/);
-    void SetNationality(string nationality);
-    string GetNationality() const;
+    Client(string age, string name, string gender, string numPassport,string password, Pais* nationality);
+    
     void SetNumPassport(string numPassport);
     string GetNumPassport() const;
     void SetGender(string gender);
@@ -19,16 +20,17 @@ public:
     string GetName() const;
     void SetAge(string age);
     string GetAge() const;
-    void SetAerolinea(Aerolinea* aerolinea);
-    Aerolinea* GetAerolinea() const;
     string toString();
-    
+    void SetTravel(Itinerario* travel);
+    Itinerario* GetTravel() const;
+    void SetNationality(Pais* nationality);
+    Pais* GetNationality() const;
+    void SetPassword(string password);
+    string GetPassword() const;
+
 private:
-    string age;
-    string name;
-    string gender;
-    string numPassport;
-    string nationality;
-    Aerolinea* aerolinea;
+    string age, name, gender, numPassport, password;
+    Pais* nationality;
+    Itinerario* travel;
 };
 #endif /* CLIENT_H */

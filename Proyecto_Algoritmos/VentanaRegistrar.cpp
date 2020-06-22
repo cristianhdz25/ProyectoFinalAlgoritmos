@@ -8,7 +8,7 @@
 #include "Client.h"
 
 VentanaRegistrar::VentanaRegistrar() {
-    this->set_size_request(350, 300);
+    this->set_size_request(350, 350);
     this->set_title("Registrarse");
     this->claseGrande = ClaseGrande::getInstance();
     init();
@@ -35,14 +35,18 @@ void VentanaRegistrar::init() {
     this->lblNacionalidad.set_label("Nacionalidad");
     this->fixed.put(this->lblNacionalidad, 20, 180);
     this->fixed.put(this->etNacionalidad, 120, 180);
+    
+    this->lblPassword.set_label("Contraseña");
+    this->fixed.put(this->lblPassword, 20, 220);
+    this->fixed.put(this->etPassword, 120, 220);
 
     this->btnRegistrar.set_label("Registrar");
     this->btnRegistrar.signal_clicked().connect(sigc::mem_fun(*this, &VentanaRegistrar::onButtonClickedRegistrar));
-    this->fixed.put(this->btnRegistrar, 150, 220);
+    this->fixed.put(this->btnRegistrar, 150, 260);
 
     this->btnCancelar.set_label("Cancelar");
     this->btnCancelar.signal_clicked().connect(sigc::mem_fun(*this, &VentanaRegistrar::onButtonClickedCancelar));
-    this->fixed.put(this->btnCancelar, 250, 220);
+    this->fixed.put(this->btnCancelar, 250, 260);
 
     this->ventanaReservar = 0;
 
@@ -56,11 +60,12 @@ void VentanaRegistrar::onButtonClickedRegistrar() {
 
     if (!this->etEdad.get_text().empty() &&!this->etGenero.get_text().empty() && !this->etNacionalidad.get_text().empty()
             && !this->etNombre.get_text().empty()
-            && !this->etPasaporte.get_text().empty()) {
+            && !this->etPasaporte.get_text().empty() && !this->etPasaporte.get_text().empty()) {
 
         if (val.COMPROBARNUMEROS(this->etEdad.get_text()) && val.COMPROBARNUMEROS(this->etPasaporte.get_text())) {
 
-            Client* client = new Client(this->etEdad.get_text(), this->etNombre.get_text(), this->etGenero.get_text(), this->etPasaporte.get_text(), this->etNacionalidad.get_text());
+            Client* client = new Client(this->etEdad.get_text(), this->etNombre.get_text(), 
+                    this->etGenero.get_text(), this->etPasaporte.get_text(),this->etPassword.get_text(),new Pais(this->etNacionalidad.get_text()));
             this->claseGrande->registrarCliente(client);
         } else {
             Gtk::MessageDialog dialogo(

@@ -28,20 +28,11 @@ public:
     void aboutWinClose();
    
 private:
-    Gtk::Label lblEdad;
-    Gtk::Label lblNombre;
-    Gtk::Label lblGenero;
-    Gtk::Label lblPasaporte;
-    Gtk::Label lblNacionalidad;
+    Gtk::Label lblEdad,lblNombre,lblGenero,lblPasaporte,lblNacionalidad,lblPassword;
 
-    Gtk::Entry etEdad;
-    Gtk::Entry etNombre;
-    Gtk::Entry etGenero;
-    Gtk::Entry etPasaporte;
-    Gtk::Entry etNacionalidad;
+    Gtk::Entry etEdad,etNombre,etGenero,etPasaporte,etNacionalidad,etPassword;
 
-    Gtk::Button btnRegistrar;
-    Gtk::Button btnCancelar;
+    Gtk::Button btnRegistrar,btnCancelar;
 
     Gtk::Fixed fixed;
     VentanaReservar * ventanaReservar;

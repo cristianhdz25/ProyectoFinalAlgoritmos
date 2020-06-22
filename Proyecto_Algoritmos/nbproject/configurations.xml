@@ -30,10 +30,11 @@
         <itemPath>VentanaDibujo.h</itemPath>
         <itemPath>VentanaGestionar.h</itemPath>
         <itemPath>VentanaItinerarios.h</itemPath>
-        <itemPath>VentanaMostrarVuelos.h</itemPath>
         <itemPath>VentanaPrincipal.h</itemPath>
         <itemPath>VentanaRegistrar.h</itemPath>
         <itemPath>VentanaReservar.h</itemPath>
+        <itemPath>WindowConfig.h</itemPath>
+        <itemPath>WindowLogin.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f5" displayName="Utility" projectFiles="true">
         <itemPath>Validaciones.h</itemPath>
@@ -72,10 +73,11 @@
         <itemPath>VentanaDibujo.cpp</itemPath>
         <itemPath>VentanaGestionar.cpp</itemPath>
         <itemPath>VentanaItinerarios.cpp</itemPath>
-        <itemPath>VentanaMostrarVuelos.cpp</itemPath>
         <itemPath>VentanaPrincipal.cpp</itemPath>
         <itemPath>VentanaRegistrar.cpp</itemPath>
         <itemPath>VentanaReservar.cpp</itemPath>
+        <itemPath>WindowConfig.cpp</itemPath>
+        <itemPath>WindowLogin.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f4" displayName="Main" projectFiles="true">
         <itemPath>main.cpp</itemPath>
@@ -188,10 +190,6 @@
       </item>
       <item path="VentanaItinerarios.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="VentanaMostrarVuelos.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="VentanaMostrarVuelos.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="VentanaPrincipal.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="VentanaPrincipal.h" ex="false" tool="3" flavor2="0">
@@ -207,6 +205,14 @@
       <item path="Vertice.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Vertice.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WindowConfig.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="WindowConfig.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WindowLogin.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="WindowLogin.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -307,10 +313,6 @@
       </item>
       <item path="VentanaItinerarios.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="VentanaMostrarVuelos.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="VentanaMostrarVuelos.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="VentanaPrincipal.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="VentanaPrincipal.h" ex="false" tool="3" flavor2="0">
@@ -326,6 +328,14 @@
       <item path="Vertice.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Vertice.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WindowConfig.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="WindowConfig.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WindowLogin.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="WindowLogin.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
