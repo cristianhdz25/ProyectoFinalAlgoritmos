@@ -1,6 +1,5 @@
-build/Debug/GNU-Linux/VentanaPrincipal.o: VentanaPrincipal.cpp \
- VentanaPrincipal.h /usr/include/gtkmm-3.0/gtkmm.h \
- /usr/include/glibmm-2.4/glibmm.h \
+build/Debug/GNU-Linux/DeleteWindow.o: DeleteWindow.cpp DeleteWindow.h \
+ /usr/include/gtkmm-3.0/gtkmm.h /usr/include/glibmm-2.4/glibmm.h \
  /usr/lib/x86_64-linux-gnu/glibmm-2.4/include/glibmmconfig.h \
  /usr/include/glibmm-2.4/glibmm/thread.h /usr/include/glib-2.0/glib.h \
  /usr/include/glib-2.0/glib/galloca.h /usr/include/glib-2.0/glib/gtypes.h \
@@ -1142,14 +1141,9 @@ build/Debug/GNU-Linux/VentanaPrincipal.o: VentanaPrincipal.cpp \
  /usr/include/gtkmm-3.0/gtkmm/treestore.h \
  /usr/include/gtkmm-3.0/gtkmm/uimanager.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
- /usr/include/gtkmm-3.0/gtkmm/volumebutton.h VentanaRegistrar.h \
- VentanaReservar.h VentanaItinerarios.h ClaseGrande.h Aerolinea.h \
- Itinerario.h Avion.h Pais.h AerolineaBusiness.h AerolineaData.h Grafo.h \
- Vertice.h Client.h VentanaAdmin.h VentanaGestionar.h Drawing.h Arista.h \
- VentanaDibujo.h WindowLogin.h WindowConfig.h ActualizarVuelo.h \
- DeleteWindow.h
+ /usr/include/gtkmm-3.0/gtkmm/volumebutton.h
 
-VentanaPrincipal.h:
+DeleteWindow.h:
 
 /usr/include/gtkmm-3.0/gtkmm.h:
 
@@ -3534,47 +3528,3 @@ VentanaPrincipal.h:
 /usr/include/gtkmm-3.0/gtkmm/viewport.h:
 
 /usr/include/gtkmm-3.0/gtkmm/volumebutton.h:
-
-VentanaRegistrar.h:
-
-VentanaReservar.h:
-
-VentanaItinerarios.h:
-
-ClaseGrande.h:
-
-Aerolinea.h:
-
-Itinerario.h:
-
-Avion.h:
-
-Pais.h:
-
-AerolineaBusiness.h:
-
-AerolineaData.h:
-
-Grafo.h:
-
-Vertice.h:
-
-Client.h:
-
-VentanaAdmin.h:
-
-VentanaGestionar.h:
-
-Drawing.h:
-
-Arista.h:
-
-VentanaDibujo.h:
-
-WindowLogin.h:
-
-WindowConfig.h:
-
-ActualizarVuelo.h:
-
-DeleteWindow.h:

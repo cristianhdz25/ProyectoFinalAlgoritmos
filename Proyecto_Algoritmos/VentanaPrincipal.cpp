@@ -7,7 +7,6 @@
 
 VentanaPrincipal::VentanaPrincipal() {
     this->set_size_request(600, 600);
-    this->claseGrande = ClaseGrande::getInstance();
     init();
 }//constructor
 
@@ -63,9 +62,6 @@ void VentanaPrincipal::init() {
     this->itemEliminar.signal_activate().connect(sigc::mem_fun(*this, &VentanaPrincipal::showWindowDelete));
     this->subMenuGestion.append(this->itemEliminar);
 
-    //    this->itemVuelo.signal_activate().connect(sigc::mem_fun(*this, &VentanaPrincipal::));
-    //    this->subMenuGestion.append(this->itemVuelo);
-    //----------------------------//
     //Administracion
     this->itemAdmin.signal_activate().connect(sigc::mem_fun(*this, &VentanaPrincipal::clickedOpenAdmin));
     this->subMenuAdmin.append(this->itemAdmin);
@@ -80,6 +76,9 @@ void VentanaPrincipal::init() {
     this->ventanaAdmin = 0;
     this->ventanaRegistrar = 0;
     this->ventanaItinerarios = 0;
+    this->actualizarVuelo=0;
+    this->deleteWindow=0;
+    
     this->add(fixed);
     this->show_all_children();
 }//init
@@ -115,7 +114,7 @@ void VentanaPrincipal::showWindowConfig() {
 
 void VentanaPrincipal::exit() {
     this->hide();
-}
+}//exit
 
 //Gestion
 
@@ -129,11 +128,21 @@ void VentanaPrincipal::showWindowReserve() {
 }
 
 void VentanaPrincipal::showWindowDelete() {
-
-}
+    if(this->deleteWindow !=0)
+        return;
+    
+    this->deleteWindow=new DeleteWindow();
+    this->deleteWindow->signal_hide().connect(sigc::mem_fun(*this,&VentanaPrincipal::aboutWinClose));
+    this->deleteWindow->show();
+}//showWindowDelete
 
 void VentanaPrincipal::showWindowUpdate() {
+    if (this->actualizarVuelo != 0)
+        return;
 
+    this->actualizarVuelo=new ActualizarVuelo();
+    this->actualizarVuelo->signal_hide().connect(sigc::mem_fun(*this, &VentanaPrincipal::aboutWinClose));
+    this->actualizarVuelo->show();
 }
 
 //Administracion
@@ -162,4 +171,6 @@ void VentanaPrincipal::aboutWinClose() {
     this->ventanaItinerarios = 0;
     this->ventanaAdmin = 0;
     this->ventanaDibujo = 0;
+    this->actualizarVuelo=0;
+    this->deleteWindow=0;
 }//aboutWinClose

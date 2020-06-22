@@ -9,6 +9,7 @@
 class VentanaDibujo : public Gtk::Window {
 public:
     VentanaDibujo();
+  
 private:
     Drawing d;
 };

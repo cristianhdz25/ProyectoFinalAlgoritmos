@@ -21,6 +21,8 @@
 #include "VentanaDibujo.h"
 #include "WindowLogin.h"
 #include "WindowConfig.h"
+#include "ActualizarVuelo.h"
+#include "DeleteWindow.h"
 
 class VentanaPrincipal : public Gtk::Window {
 public:
@@ -43,9 +45,9 @@ private:
     Gtk::MenuItem menuSesion, menuGestion, menuAdmin;
     Gtk::Menu subMenuSesion, subMenuGestion, subMenuAdmin;
     Gtk::ImageMenuItem itemRegistrar, itemLogin, itemConfig, itemSalir, itemReserve, itemActualizar, itemEliminar, itemAdmin, itemVuelo;
+
+
     Gtk::Fixed fixed; // contenedor
-    
-    ClaseGrande * claseGrande;
     VentanaRegistrar* ventanaRegistrar;
     VentanaItinerarios* ventanaItinerarios;
     VentanaAdmin* ventanaAdmin;
@@ -54,6 +56,8 @@ private:
     Drawing* drawing;
     VentanaDibujo* ventanaDibujo;
     WindowConfig * windowConfig;
+    ActualizarVuelo* actualizarVuelo;
+    DeleteWindow* deleteWindow;
 };
 
 #endif /* VENTANAPRINCIPAL_H */
