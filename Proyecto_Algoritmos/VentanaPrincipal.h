@@ -43,9 +43,9 @@ private:
     Gtk::MenuItem menuSesion, menuGestion, menuAdmin;
     Gtk::Menu subMenuSesion, subMenuGestion, subMenuAdmin;
     Gtk::ImageMenuItem itemRegistrar, itemLogin, itemConfig, itemSalir, itemReserve, itemActualizar, itemEliminar, itemAdmin, itemVuelo;
-
-
     Gtk::Fixed fixed; // contenedor
+    
+    ClaseGrande * claseGrande;
     VentanaRegistrar* ventanaRegistrar;
     VentanaItinerarios* ventanaItinerarios;
     VentanaAdmin* ventanaAdmin;

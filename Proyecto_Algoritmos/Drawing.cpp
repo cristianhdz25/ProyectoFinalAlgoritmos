@@ -1,10 +1,10 @@
 #include "Drawing.h"
 
 Drawing::Drawing() {
+    this->grafo = Grafo::getInstance();
     this->set_size_request(800, 800);
     this->aristas = new vector<Arista*>();
     this->vertice = new Vertice();
-    this->grafo = Grafo::getInstance();
     initPosiciones();
 }//constructor
 
@@ -20,18 +20,18 @@ void Drawing::initPosiciones() {
     int y = 0;
     int x1 = 0;
     int y1 = 0;
-    
+
     for (int i = 0; i<this->grafo->grafo.size(); i++) {
-        if(this->grafo->grafo.at(i)->getPosX()==0 && this->grafo->grafo.at(i)->getPosY()==0){
-        this->grafo->grafo.at(i)->setPosX(x += 30);
-        this->grafo->grafo.at(i)->setPosY(y = 10);
+        if (this->grafo->grafo.at(i)->getPosX() == 0 && this->grafo->grafo.at(i)->getPosY() == 0) {
+            this->grafo->grafo.at(i)->setPosX(x += 30);
+            this->grafo->grafo.at(i)->setPosY(y = 10);
         }
-        for (int j = 0; j< this->grafo->grafo.at(i)->listaAristas.size(); j++) {        
+        for (int j = 0; j< this->grafo->grafo.at(i)->listaAristas.size(); j++) {
             this->grafo->grafo.at(i)->listaAristas.at(j)->setPosX(x1 += 30);
             this->grafo->grafo.at(i)->listaAristas.at(j)->setPosY(y1 = 200);
-            this->aristas->push_back(new Arista(grafo->grafo.at(i),this->grafo->grafo.at(i)->listaAristas.at(j)));
+            this->aristas->push_back(new Arista(grafo->grafo.at(i), this->grafo->grafo.at(i)->listaAristas.at(j)));
         }
-        
+
     }
 }//asignaPosiciones  
 

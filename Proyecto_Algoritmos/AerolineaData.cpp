@@ -23,7 +23,7 @@ AerolineaData::AerolineaData() {
     this->aerolineas.push_back(new Aerolinea("VueltoAchiote"));
     this->aerolineas.push_back(new Aerolinea("VueltoZorritone"));
     this->grafo = Grafo::getInstance();
-   this->initItinerarios();
+    this->initItinerarios();
 }//constructor
 
 void AerolineaData::initItinerarios() {

@@ -7,6 +7,7 @@
 
 VentanaPrincipal::VentanaPrincipal() {
     this->set_size_request(600, 600);
+    this->claseGrande = ClaseGrande::getInstance();
     init();
 }//constructor
 
