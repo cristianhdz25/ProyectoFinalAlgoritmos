@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/ActualizarVuelo.o \
 	${OBJECTDIR}/Aerolinea.o \
 	${OBJECTDIR}/AerolineaBusiness.o \
 	${OBJECTDIR}/AerolineaData.o \
@@ -42,6 +43,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Avion.o \
 	${OBJECTDIR}/ClaseGrande.o \
 	${OBJECTDIR}/Client.o \
+	${OBJECTDIR}/DeleteWindow.o \
 	${OBJECTDIR}/Drawing.o \
 	${OBJECTDIR}/Grafo.o \
 	${OBJECTDIR}/Itinerario.o \
@@ -87,6 +89,11 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proyecto_algoritmos: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proyecto_algoritmos ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/ActualizarVuelo.o: ActualizarVuelo.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ActualizarVuelo.o ActualizarVuelo.cpp
+
 ${OBJECTDIR}/Aerolinea.o: Aerolinea.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -121,6 +128,11 @@ ${OBJECTDIR}/Client.o: Client.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Client.o Client.cpp
+
+${OBJECTDIR}/DeleteWindow.o: DeleteWindow.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DeleteWindow.o DeleteWindow.cpp
 
 ${OBJECTDIR}/Drawing.o: Drawing.cpp
 	${MKDIR} -p ${OBJECTDIR}

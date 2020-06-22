@@ -52,7 +52,7 @@ void WindowConfig::init() {
     this->fixed.put(this->lblPassword, 20, 220);
     this->fixed.put(this->etPassword, 120, 220);
 
-    this->btnUpdate.set_label("Actualizar");
+    this->btnUpdate.set_label("Registrar");
     this->btnUpdate.signal_clicked().connect(sigc::mem_fun(*this, &WindowConfig::onButtonClickedUpdate));
     this->fixed.put(this->btnUpdate, 150, 260);
 
