@@ -24,7 +24,7 @@ void VentanaItinerarios::init() {
 
     this->etHora.set_editable(false);
     this->fixed.put(this->etHora, 20, 140);
-    if (!this->claseGrande->getAerolineas().front()->getItinerarios().empty())
+    if (!this->claseGrande->getAerolineas()->front()->getItinerarios().empty())
         this->etHora.set_text(this->claseGrande->mostrarItinerario());
 
     this->btnAceptar.set_label("Aceptar");

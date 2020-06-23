@@ -24,7 +24,7 @@ public:
     
     void registrarAerolinea(Aerolinea* aerolinea); 
     
-    list<Aerolinea*> getAerolineas() const;
+    list<Aerolinea*>* getAerolineas() const;
     
 private:
     AerolineaData* aerolineaData;
