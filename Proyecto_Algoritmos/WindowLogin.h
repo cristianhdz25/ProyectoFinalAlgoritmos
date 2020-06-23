@@ -27,7 +27,7 @@ public:
 private:
     Gtk::Label lblPassport, lblPassword;
     Gtk::Entry etPassport, etPassword;
-    ClaseGrande * claseGrande;
+    ClaseGrande* claseGrande;
     
     Gtk::Button btnLogin, btnExit;
     Gtk::Fixed fixed;

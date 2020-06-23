@@ -39,6 +39,8 @@ void WindowLogin::init() {
     this->btnExit.signal_clicked().connect(sigc::mem_fun(*this, &WindowLogin::onButtonClickedExit));
     this->fixed.put(this->btnExit, 135, 140);
 
+    
+    this->claseGrande=ClaseGrande::getInstance();
     this->add(this->fixed);
     this->show_all_children();
 }//init()
