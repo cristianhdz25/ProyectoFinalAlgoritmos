@@ -35,7 +35,7 @@ void VentanaRegistrar::init() {
     this->lblNacionalidad.set_label("Nacionalidad");
     this->fixed.put(this->lblNacionalidad, 20, 180);
     this->fixed.put(this->etNacionalidad, 120, 180);
-    
+
     this->lblPassword.set_label("Contraseña");
     this->fixed.put(this->lblPassword, 20, 220);
     this->fixed.put(this->etPassword, 120, 220);
@@ -64,8 +64,8 @@ void VentanaRegistrar::onButtonClickedRegistrar() {
 
         if (val.COMPROBARNUMEROS(this->etEdad.get_text()) && val.COMPROBARNUMEROS(this->etPasaporte.get_text())) {
 
-            Client* client = new Client(this->etEdad.get_text(), this->etNombre.get_text(), 
-                    this->etGenero.get_text(), this->etPasaporte.get_text(),this->etPassword.get_text(),new Pais(this->etNacionalidad.get_text()));
+            Client* client = new Client(this->etEdad.get_text(), this->etNombre.get_text(),
+                    this->etGenero.get_text(), this->etPasaporte.get_text(), this->etPassword.get_text(), new Pais(this->etNacionalidad.get_text()));
             this->claseGrande->registrarCliente(client);
         } else {
             Gtk::MessageDialog dialogo(

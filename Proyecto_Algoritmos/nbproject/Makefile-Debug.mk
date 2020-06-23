@@ -43,6 +43,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Avion.o \
 	${OBJECTDIR}/ClaseGrande.o \
 	${OBJECTDIR}/Client.o \
+	${OBJECTDIR}/Compra.o \
 	${OBJECTDIR}/DeleteWindow.o \
 	${OBJECTDIR}/Drawing.o \
 	${OBJECTDIR}/Grafo.o \
@@ -128,6 +129,11 @@ ${OBJECTDIR}/Client.o: Client.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Client.o Client.cpp
+
+${OBJECTDIR}/Compra.o: Compra.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Compra.o Compra.cpp
 
 ${OBJECTDIR}/DeleteWindow.o: DeleteWindow.cpp
 	${MKDIR} -p ${OBJECTDIR}

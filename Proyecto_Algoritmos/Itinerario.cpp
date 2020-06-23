@@ -57,7 +57,6 @@ string Itinerario::toString() {
 }
 string Itinerario::toString2() {
     stringstream s;
-
     s << this->origen->toString() << "-" << this->destino->toString() <<" -> " << this->hora;
     return s.str();
 }
