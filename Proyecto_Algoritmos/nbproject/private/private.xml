@@ -16,7 +16,6 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
             <file>file:/home/fabricio/Descargas/ProyectoFinalAlgoritmos-master/ProyectoFinalAlgoritmos/Proyecto_Algoritmos/VentanaPrincipal.h</file>
             <file>file:/home/fabricio/Descargas/ProyectoFinalAlgoritmos-master/ProyectoFinalAlgoritmos/Proyecto_Algoritmos/Avion.cpp</file>
             <file>file:/home/fabricio/Descargas/ProyectoFinalAlgoritmos-master/ProyectoFinalAlgoritmos/Proyecto_Algoritmos/ClaseGrande.h</file>
@@ -41,21 +40,6 @@
             <file>file:/home/fabricio/Descargas/ProyectoFinalAlgoritmos-master/ProyectoFinalAlgoritmos/Proyecto_Algoritmos/AerolineaBusiness.cpp</file>
             <file>file:/home/fabricio/Descargas/ProyectoFinalAlgoritmos-master/ProyectoFinalAlgoritmos/Proyecto_Algoritmos/Drawing.cpp</file>
             <file>file:/home/fabricio/Descargas/ProyectoFinalAlgoritmos-master/ProyectoFinalAlgoritmos/Proyecto_Algoritmos/VentanaDibujo.cpp</file>
-=======
-            <file>file:/home/carlos/Escritorio/Repositorio/ProyectoFinalAlgoritmos/Proyecto_Algoritmos/VentanaReservar.cpp</file>
-            <file>file:/home/carlos/Escritorio/Repositorio/ProyectoFinalAlgoritmos/Proyecto_Algoritmos/Client.cpp</file>
-            <file>file:/home/carlos/Escritorio/Repositorio/ProyectoFinalAlgoritmos/Proyecto_Algoritmos/Compra.h</file>
-            <file>file:/home/carlos/Escritorio/Repositorio/ProyectoFinalAlgoritmos/Proyecto_Algoritmos/Itinerario.cpp</file>
-            <file>file:/home/carlos/Escritorio/Repositorio/ProyectoFinalAlgoritmos/Proyecto_Algoritmos/Avion.cpp</file>
-            <file>file:/home/carlos/Escritorio/Repositorio/ProyectoFinalAlgoritmos/Proyecto_Algoritmos/VentanaRegistrar.cpp</file>
-            <file>file:/home/carlos/Escritorio/Repositorio/ProyectoFinalAlgoritmos/Proyecto_Algoritmos/VentanaItinerarios.cpp</file>
-            <file>file:/home/carlos/Escritorio/Repositorio/ProyectoFinalAlgoritmos/Proyecto_Algoritmos/ClaseGrande.cpp</file>
-            <file>file:/home/carlos/Escritorio/Repositorio/ProyectoFinalAlgoritmos/Proyecto_Algoritmos/Grafo.h</file>
-            <file>file:/home/carlos/Escritorio/Repositorio/ProyectoFinalAlgoritmos/Proyecto_Algoritmos/Client.h</file>
-            <file>file:/home/carlos/Escritorio/Repositorio/ProyectoFinalAlgoritmos/Proyecto_Algoritmos/Compra.cpp</file>
-            <file>file:/home/carlos/Escritorio/Repositorio/ProyectoFinalAlgoritmos/Proyecto_Algoritmos/ClaseGrande.h</file>
-            <file>file:/home/carlos/Escritorio/Repositorio/ProyectoFinalAlgoritmos/Proyecto_Algoritmos/main.cpp</file>
->>>>>>> 7e62fdc062cc4ac753c23b261b8f41bd005f9340
         </group>
     </open-files>
 </project-private>
