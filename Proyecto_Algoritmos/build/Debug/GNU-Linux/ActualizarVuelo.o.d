@@ -1,5 +1,5 @@
-build/Debug/GNU-Linux/VentanaReservar.o: VentanaReservar.cpp \
- VentanaReservar.h /usr/include/gtkmm-3.0/gtkmm.h \
+build/Debug/GNU-Linux/ActualizarVuelo.o: ActualizarVuelo.cpp \
+ ActualizarVuelo.h /usr/include/gtkmm-3.0/gtkmm.h \
  /usr/include/glibmm-2.4/glibmm.h /usr/include/glibmm-2.4/glibmm/thread.h \
  /usr/include/glibmm-2.4/glibmm/threads.h \
  /usr/include/glibmm-2.4/glibmm/balancedtree.h \
@@ -356,7 +356,7 @@ build/Debug/GNU-Linux/VentanaReservar.o: VentanaReservar.cpp \
  ClaseGrande.h Aerolinea.h Itinerario.h Avion.h Pais.h \
  AerolineaBusiness.h AerolineaData.h Grafo.h Vertice.h Client.h Compra.h
 
-VentanaReservar.h:
+ActualizarVuelo.h:
 
 /usr/include/gtkmm-3.0/gtkmm.h:
 
