@@ -25,14 +25,20 @@ int main(int argc, char** argv) {
 //    grafo.moverVertices(4);
 //    grafo.moverVertices(5);
 //    //        
-                Glib::RefPtr<Gtk::Application> app =
-                        Gtk::Application::create(argc, argv, "flag2");
-            
-                VentanaPrincipal ventana;
-                ventana.set_title("Ventana Principal");
-            
-                return app->run(ventana);
+//                Glib::RefPtr<Gtk::Application> app =
+//                        Gtk::Application::create(argc, argv, "flag2");
+//            
+//                VentanaPrincipal ventana;
+//                ventana.set_title("Ventana Principal");
+//            
+//                return app->run(ventana);
+    
+        
 
+                ClaseGrande * claseGrande = ClaseGrande::getInstance();
+                
+                claseGrande->registrarCliente(new Client("12","Nombre","Genero","Pasaporte","contra",new Pais("CR")));
+                cout<<claseGrande->searchClient("Pasaporte","contra")<<endl;
     //Aerolinea* aerolinea=new Aerolinea("A");
     //cout<<"1"<<((Itinerario*)aerolinea->getItinerarios().front())->toString()<<endl;
     //aerolinea->arribaItinerarios();

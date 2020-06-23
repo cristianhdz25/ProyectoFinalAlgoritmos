@@ -13,7 +13,7 @@ using namespace std;
 VentanaItinerarios::VentanaItinerarios() {
     this->set_size_request(350, 300);
     this->set_title("Reservar");
-    
+
     this->claseGrande = ClaseGrande::getInstance();
     init();
 }//constructor
@@ -24,7 +24,7 @@ void VentanaItinerarios::init() {
 
     this->etHora.set_editable(false);
     this->fixed.put(this->etHora, 20, 140);
-    if(!this->claseGrande->getAerolineas().front()->getItinerarios().empty())
+    if (!this->claseGrande->getAerolineas().front()->getItinerarios().empty())
         this->etHora.set_text(this->claseGrande->mostrarItinerario());
 
     this->btnAceptar.set_label("Aceptar");
@@ -42,13 +42,13 @@ void VentanaItinerarios::init() {
     mostrarItinerario();
     this->tvMostrar.set_editable(false);
     this->fixed.put(tvMostrar, 20, 40);
-   
+
     this->add(this->fixed);
     this->show_all_children();
 }//init
 
 void VentanaItinerarios::onButtonClickedAceptar() {
-    
+    this->claseGrande->registrarCompra();
 }
 
 void VentanaItinerarios::onButtonClickedCancelar() {

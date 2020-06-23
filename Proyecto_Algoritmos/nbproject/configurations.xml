@@ -18,6 +18,7 @@
         <itemPath>Avion.h</itemPath>
         <itemPath>ClaseGrande.h</itemPath>
         <itemPath>Client.h</itemPath>
+        <itemPath>Compra.h</itemPath>
         <itemPath>Grafo.h</itemPath>
         <itemPath>Itinerario.h</itemPath>
         <itemPath>Pais.h</itemPath>
@@ -63,6 +64,7 @@
         <itemPath>Avion.cpp</itemPath>
         <itemPath>ClaseGrande.cpp</itemPath>
         <itemPath>Client.cpp</itemPath>
+        <itemPath>Compra.cpp</itemPath>
         <itemPath>Grafo.cpp</itemPath>
         <itemPath>Itinerario.cpp</itemPath>
         <itemPath>Pais.cpp</itemPath>
@@ -160,6 +162,10 @@
       <item path="Client.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Client.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Compra.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Compra.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="DeleteWindow.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -291,6 +297,10 @@
       <item path="Client.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Client.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Compra.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Compra.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="DeleteWindow.cpp" ex="false" tool="1" flavor2="0">
       </item>
