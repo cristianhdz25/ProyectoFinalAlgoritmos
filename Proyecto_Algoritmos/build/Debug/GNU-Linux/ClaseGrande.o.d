@@ -1143,7 +1143,7 @@ build/Debug/GNU-Linux/ClaseGrande.o: ClaseGrande.cpp ClaseGrande.h \
  /usr/include/gtkmm-3.0/gtkmm/treestore.h \
  /usr/include/gtkmm-3.0/gtkmm/uimanager.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
- /usr/include/gtkmm-3.0/gtkmm/volumebutton.h Client.h
+ /usr/include/gtkmm-3.0/gtkmm/volumebutton.h Client.h Compra.h
 
 ClaseGrande.h:
 
@@ -3548,3 +3548,5 @@ Vertice.h:
 /usr/include/gtkmm-3.0/gtkmm/volumebutton.h:
 
 Client.h:
+
+Compra.h:

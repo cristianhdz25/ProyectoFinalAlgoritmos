@@ -1,5 +1,6 @@
 #include "ClaseGrande.h"
 #include "AerolineaData.h"
+#include "Compra.h"
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -13,9 +14,7 @@ ClaseGrande::ClaseGrande() {
 
 ClaseGrande* ClaseGrande::getInstance() {
     if (instance == 0) {
-
         instance = new ClaseGrande();
-
     }//if
     return instance;
 
@@ -65,12 +64,33 @@ void ClaseGrande::registrarCliente(Client* client) {
     this->listaCliente.push_back(client);
 }//registrarCliente
 
+Client* ClaseGrande::searchClient(string passport, string password) {
+    if (!this->listaCliente.empty()) {
+         cout << "search Entro" << endl;
+        for (int i = 0; i<this->listaCliente.size(); i++) {
+            cout << "for Entro" << endl;
+            if (this->listaCliente.at(i)->GetNumPassport() == passport && this->listaCliente.at(i)->GetPassword() == password) {
+                 cout << this->listaCliente.at(i)->toString()<< endl;
+                return this->listaCliente.at(i);
+            }//if
+        }//for
+    }//if
+    cout<<"NULL"<<endl;
+    return NULL;
+}//searchClient
+
+void ClaseGrande::registrarCompra() {
+    this->usuarioActual->SetTravel(this->aerolineas.front()->getItinerarios().front());
+    Compra* compras = new Compra(this->usuarioActual);
+    this->listaCompra.push_back(compras);
+}//registrarCompra
+
 void ClaseGrande::moverVertices() {
 
 }//moverVertices
 
 void ClaseGrande::mostrarVertices() {
-   
+
 }//mostrarVertice
 
 void ClaseGrande::setAerolineas(list<Aerolinea*> aerolineas) {

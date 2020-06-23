@@ -11,7 +11,7 @@ using namespace std;
 class Client {
 public:
     Client(string age, string name, string gender, string numPassport,string password, Pais* nationality);
-    
+    Client();
     void SetNumPassport(string numPassport);
     string GetNumPassport() const;
     void SetGender(string gender);

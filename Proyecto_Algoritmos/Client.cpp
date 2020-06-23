@@ -1,14 +1,17 @@
 #include "Client.h"
 
 Client::Client(string age, string name, string gender, string numPassport, string password, Pais* nationality) {
-    this->age=age;
-    this->name=name;
-    this->gender=gender;
-    this->numPassport=numPassport;
-    this->nationality=nationality;
-    this->password=password;
-    this->travel=NULL;
+    this->age = age;
+    this->name = name;
+    this->gender = gender;
+    this->numPassport = numPassport;
+    this->nationality = nationality;
+    this->password = password;
+    this->travel = NULL;
 }//constructor
+
+Client::Client() {
+}
 
 void Client::SetNumPassport(string numPassport) {
     this->numPassport = numPassport;
@@ -61,3 +64,20 @@ Pais* Client::GetNationality() const {
 void Client::SetPassword(string password) {
     this->password = password;
 }
+
+string Client::GetPassword() const {
+    return password;
+}
+
+string Client::toString() {
+    stringstream s;
+    if (this->travel != NULL) {
+        s << this->age << this->name << this->gender  << this->numPassport << this->nationality->toString() << this->travel->toString();
+
+    } else {
+        s << this->age <<" "<< this->name <<" "<< this->gender <<" "<< this->numPassport<<" " <<this->nationality->toString();
+
+
+    }
+    return s.str();
+}//toString

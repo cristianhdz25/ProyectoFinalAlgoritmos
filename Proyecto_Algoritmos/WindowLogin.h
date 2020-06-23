@@ -15,6 +15,7 @@
 #define WINDOWLOGIN_H
 
 #include <gtkmm.h>
+#include "ClaseGrande.h"
 
 class WindowLogin : public Gtk::Window {
 public:
@@ -26,7 +27,8 @@ public:
 private:
     Gtk::Label lblPassport, lblPassword;
     Gtk::Entry etPassport, etPassword;
-
+    ClaseGrande * claseGrande;
+    
     Gtk::Button btnLogin, btnExit;
     Gtk::Fixed fixed;
 };

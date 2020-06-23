@@ -14,6 +14,7 @@
 #include "WindowLogin.h"
 
 #include <gtkmm.h>
+#include "Client.h"
 
 WindowLogin::WindowLogin() {
     this->set_size_request(200, 200);
@@ -43,11 +44,46 @@ void WindowLogin::init() {
 }//init()
 
 void WindowLogin::onButtonClickedLogin() {
+    if (!this->etPassport.get_text().empty() && !this->etPassword.get_text().empty()) {
+          cout << "clicked Entro" << endl;
+          
+        Client * client = this->claseGrande->searchClient(this->etPassport.get_text(), this->etPassword.get_text());
+        
+        if (client != NULL) {
+            
+            Gtk::MessageDialog dialogo(
+                    *this,
+                    "Se ha iniciado sesion exitosamente",
+                    false,
+                    Gtk::MESSAGE_INFO
+                    );
+            dialogo.run();
+              cout << "if clicked Entro" << endl;
+        } else {
+            Gtk::MessageDialog dialogo(
+                    *this,
+                    "Error al iniciar sesion",
+                    false,
+                    Gtk::MESSAGE_INFO
+                    );
+            dialogo.set_secondary_text("Datos no existen");
+            dialogo.run();
+        }//if-else
 
-}
+    } else {
+        Gtk::MessageDialog dialogo(
+                *this,
+                "Error al iniciar sesion",
+                false,
+                Gtk::MESSAGE_INFO
+                );
+        dialogo.set_secondary_text("Espacios en blanco");
+        dialogo.run();
+    }//else
+}//
 
 void WindowLogin::onButtonClickedExit() {
-        this->hide();
+    this->hide();
 }
 
 

@@ -3,9 +3,11 @@
 #define CLASEGRANDE_H
 #include <list>
 #include <queue> 
+#include "string"
 #include "Aerolinea.h"
 #include "AerolineaBusiness.h"
 #include "Client.h"
+#include "Compra.h"
 
 using namespace std;
 
@@ -27,14 +29,21 @@ public:
     void arriba();
     void abajo();
     void registrarCliente(Client* client);
+    Client* searchClient(string passport, string password);
     void moverVertices();
     void mostrarVertices();
+    void setUsuarioActual(Client* usuarioActual);
+    Client* getUsuarioActual() const;
+    void registrarCompra(); 
 private:
     list<Aerolinea*> aerolineas;
     AerolineaBusiness* aerolineaBusiness;
     static ClaseGrande* instance;
     vector<Client*> listaCliente;
     Grafo* grafo;
+    Client* usuarioActual;
+    vector<Compra*> listaCompra;
+    Compra* compra;
 };
 
 #endif /* CLASEGRANDE_H */
