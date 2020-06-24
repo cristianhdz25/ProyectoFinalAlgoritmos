@@ -13,7 +13,7 @@ using namespace std;
 
 class ClaseGrande {
 public:
-    
+    ClaseGrande();
     static ClaseGrande* getInstance(); //constructor singleton
     virtual ~ClaseGrande();
 
@@ -24,8 +24,8 @@ public:
     void arribaItinerario();
     void registrarAerolinea(Aerolinea* aerolinea);
     void registrarItinerario(Itinerario* itinerario);
-    void setAerolineas(list<Aerolinea*>* aerolineas);
-    list<Aerolinea*>* getAerolineas();
+    void setAerolineas(list<Aerolinea*> aerolineas);
+    list<Aerolinea*> getAerolineas();
     void arriba();
     void abajo();
     void registrarCliente(Client* client);
@@ -36,14 +36,13 @@ public:
     Client* getUsuarioActual() const;
     void registrarCompra(); 
 private:
-    ClaseGrande();
-    list<Aerolinea*>* aerolineas;
+    list<Aerolinea*> aerolineas;
     AerolineaBusiness* aerolineaBusiness;
     static ClaseGrande* instance;
-    vector<Client*>* listaCliente;
+    vector<Client*> listaCliente;
     Grafo* grafo;
     Client* usuarioActual;
-    vector<Compra*>* listaCompra;
+    vector<Compra*> listaCompra;
     Compra* compra;
 };
 
