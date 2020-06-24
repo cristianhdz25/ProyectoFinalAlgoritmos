@@ -48,6 +48,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Drawing.o \
 	${OBJECTDIR}/Grafo.o \
 	${OBJECTDIR}/Itinerario.o \
+	${OBJECTDIR}/Main.o \
 	${OBJECTDIR}/Pais.o \
 	${OBJECTDIR}/UsuarioAdministrador.o \
 	${OBJECTDIR}/UsuarioAdministradorBusiness.o \
@@ -63,8 +64,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Vertice.o \
 	${OBJECTDIR}/WindowConfig.o \
 	${OBJECTDIR}/WindowFlights.o \
-	${OBJECTDIR}/WindowLogin.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/WindowLogin.o
 
 
 # C Compiler Flags
@@ -156,6 +156,11 @@ ${OBJECTDIR}/Itinerario.o: Itinerario.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Itinerario.o Itinerario.cpp
 
+${OBJECTDIR}/Main.o: Main.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Main.o Main.cpp
+
 ${OBJECTDIR}/Pais.o: Pais.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -235,11 +240,6 @@ ${OBJECTDIR}/WindowLogin.o: WindowLogin.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/WindowLogin.o WindowLogin.cpp
-
-${OBJECTDIR}/main.o: main.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 # Subprojects
 .build-subprojects:

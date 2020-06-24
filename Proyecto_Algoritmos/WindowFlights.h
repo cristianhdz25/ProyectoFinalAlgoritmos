@@ -55,7 +55,7 @@ protected:
     ModelColumns m_Columns;
 
     //Child widgets:
-    list<Aerolinea*> aerolineas;
+    list<Aerolinea*>* aerolineas;
     ClaseGrande * claseGrande;
     Gtk::Box m_VBox;
     Gtk::ScrolledWindow m_ScrolledWindow;

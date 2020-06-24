@@ -19,15 +19,16 @@
 using namespace std;
 
 AerolineaData::AerolineaData() {
-    this->aerolineas.push_back(new Aerolinea("VueltoPenzoil"));
-    this->aerolineas.push_back(new Aerolinea("VueltoAchiote"));
-    this->aerolineas.push_back(new Aerolinea("VueltoZorritone"));
+    this->aerolineas=new list<Aerolinea*>();
+    this->aerolineas->push_back(new Aerolinea("VueltoPenzoil"));
+    this->aerolineas->push_back(new Aerolinea("VueltoAchiote"));
+    this->aerolineas->push_back(new Aerolinea("VueltoZorritone"));
     this->grafo = Grafo::getInstance();
    this->initItinerarios();
 }//constructor
 
 void AerolineaData::initItinerarios() {
-    Aerolinea *aux = this->aerolineas.front();
+    Aerolinea *aux = this->aerolineas->front();
 
     queue<Itinerario*> itinerarios1;
     itinerarios1.push(new Itinerario(new Pais("CR"), new Pais("MX"), "7am-10am", new Avion("Boeing 737", 80)));
@@ -39,11 +40,11 @@ void AerolineaData::initItinerarios() {
     this->grafo->agregarAristaYPeso(new Vertice(new Pais("CR")), new Vertice(new Pais("PR")), 3);
     this->grafo->agregarAristaYPeso(new Vertice(new Pais("CR")), new Vertice(new Pais("PN")), 3);
     this->grafo->agregarAristaYPeso(new Vertice(new Pais("CR")), new Vertice(new Pais("COL")), 3);
-    this->aerolineas.front()->setItinerarios(itinerarios1);
-    this->aerolineas.pop_front();
-    this->aerolineas.push_back(aux);
+    this->aerolineas->front()->setItinerarios(itinerarios1);
+    this->aerolineas->pop_front();
+    this->aerolineas->push_back(aux);
 
-    aux = this->aerolineas.front();
+    aux = this->aerolineas->front();
     queue<Itinerario*> itinerarios2;
     itinerarios2.push(new Itinerario(new Pais("PN"), new Pais("MX"), "7am-10am", new Avion("Boeing 787", 90)));
     itinerarios2.push(new Itinerario(new Pais("COL"), new Pais("PR"), "10am-1pm", new Avion("Boeing 747", 70)));
@@ -54,11 +55,11 @@ void AerolineaData::initItinerarios() {
     this->grafo->agregarAristaYPeso(new Vertice(new Pais("COL")), new Vertice(new Pais("PR")), 3);
     this->grafo->agregarAristaYPeso(new Vertice(new Pais("USA")), new Vertice(new Pais("PN")), 3);
     this->grafo->agregarAristaYPeso(new Vertice(new Pais("GUA")), new Vertice(new Pais("COL")), 3);
-    this->aerolineas.front()->setItinerarios(itinerarios2);
-    this->aerolineas.pop_front();
-    this->aerolineas.push_back(aux);
+    this->aerolineas->front()->setItinerarios(itinerarios2);
+    this->aerolineas->pop_front();
+    this->aerolineas->push_back(aux);
 
-    aux = this->aerolineas.front();
+    aux = this->aerolineas->front();
     queue<Itinerario*> itinerarios3;
     itinerarios3.push(new Itinerario(new Pais("CR"), new Pais("URU"), "7am-10am", new Avion("Boeing 747", 60)));
     itinerarios3.push(new Itinerario(new Pais("PR"), new Pais("ITA"), "10am-1pm", new Avion("Boeing 737", 80)));
@@ -69,13 +70,18 @@ void AerolineaData::initItinerarios() {
     this->grafo->agregarAristaYPeso(new Vertice(new Pais("PR")), new Vertice(new Pais("ITA")), 3);
     this->grafo->agregarAristaYPeso(new Vertice(new Pais("CR")), new Vertice(new Pais("POR")), 3);
     this->grafo->agregarAristaYPeso(new Vertice(new Pais("NIC")), new Vertice(new Pais("ECU")), 3);
-    this->aerolineas.front()->setItinerarios(itinerarios3);
-    this->aerolineas.pop_front();
-    this->aerolineas.push_back(aux);
+    this->aerolineas->front()->setItinerarios(itinerarios3);
+    this->aerolineas->pop_front();
+    this->aerolineas->push_back(aux);
 }
 
 void AerolineaData::registrarAerolinea(Aerolinea* aerolinea) {
-    this->aerolineas.push_front(aerolinea);
+    for (int i = 0; i < aerolinea->getItinerarios().size(); i++) {
+        
+        this->grafo->agregarAristaYPeso(new Vertice(aerolinea->getItinerario()->getOrigen()),
+                new Vertice(aerolinea->getItinerario()->getDestino()), atoi(aerolinea->getItinerario()->getHora().c_str()));
+    }//for i
+    this->aerolineas->push_front(aerolinea);
 }//registrarAerolinea
 
 AerolineaData::~AerolineaData() {
@@ -92,11 +98,11 @@ AerolineaData* AerolineaData::getInstance() {
 
 }
 
-void AerolineaData::setAerolineas(list<Aerolinea*> aerolineas) {
+void AerolineaData::setAerolineas(list<Aerolinea*>* aerolineas) {
     this->aerolineas = aerolineas;
 }
 
-list<Aerolinea*> AerolineaData::getAerolineas() const {
+list<Aerolinea*>* AerolineaData::getAerolineas() const {
     return aerolineas;
 }
 

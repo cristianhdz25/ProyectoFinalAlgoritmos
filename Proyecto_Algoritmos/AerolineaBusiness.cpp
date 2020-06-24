@@ -24,6 +24,6 @@ void AerolineaBusiness::registrarAerolinea(Aerolinea* aerolinea){
     this->aerolineaData->registrarAerolinea(aerolinea);
 }//registrarAerolinea
 
-list<Aerolinea*> AerolineaBusiness::getAerolineas() const{
+list<Aerolinea*>* AerolineaBusiness::getAerolineas() const{
     return this->aerolineaData->getAerolineas();
 }

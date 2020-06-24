@@ -49,9 +49,9 @@ m_Button_Quit("Salir") {
 
     //Fill the TreeView's model
     Gtk::TreeModel::Row row;
-    for (int i = 0; i < this->aerolineas.size(); i++) {
-        Aerolinea* temp = this->aerolineas.front();
-        queue<Itinerario*> itinerarios = this->aerolineas.front()->getItinerarios();
+    for (int i = 0; i < this->aerolineas->size(); i++) {
+        Aerolinea* temp = this->aerolineas->front();
+        queue<Itinerario*> itinerarios = this->aerolineas->front()->getItinerarios();
         queue<Itinerario*> aux = itinerarios;
         for (int i = 0; i < itinerarios.size(); i++) {
             row = *(m_refTreeModel->append());
@@ -63,8 +63,8 @@ m_Button_Quit("Salir") {
             row[m_Columns.m_col_airline] = temp->getNombre();
             aux.pop();
         }
-        this->aerolineas.pop_front();
-        this->aerolineas.push_back(temp);
+        this->aerolineas->pop_front();
+        this->aerolineas->push_back(temp);
     }
     
     m_TreeView.append_column("Tiempo", m_Columns.m_col_time);

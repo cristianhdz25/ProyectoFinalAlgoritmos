@@ -1,4 +1,4 @@
-build/Debug/GNU-Linux/main.o: main.cpp VentanaPrincipal.h \
+build/Debug/GNU-Linux/Main.o: Main.cpp VentanaPrincipal.h \
  /usr/include/gtkmm-3.0/gtkmm.h /usr/include/glibmm-2.4/glibmm.h \
  /usr/lib/x86_64-linux-gnu/glibmm-2.4/include/glibmmconfig.h \
  /usr/include/glibmm-2.4/glibmm/thread.h /usr/include/glib-2.0/glib.h \
