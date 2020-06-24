@@ -49,6 +49,14 @@ void VentanaItinerarios::init() {
 
 void VentanaItinerarios::onButtonClickedAceptar() {
     this->claseGrande->registrarCompra();
+      Gtk::MessageDialog dialogo(
+                    *this,
+                    "Se ha reservado con exito",
+                    false,
+                    Gtk::MESSAGE_INFO
+                    );
+            dialogo.run();
+    this->hide();
 }
 
 void VentanaItinerarios::onButtonClickedCancelar() {

@@ -13,7 +13,6 @@ VentanaReservar::VentanaReservar() {
     this->set_title("Reservar");
     this->claseGrande = ClaseGrande::getInstance();
     init();
-
 }
 
 void VentanaReservar::init() {

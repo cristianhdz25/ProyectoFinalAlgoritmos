@@ -47,7 +47,6 @@ void WindowLogin::init() {
 
 void WindowLogin::onButtonClickedLogin() {
     if (!this->etPassport.get_text().empty() && !this->etPassword.get_text().empty()) {
-          cout << "clicked Entro" << endl;
           
         Client * client = this->claseGrande->searchClient(this->etPassport.get_text(), this->etPassword.get_text());
         
@@ -60,7 +59,7 @@ void WindowLogin::onButtonClickedLogin() {
                     Gtk::MESSAGE_INFO
                     );
             dialogo.run();
-              cout << "if clicked Entro" << endl;
+            this->hide();
         } else {
             Gtk::MessageDialog dialogo(
                     *this,
