@@ -11,10 +11,11 @@ using namespace std;
 class Drawing :public Gtk::DrawingArea{
 public:
     Drawing();
-   
+    
 protected:
     bool on_draw(const Cairo::RefPtr<Cairo::Context>& cr);
     void initPosiciones();
+    void draw_text(const Cairo::RefPtr<Cairo::Context>& cr, int posX, int posY, string text);
 private:
     Vertice* vertice;
     Grafo* grafo;
