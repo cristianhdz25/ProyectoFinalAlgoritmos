@@ -15,7 +15,6 @@ public:
     void subirItinerario();
     string mostrarItinerario();
     string mostrarItinerarios();
-    Itinerario* getItinerario();
     void agregarItinerario(Itinerario* itinerario);
     
     void setItinerarios(queue<Itinerario*> itinerarios);

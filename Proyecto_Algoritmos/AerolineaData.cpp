@@ -76,11 +76,6 @@ void AerolineaData::initItinerarios() {
 }
 
 void AerolineaData::registrarAerolinea(Aerolinea* aerolinea) {
-    for (int i = 0; i < aerolinea->getItinerarios().size(); i++) {
-        
-        this->grafo->agregarAristaYPeso(new Vertice(aerolinea->getItinerario()->getOrigen()),
-                new Vertice(aerolinea->getItinerario()->getDestino()), atoi(aerolinea->getItinerario()->getHora().c_str()));
-    }//for i
     this->aerolineas->push_front(aerolinea);
 }//registrarAerolinea
 

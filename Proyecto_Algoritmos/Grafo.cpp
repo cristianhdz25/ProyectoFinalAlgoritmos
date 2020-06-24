@@ -52,7 +52,7 @@ void Grafo::agregarAristaYPeso(Vertice* vertice1, Vertice* vertice2, int peso) {
         this->grafo.at(this->getPosicion(vertice1))->listaPesos.push_back(peso);
 
     } else if (!this->exist(vertice1) && this->exist(vertice2)) {
-        vertice1->listaAristas.push_back(this->grafo.at(this->getPosicion(vertice2)));
+        vertice1->listaAristas.push_back(this->grafo.at(this->getPosicion(vertice2))); //this.get
         vertice1->listaPesos.push_back(peso);
         this->grafo.push_back(vertice1);
 
@@ -62,7 +62,7 @@ void Grafo::agregarAristaYPeso(Vertice* vertice1, Vertice* vertice2, int peso) {
         this->grafo.push_back(vertice2);
 
     }//else if
-    cout<<this->toString()<<endl;
+
 }//agragarAristaYPeso
 
 string Grafo::mostrarVertices(int posicion) {

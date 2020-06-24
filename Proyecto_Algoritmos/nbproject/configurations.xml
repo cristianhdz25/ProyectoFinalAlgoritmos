@@ -37,7 +37,6 @@
         <itemPath>VentanaRegistrar.h</itemPath>
         <itemPath>VentanaReservar.h</itemPath>
         <itemPath>WindowConfig.h</itemPath>
-        <itemPath>WindowFlights.h</itemPath>
         <itemPath>WindowLogin.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f5" displayName="Utility" projectFiles="true">
@@ -84,11 +83,10 @@
         <itemPath>VentanaRegistrar.cpp</itemPath>
         <itemPath>VentanaReservar.cpp</itemPath>
         <itemPath>WindowConfig.cpp</itemPath>
-        <itemPath>WindowFlights.cpp</itemPath>
         <itemPath>WindowLogin.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f4" displayName="Main" projectFiles="true">
-        <itemPath>Main.cpp</itemPath>
+        <itemPath>main.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="Utility" projectFiles="true">
         <itemPath>Validaciones.cpp</itemPath>
@@ -185,8 +183,6 @@
       </item>
       <item path="Itinerario.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Main.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="Pais.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Pais.h" ex="false" tool="3" flavor2="0">
@@ -243,13 +239,11 @@
       </item>
       <item path="WindowConfig.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="WindowFlights.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="WindowFlights.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="WindowLogin.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="WindowLogin.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -324,8 +318,6 @@
       </item>
       <item path="Itinerario.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Main.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="Pais.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Pais.h" ex="false" tool="3" flavor2="0">
@@ -382,13 +374,11 @@
       </item>
       <item path="WindowConfig.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="WindowFlights.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="WindowFlights.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="WindowLogin.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="WindowLogin.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>

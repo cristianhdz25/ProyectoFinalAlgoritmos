@@ -62,9 +62,3 @@ string Aerolinea::getNombre() const {
 string Aerolinea::toString(){
     return this->nombre;
 }
-
-Itinerario* Aerolinea::getItinerario() {
-    Itinerario* itinerario=this->itinerarios.front();
-    this->subirItinerario();
-    return itinerario;
-}
