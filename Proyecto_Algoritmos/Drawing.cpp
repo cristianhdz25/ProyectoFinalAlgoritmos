@@ -1,4 +1,6 @@
 #include "Drawing.h"
+#include "pangomm.h"
+
 
 Drawing::Drawing() {
     this->set_size_request(800, 800);
@@ -11,8 +13,11 @@ Drawing::Drawing() {
 bool Drawing::on_draw(const Cairo::RefPtr<Cairo::Context>& cr) {
     for (int i = 0; i < this->grafo->grafo.size(); i++) {
         this->grafo->grafo.at(i)->draw(cr);
-        this->aristas->at(i)->draw(cr);
     }//for
+    for (int i = 0; i < this->aristas->size(); i++) {
+        this->aristas->at(i)->draw(cr);
+    }
+    this->draw_text(cr, 100,100, "Texto");
 }//on_draw
 
 void Drawing::initPosiciones() {
@@ -33,7 +38,30 @@ void Drawing::initPosiciones() {
         }
         
     }
-}//asignaPosiciones  
+}//asignaPosiciones
+
+    void Drawing::draw_text(const Cairo::RefPtr<Cairo::Context>& cr,
+                       int rectangle_width, int rectangle_height, string text){
+  Pango::FontDescription font;
+
+  font.set_family("Monospace");
+  font.set_weight(Pango::WEIGHT_BOLD);
+
+  auto layout = create_pango_layout("Hi there!");
+
+  layout->set_font_description(font);
+
+  int text_width;
+  int text_height;
+
+  layout->get_pixel_size(text_width, text_height);
+
+  cr->move_to((rectangle_width-text_width)/2, (rectangle_height-text_height)/2);
+
+  layout->show_in_cairo_context(cr);
+}
+    
+  
 
 
 

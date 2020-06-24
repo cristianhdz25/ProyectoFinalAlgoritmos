@@ -5,6 +5,7 @@
 #include "Vertice.h"
 #include "Grafo.h"
 #include "Arista.h"
+#include "glibmm.h"
 
 using namespace std;
 
@@ -14,6 +15,8 @@ public:
    
 protected:
     bool on_draw(const Cairo::RefPtr<Cairo::Context>& cr);
+    void draw_text(const Cairo::RefPtr<Cairo::Context>& cr,
+                       int rectangle_width, int rectangle_height,string text);
     void initPosiciones();
 private:
     Vertice* vertice;
