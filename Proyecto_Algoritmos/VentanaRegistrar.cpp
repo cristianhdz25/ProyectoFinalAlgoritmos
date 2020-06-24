@@ -70,7 +70,7 @@ void VentanaRegistrar::onButtonClickedRegistrar() {
             this->claseGrande->registrarCliente(client);
             Gtk::MessageDialog dialogo(
                     *this,
-                    "Listo",
+                    "Se registro correctamente",
                     false,
                     Gtk::MESSAGE_INFO
                     );

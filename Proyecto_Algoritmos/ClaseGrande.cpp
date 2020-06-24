@@ -7,12 +7,12 @@
 using namespace std;
 
 ClaseGrande::ClaseGrande() {
-    
+
     this->aerolineaBusiness = new AerolineaBusiness();
     this->aerolineas = this->aerolineaBusiness->getAerolineas();
-    this->listaCliente=new vector<Client*>();
-    this->listaCompra=new vector<Compra*>();
-    
+    this->listaCliente = new vector<Client*>();
+    this->listaCompra = new vector<Compra*>();
+
     this->grafo = Grafo::getInstance();
 }//constructor
 
@@ -68,8 +68,8 @@ void ClaseGrande::abajo() {
 
 void ClaseGrande::registrarCliente(Client* client) {
     this->listaCliente->push_back(client);
-    
-    this->usuarioActual=client;
+
+    this->usuarioActual = client;
 }//registrarCliente
 
 Client* ClaseGrande::searchClient(string passport, string password) {
@@ -86,6 +86,7 @@ Client* ClaseGrande::searchClient(string passport, string password) {
 void ClaseGrande::registrarCompra() {
     this->usuarioActual->SetTravel(this->aerolineas->front()->getItinerarios().front());
     Compra* compras = new Compra(this->usuarioActual);
+    this->aerolineas->front()->getItinerarios().front()->getAvion()->setQuantity(this->aerolineas->front()->getItinerarios().front()->getAvion()->getQuantity() - 1);
     this->listaCompra->push_back(compras);
 }//registrarCompra
 
@@ -94,7 +95,7 @@ void ClaseGrande::moverVertices() {
 }//moverVertices
 
 void ClaseGrande::mostrarVertices() {
-    
+
 }//mostrarVertice
 
 void ClaseGrande::setAerolineas(list<Aerolinea*>* aerolineas) {
