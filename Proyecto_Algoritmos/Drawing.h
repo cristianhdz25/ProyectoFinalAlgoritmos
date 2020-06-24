@@ -14,6 +14,7 @@ public:
    
 protected:
     bool on_draw(const Cairo::RefPtr<Cairo::Context>& cr);
+    void draw_text(const Cairo::RefPtr<Cairo::Context>& cr, int posX, int posY, string text);
     void initPosiciones();
 private:
     Vertice* vertice;
