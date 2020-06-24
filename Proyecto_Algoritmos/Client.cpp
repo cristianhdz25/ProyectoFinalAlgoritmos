@@ -73,9 +73,6 @@ string Client::GetPassword() const{
 
 string Client::toString() {
     stringstream s;
-    s<<this->age<<this->name<<this->gender<<this->nationality->toString()<<this->numPassport;
-    if(this->travel!=NULL)
-        s<<this->travel->toString();
-    
+    s<<this->age<<this->name<<this->gender<<this->nationality<<this->numPassport<<this->travel->toString();
     return s.str();
 }//toString

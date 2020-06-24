@@ -33,6 +33,7 @@ void VentanaPrincipal::init() {
     this->itemSalir.set_label("Salir");
     //-----//
     this->itemReserve.set_label("Reservar vuelo");
+    this->itemShowFlights.set_label("Ver vuelos");
     this->itemActualizar.set_label("Actualizar vuelo");
     this->itemEliminar.set_label("Eliminar vuelo");
     //-----//
@@ -56,6 +57,9 @@ void VentanaPrincipal::init() {
     this->itemReserve.signal_activate().connect(sigc::mem_fun(*this, &VentanaPrincipal::showWindowReserve));
     this->subMenuGestion.append(this->itemReserve);
 
+    this->itemShowFlights.signal_activate().connect(sigc::mem_fun(*this, &VentanaPrincipal::showWindowFlights));
+    this->subMenuGestion.append(this->itemShowFlights);
+
     this->itemActualizar.signal_activate().connect(sigc::mem_fun(*this, &VentanaPrincipal::showWindowUpdate));
     this->subMenuGestion.append(this->itemActualizar);
 
@@ -69,6 +73,7 @@ void VentanaPrincipal::init() {
     this->itemVuelo.signal_activate().connect(sigc::mem_fun(*this, &VentanaPrincipal::mostrarVentanaVuelos));
     this->subMenuAdmin.append(this->itemVuelo);
 
+    this->windowFlights = 0;
     this->windowConfig = 0;
     this->windowLogin = 0;
     this->ventanaReservar = 0;
@@ -76,9 +81,9 @@ void VentanaPrincipal::init() {
     this->ventanaAdmin = 0;
     this->ventanaRegistrar = 0;
     this->ventanaItinerarios = 0;
-    this->actualizarVuelo=0;
-    this->deleteWindow=0;
-    
+    this->actualizarVuelo = 0;
+    this->deleteWindow = 0;
+
     this->add(fixed);
     this->show_all_children();
 }//init
@@ -127,12 +132,21 @@ void VentanaPrincipal::showWindowReserve() {
     this->ventanaReservar->show();
 }
 
-void VentanaPrincipal::showWindowDelete() {
-    if(this->deleteWindow !=0)
+void VentanaPrincipal::showWindowFlights() {
+    if (this->windowFlights != 0)
         return;
-    
-    this->deleteWindow=new DeleteWindow();
-    this->deleteWindow->signal_hide().connect(sigc::mem_fun(*this,&VentanaPrincipal::aboutWinClose));
+
+    this->windowFlights = new WindowFlights();
+    this->windowFlights->signal_hide().connect(sigc::mem_fun(*this, &VentanaPrincipal::aboutWinClose));
+    this->windowFlights->show();
+}
+
+void VentanaPrincipal::showWindowDelete() {
+    if (this->deleteWindow != 0)
+        return;
+
+    this->deleteWindow = new DeleteWindow();
+    this->deleteWindow->signal_hide().connect(sigc::mem_fun(*this, &VentanaPrincipal::aboutWinClose));
     this->deleteWindow->show();
 }//showWindowDelete
 
@@ -140,7 +154,7 @@ void VentanaPrincipal::showWindowUpdate() {
     if (this->actualizarVuelo != 0)
         return;
 
-    this->actualizarVuelo=new ActualizarVuelo();
+    this->actualizarVuelo = new ActualizarVuelo();
     this->actualizarVuelo->signal_hide().connect(sigc::mem_fun(*this, &VentanaPrincipal::aboutWinClose));
     this->actualizarVuelo->show();
 }
@@ -171,6 +185,7 @@ void VentanaPrincipal::aboutWinClose() {
     this->ventanaItinerarios = 0;
     this->ventanaAdmin = 0;
     this->ventanaDibujo = 0;
-    this->actualizarVuelo=0;
-    this->deleteWindow=0;
+    this->actualizarVuelo = 0;
+    this->deleteWindow = 0;
+    this->windowFlights = 0;
 }//aboutWinClose
