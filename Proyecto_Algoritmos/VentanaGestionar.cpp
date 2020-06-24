@@ -93,9 +93,7 @@ void VentanaGestionar::clickedAddtinerarie() {
         Avion* tempA = new Avion(this->etAvion.get_text(), stoi(this->etEspacios.get_text()));
 
         tempItinerario.push(new Itinerario(new Pais(this->etSalida.get_text()), (new Pais(this->etDestination.get_text())),
-                this->etItinerario.get_text(), tempA));
-        this->grafo->agregarAristaYPeso(new Vertice(new Pais(this->etSalida.get_text())),
-                new Vertice(new Pais(this->etDestination.get_text())), atoi(this->etPeso.get_text().c_str()));
+                this->etSchedule.get_text(), tempA));
 
         this->etSalida.set_text("");
         this->etDestination.set_text("");

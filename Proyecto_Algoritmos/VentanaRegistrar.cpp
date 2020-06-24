@@ -66,7 +66,16 @@ void VentanaRegistrar::onButtonClickedRegistrar() {
 
             Client* client = new Client(this->etEdad.get_text(), this->etNombre.get_text(),
                     this->etGenero.get_text(), this->etPasaporte.get_text(), this->etPassword.get_text(), new Pais(this->etNacionalidad.get_text()));
+            cout << client->toString() << endl;
             this->claseGrande->registrarCliente(client);
+            Gtk::MessageDialog dialogo(
+                    *this,
+                    "Listo",
+                    false,
+                    Gtk::MESSAGE_INFO
+                    );
+            dialogo.run();
+            this->hide();
         } else {
             Gtk::MessageDialog dialogo(
                     *this,

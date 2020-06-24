@@ -62,7 +62,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/VentanaReservar.o \
 	${OBJECTDIR}/Vertice.o \
 	${OBJECTDIR}/WindowConfig.o \
-	${OBJECTDIR}/WindowFlights.o \
 	${OBJECTDIR}/WindowLogin.o \
 	${OBJECTDIR}/main.o
 
@@ -225,11 +224,6 @@ ${OBJECTDIR}/WindowConfig.o: WindowConfig.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/WindowConfig.o WindowConfig.cpp
-
-${OBJECTDIR}/WindowFlights.o: WindowFlights.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/WindowFlights.o WindowFlights.cpp
 
 ${OBJECTDIR}/WindowLogin.o: WindowLogin.cpp
 	${MKDIR} -p ${OBJECTDIR}

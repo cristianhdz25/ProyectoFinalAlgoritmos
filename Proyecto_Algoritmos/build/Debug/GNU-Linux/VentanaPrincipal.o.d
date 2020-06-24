@@ -1147,7 +1147,7 @@ build/Debug/GNU-Linux/VentanaPrincipal.o: VentanaPrincipal.cpp \
  Itinerario.h Avion.h Pais.h AerolineaBusiness.h AerolineaData.h Grafo.h \
  Vertice.h Client.h Compra.h VentanaAdmin.h VentanaGestionar.h Drawing.h \
  Arista.h VentanaDibujo.h WindowLogin.h WindowConfig.h ActualizarVuelo.h \
- DeleteWindow.h WindowFlights.h
+ DeleteWindow.h
 
 VentanaPrincipal.h:
 
@@ -3580,5 +3580,3 @@ WindowConfig.h:
 ActualizarVuelo.h:
 
 DeleteWindow.h:
-
-WindowFlights.h:
