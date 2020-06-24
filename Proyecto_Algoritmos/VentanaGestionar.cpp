@@ -1,4 +1,3 @@
-
 #include "VentanaGestionar.h"
 #include <gtkmm-3.0/gtkmm/window.h>
 #include <gtkmm.h>
@@ -94,9 +93,10 @@ void VentanaGestionar::clickedAddtinerarie() {
 
         tempItinerario.push(new Itinerario(new Pais(this->etSalida.get_text()), (new Pais(this->etDestination.get_text())),
                 this->etItinerario.get_text(), tempA));
+        /*
         this->grafo->agregarAristaYPeso(new Vertice(new Pais(this->etSalida.get_text())),
                 new Vertice(new Pais(this->etDestination.get_text())), atoi(this->etPeso.get_text().c_str()));
-
+*/
         this->etSalida.set_text("");
         this->etDestination.set_text("");
         this->etSchedule.set_text("");
@@ -107,8 +107,10 @@ void VentanaGestionar::clickedAddtinerarie() {
 void VentanaGestionar::clickedAddAirline() {
     if (!(this->etName.get_text().empty())) {
         Aerolinea* temp = new Aerolinea(this->etName.get_text());
-
         temp->setItinerarios(tempItinerario);
+        cout<<"Itinerario: " <<temp->mostrarItinerarios()<<endl;
+        cout<<"Itinerario: " <<temp->getNombre()<<endl;
+        
         this->claseGrande->registrarAerolinea(temp);
 
     }//if
