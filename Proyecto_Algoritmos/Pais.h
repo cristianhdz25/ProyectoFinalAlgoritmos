@@ -24,14 +24,15 @@ using namespace std;
 class Pais {
 public:
     Pais(string nombre);
-    void setRestricciones(vector<string>* restricciones);
-    vector<string>* getRestricciones() const;
+    void setRestricciones(vector<Pais*> restricciones);
+    vector<Pais*> getRestricciones() const;
     void setNombre(string nombre);
     string getNombre() const;
     string toString();
+
 private:
     string nombre;
-    vector<string>* restricciones;
+    vector<Pais*> restricciones;
 };
 
 #endif /* PAIS_H */

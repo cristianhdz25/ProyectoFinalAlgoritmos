@@ -33,6 +33,7 @@ public:
     void moverVertices();
     void mostrarVertices();
     void setUsuarioActual(Client* usuarioActual);
+    bool comprobarRestriccionDelQueCompraElTiquete();
     Client* getUsuarioActual() const;
     void registrarCompra(); 
 private:

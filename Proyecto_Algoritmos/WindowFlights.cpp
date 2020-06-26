@@ -53,7 +53,7 @@ m_Button_Quit("Salir") {
         Aerolinea* temp = this->aerolineas->front();
         queue<Itinerario*> itinerarios = this->aerolineas->front()->getItinerarios();
         queue<Itinerario*> aux = itinerarios;
-        for (int i = 0; i < itinerarios.size(); i++) {
+        for (int k = 0; k < itinerarios.size(); k++) {
             row = *(m_refTreeModel->append());
             row[m_Columns.m_col_time] = aux.front()->getHora();
             row[m_Columns.m_col_origin] = aux.front()->getOrigen()->getNombre();
