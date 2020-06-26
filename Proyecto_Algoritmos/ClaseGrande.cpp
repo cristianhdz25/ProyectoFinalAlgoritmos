@@ -106,4 +106,14 @@ list<Aerolinea*>* ClaseGrande::getAerolineas() {
     return aerolineas;
 }
 
+bool ClaseGrande::comprobarRestriccionDelQueCompraElTiquete() {
+    for (int i = 0; i<this->aerolineas->front()->getItinerarios().front()->getDestino()->getRestricciones().size(); i++) {
+        if (this->aerolineas->front()->getItinerarios().front()->getDestino()->getRestricciones().at(i)->getNombre() == this->usuarioActual->GetNationality()->getNombre()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
 ClaseGrande* ClaseGrande::instance = 0;

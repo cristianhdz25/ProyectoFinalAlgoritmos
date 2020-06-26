@@ -48,7 +48,9 @@ void VentanaItinerarios::init() {
 }//init
 
 void VentanaItinerarios::onButtonClickedAceptar() {
-    this->claseGrande->registrarCompra();
+    if(this->claseGrande->comprobarRestriccionDelQueCompraElTiquete() == 0){
+     
+      this->claseGrande->registrarCompra();
       Gtk::MessageDialog dialogo(
                     *this,
                     "Se ha reservado con exito",
@@ -56,7 +58,16 @@ void VentanaItinerarios::onButtonClickedAceptar() {
                     Gtk::MESSAGE_INFO
                     );
             dialogo.run();
-    this->hide();
+    this->hide();   
+    }else {
+          Gtk::MessageDialog dialogo(
+                    *this,
+                    "Su nacionalidad le restringe esta accion",
+                    false,
+                    Gtk::MESSAGE_INFO
+                    );
+            dialogo.run();
+    }
 }
 
 void VentanaItinerarios::onButtonClickedCancelar() {

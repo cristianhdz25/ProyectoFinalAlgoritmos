@@ -19,14 +19,14 @@
 
 Pais::Pais(string nombre) {
     this->nombre = nombre;
-    this->restricciones = new vector<string>();
+    this->restricciones;
 }
 
-void Pais::setRestricciones(vector<string>* restricciones) {
+void Pais::setRestricciones(vector<Pais*> restricciones) {
     this->restricciones = restricciones;
 }
 
-vector<string>* Pais::getRestricciones() const{
+vector<Pais*> Pais::getRestricciones() const{
     return restricciones;
 }
 
