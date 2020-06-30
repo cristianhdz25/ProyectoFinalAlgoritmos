@@ -48,9 +48,9 @@ void VentanaItinerarios::init() {
 }//init
 
 void VentanaItinerarios::onButtonClickedAceptar() {
-    if(this->claseGrande->comprobarRestriccionDelQueCompraElTiquete() == 0){
-     
+    if(this->claseGrande->comprobarRestriccionDelQueCompraElTiquete() == 0){    
       this->claseGrande->registrarCompra();
+      this->claseGrande->asignarItinerario();
       Gtk::MessageDialog dialogo(
                     *this,
                     "Se ha reservado con exito",

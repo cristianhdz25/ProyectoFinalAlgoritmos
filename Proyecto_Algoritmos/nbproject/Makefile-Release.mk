@@ -44,7 +44,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/ClaseGrande.o \
 	${OBJECTDIR}/Client.o \
 	${OBJECTDIR}/Compra.o \
-	${OBJECTDIR}/DeleteWindow.o \
 	${OBJECTDIR}/Drawing.o \
 	${OBJECTDIR}/Grafo.o \
 	${OBJECTDIR}/Itinerario.o \
@@ -63,6 +62,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/VentanaReservar.o \
 	${OBJECTDIR}/Vertice.o \
 	${OBJECTDIR}/WindowConfig.o \
+	${OBJECTDIR}/WindowDelete.o \
 	${OBJECTDIR}/WindowFlights.o \
 	${OBJECTDIR}/WindowLogin.o
 
@@ -135,11 +135,6 @@ ${OBJECTDIR}/Compra.o: Compra.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Compra.o Compra.cpp
-
-${OBJECTDIR}/DeleteWindow.o: DeleteWindow.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DeleteWindow.o DeleteWindow.cpp
 
 ${OBJECTDIR}/Drawing.o: Drawing.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -230,6 +225,11 @@ ${OBJECTDIR}/WindowConfig.o: WindowConfig.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/WindowConfig.o WindowConfig.cpp
+
+${OBJECTDIR}/WindowDelete.o: WindowDelete.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/WindowDelete.o WindowDelete.cpp
 
 ${OBJECTDIR}/WindowFlights.o: WindowFlights.cpp
 	${MKDIR} -p ${OBJECTDIR}
