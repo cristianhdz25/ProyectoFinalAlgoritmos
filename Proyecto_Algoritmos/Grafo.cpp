@@ -62,7 +62,7 @@ void Grafo::agregarAristaYPeso(Vertice* vertice1, Vertice* vertice2, int peso) {
         this->grafo.push_back(vertice2);
 
     }//else if
-    cout<<this->toString()<<endl;
+
 }//agragarAristaYPeso
 
 string Grafo::mostrarVertices(int posicion) {

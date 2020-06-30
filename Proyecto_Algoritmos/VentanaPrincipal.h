@@ -24,6 +24,7 @@
 #include "ActualizarVuelo.h"
 #include "DeleteWindow.h"
 #include "WindowFlights.h"
+#include "WindowDelete.h"
 
 class VentanaPrincipal : public Gtk::Window {
 public:
@@ -60,7 +61,7 @@ private:
     VentanaDibujo* ventanaDibujo;
     WindowConfig * windowConfig;
     ActualizarVuelo* actualizarVuelo;
-    DeleteWindow* deleteWindow;
+    WindowDelete* deleteWindow;
     WindowFlights * windowFlights;
 };
 

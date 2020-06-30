@@ -116,4 +116,12 @@ bool ClaseGrande::comprobarRestriccionDelQueCompraElTiquete() {
     }
 }
 
+void ClaseGrande::asignarItinerario(){
+    this->usuarioActual->SetTravel(this->aerolineas->front()->getItinerarios().front());
+}
+
+Client* ClaseGrande::getUsuarioActual() const{
+    return usuarioActual;
+}
+
 ClaseGrande* ClaseGrande::instance = 0;

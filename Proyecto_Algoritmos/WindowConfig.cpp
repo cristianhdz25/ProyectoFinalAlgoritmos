@@ -41,6 +41,8 @@ void WindowConfig::init() {
     this->fixed.put(this->etGender, 120, 100);
 
     this->lblPassport.set_label("Pasaporte");
+    this->etPassport.set_text(this->claseGrande->getUsuarioActual()->GetNumPassport());
+    this->etPassport.set_editable(false);
     this->fixed.put(this->lblPassport, 20, 140);
     this->fixed.put(this->etPassport, 120, 140);
 
@@ -52,7 +54,7 @@ void WindowConfig::init() {
     this->fixed.put(this->lblPassword, 20, 220);
     this->fixed.put(this->etPassword, 120, 220);
 
-    this->btnUpdate.set_label("Registrar");
+    this->btnUpdate.set_label("Actualizar");
     this->btnUpdate.signal_clicked().connect(sigc::mem_fun(*this, &WindowConfig::onButtonClickedUpdate));
     this->fixed.put(this->btnUpdate, 150, 260);
 
@@ -76,12 +78,20 @@ void WindowConfig::onButtonClickedUpdate() {
 
             Client* client = new Client(this->etAge.get_text(),
                     this->etName.get_text(), this->etGender.get_text(),
-                    this->etPassport.get_text() ,this->etPassword.get_text(),new Pais(this->etNacionality.get_text()));
+                    this->claseGrande->getUsuarioActual()->GetNumPassport() ,this->etPassword.get_text(),new Pais(this->etNacionality.get_text()));
             this->claseGrande->registrarCliente(client);
+            Gtk::MessageDialog dialogo(
+                    *this,
+                    "Se ha actualizado con exito",
+                    false,
+                    Gtk::MESSAGE_INFO
+                    );
+            dialogo.run();
+            this->hide();
         } else {
             Gtk::MessageDialog dialogo(
                     *this,
-                    "Error al registrar",
+                    "Error al Actualizar",
                     false,
                     Gtk::MESSAGE_INFO
                     );
@@ -91,7 +101,7 @@ void WindowConfig::onButtonClickedUpdate() {
     } else {
         Gtk::MessageDialog dialogo(
                 *this,
-                "Error al registrar",
+                "Error al actualizar",
                 false,
                 Gtk::MESSAGE_INFO
                 );

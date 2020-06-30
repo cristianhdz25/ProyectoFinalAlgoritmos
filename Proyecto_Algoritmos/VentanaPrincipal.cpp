@@ -3,6 +3,7 @@
 #include <bits/stl_tempbuf.h>
 #include "iostream"
 #include "VentanaAdmin.h"
+#include "WindowDelete.h"
 #include <gtkmm.h>
 
 VentanaPrincipal::VentanaPrincipal() {
@@ -145,7 +146,7 @@ void VentanaPrincipal::showWindowDelete() {
     if (this->deleteWindow != 0)
         return;
 
-    this->deleteWindow = new DeleteWindow();
+    this->deleteWindow = new WindowDelete();
     this->deleteWindow->signal_hide().connect(sigc::mem_fun(*this, &VentanaPrincipal::aboutWinClose));
     this->deleteWindow->show();
 }//showWindowDelete

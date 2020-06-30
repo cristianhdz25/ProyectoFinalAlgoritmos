@@ -20,14 +20,15 @@ public:
     void onButtonClickedAbajo();
     void mostrarItinerario();
     void aboutWinClose();
+    void mostrarInfo();
         
 private:
-    Gtk::Label lblAerolinea;
+    Gtk::Label lblAerolinea, lblInformacion;
     Gtk::Entry etAerolinea;
     Gtk::Button btnArriba, btnAbajo, btnReservar, btnCancelar;
     Gtk::Fixed fixed;
-    Glib::RefPtr<Gtk::TextBuffer> muestraItinerario;
-    Gtk::TextView tvMostrar;
+    Glib::RefPtr<Gtk::TextBuffer> muestraItinerario, muestraInfo;
+    Gtk::TextView tvMostrar, tvMostrarInfo;
     VentanaItinerarios * ventanaItinerarios;
     ClaseGrande * claseGrande;
 };

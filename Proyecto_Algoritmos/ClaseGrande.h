@@ -35,7 +35,8 @@ public:
     void setUsuarioActual(Client* usuarioActual);
     bool comprobarRestriccionDelQueCompraElTiquete();
     Client* getUsuarioActual() const;
-    void registrarCompra(); 
+    void registrarCompra();
+    void asignarItinerario();
 private:
     ClaseGrande();
     list<Aerolinea*>* aerolineas;
