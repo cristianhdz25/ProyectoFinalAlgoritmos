@@ -1,4 +1,4 @@
-build/Debug/GNU-Linux/VentanaAdmin.o: VentanaAdmin.cpp VentanaAdmin.h \
+build/Debug/GNU-Linux/Main.o: Main.cpp VentanaPrincipal.h \
  /usr/include/gtkmm-3.0/gtkmm.h /usr/include/glibmm-2.4/glibmm.h \
  /usr/lib/x86_64-linux-gnu/glibmm-2.4/include/glibmmconfig.h \
  /usr/include/glibmm-2.4/glibmm/thread.h /usr/include/glib-2.0/glib.h \
@@ -1141,14 +1141,16 @@ build/Debug/GNU-Linux/VentanaAdmin.o: VentanaAdmin.cpp VentanaAdmin.h \
  /usr/include/gtkmm-3.0/gtkmm/treestore.h \
  /usr/include/gtkmm-3.0/gtkmm/uimanager.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
- /usr/include/gtkmm-3.0/gtkmm/volumebutton.h VentanaGestionar.h \
- AerolineaBusiness.h AerolineaData.h Aerolinea.h Itinerario.h Avion.h \
- Pais.h Grafo.h Vertice.h ClaseGrande.h Client.h Compra.h \
+ /usr/include/gtkmm-3.0/gtkmm/volumebutton.h VentanaRegistrar.h \
+ VentanaReservar.h VentanaItinerarios.h ClaseGrande.h Aerolinea.h \
+ Itinerario.h Avion.h Pais.h AerolineaBusiness.h AerolineaData.h Grafo.h \
+ Vertice.h Client.h Compra.h VentanaAdmin.h VentanaGestionar.h \
  WindowAddNewAirline.h Validaciones.h WindowUpdateAirlane.h \
- WindowUpdateItinerarie.h UsuarioAdministradorBusiness.h \
- UsuarioAdministradorData.h UsuarioAdministrador.h
+ WindowUpdateItinerarie.h Drawing.h Arista.h VentanaDibujo.h \
+ WindowLogin.h WindowConfig.h ActualizarVuelo.h DeleteWindow.h \
+ WindowFlights.h WindowDelete.h
 
-VentanaAdmin.h:
+VentanaPrincipal.h:
 
 /usr/include/gtkmm-3.0/gtkmm.h:
 
@@ -3534,11 +3536,13 @@ VentanaAdmin.h:
 
 /usr/include/gtkmm-3.0/gtkmm/volumebutton.h:
 
-VentanaGestionar.h:
+VentanaRegistrar.h:
 
-AerolineaBusiness.h:
+VentanaReservar.h:
 
-AerolineaData.h:
+VentanaItinerarios.h:
+
+ClaseGrande.h:
 
 Aerolinea.h:
 
@@ -3548,15 +3552,21 @@ Avion.h:
 
 Pais.h:
 
+AerolineaBusiness.h:
+
+AerolineaData.h:
+
 Grafo.h:
 
 Vertice.h:
 
-ClaseGrande.h:
-
 Client.h:
 
 Compra.h:
+
+VentanaAdmin.h:
+
+VentanaGestionar.h:
 
 WindowAddNewAirline.h:
 
@@ -3566,8 +3576,20 @@ WindowUpdateAirlane.h:
 
 WindowUpdateItinerarie.h:
 
-UsuarioAdministradorBusiness.h:
+Drawing.h:
 
-UsuarioAdministradorData.h:
+Arista.h:
 
-UsuarioAdministrador.h:
+VentanaDibujo.h:
+
+WindowLogin.h:
+
+WindowConfig.h:
+
+ActualizarVuelo.h:
+
+DeleteWindow.h:
+
+WindowFlights.h:
+
+WindowDelete.h:

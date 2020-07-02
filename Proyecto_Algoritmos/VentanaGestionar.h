@@ -6,36 +6,30 @@
 
 #include "AerolineaBusiness.h"
 #include "ClaseGrande.h"
+#include "WindowAddNewAirline.h"
+#include "WindowUpdateAirlane.h"
+#include "WindowUpdateItinerarie.h"
 
 class VentanaGestionar : public Gtk::Window {
 public:
     VentanaGestionar();
     void init();
     void clickedNewAirline();
-    void clickedActualizar();
-    void clickedAddtinerarie();
-    void clickedAddAirline();
-    void clickedUp();
-    void clickedActualizarAerolinea();
-    void clickedUpItineraries();
+    void clickedUpdateAirline();
+    void clickedUpdateItinerarie();
+    void aboutWinClose();
+
 private:
     Gtk::MenuBar menuBar;
     Gtk::MenuItem menuArchivo;
     Gtk::Menu subMenuArchivo;
-    Gtk::ImageMenuItem menuNewAirline, menuActualizar;
-    Gtk::Fixed fixedAirline, fixedActualizar;
-
-    Gtk::Label lblName, lblSalida, lblDestination, lblSchedule,
-    lblItinerario, lblAvion, lblEspacios,lblPeso;
-    Gtk::Entry etName, etSalida, etDestination, etSchedule,
-    etItinerario, etAvion, etEspacios,etPeso;
-    Gtk::Button btAdd, btnAddItinerarie, btCancel, btSubir,
-    btSubirItinerario, btnActulizar;
-
-    queue<Itinerario*> tempItinerario;
-
-    ClaseGrande * claseGrande;
-    Grafo * grafo;
+    Gtk::ImageMenuItem imageMenuNewAirline, imageMenuActualizar, imageMenuUpdateAirline;
+    Gtk::Fixed fixed;
+    
+    WindowAddNewAirline * windowNewAirline;
+    WindowUpdateAirlane * windowUpdateAirlane;
+    WindowUpdateItinerarie * windowUpdateItinerarie;
+    
 };
 
 #endif /* VENTANAGESTIONAR_H */

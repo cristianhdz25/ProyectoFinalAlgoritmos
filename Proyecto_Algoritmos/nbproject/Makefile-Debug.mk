@@ -61,10 +61,13 @@ OBJECTFILES= \
 	${OBJECTDIR}/VentanaRegistrar.o \
 	${OBJECTDIR}/VentanaReservar.o \
 	${OBJECTDIR}/Vertice.o \
+	${OBJECTDIR}/WindowAddNewAirline.o \
 	${OBJECTDIR}/WindowConfig.o \
 	${OBJECTDIR}/WindowDelete.o \
 	${OBJECTDIR}/WindowFlights.o \
-	${OBJECTDIR}/WindowLogin.o
+	${OBJECTDIR}/WindowLogin.o \
+	${OBJECTDIR}/WindowUpdateAirlane.o \
+	${OBJECTDIR}/WindowUpdateItinerarie.o
 
 
 # C Compiler Flags
@@ -221,6 +224,11 @@ ${OBJECTDIR}/Vertice.o: Vertice.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Vertice.o Vertice.cpp
 
+${OBJECTDIR}/WindowAddNewAirline.o: WindowAddNewAirline.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/WindowAddNewAirline.o WindowAddNewAirline.cpp
+
 ${OBJECTDIR}/WindowConfig.o: WindowConfig.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -240,6 +248,16 @@ ${OBJECTDIR}/WindowLogin.o: WindowLogin.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/WindowLogin.o WindowLogin.cpp
+
+${OBJECTDIR}/WindowUpdateAirlane.o: WindowUpdateAirlane.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/WindowUpdateAirlane.o WindowUpdateAirlane.cpp
+
+${OBJECTDIR}/WindowUpdateItinerarie.o: WindowUpdateItinerarie.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/WindowUpdateItinerarie.o WindowUpdateItinerarie.cpp
 
 # Subprojects
 .build-subprojects:
