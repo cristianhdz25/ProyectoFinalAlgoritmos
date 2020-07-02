@@ -64,18 +64,30 @@ void VentanaRegistrar::onButtonClickedRegistrar() {
 
         if (val.COMPROBARNUMEROS(this->etEdad.get_text()) && val.COMPROBARNUMEROS(this->etPasaporte.get_text())) {
 
-            Client* client = new Client(this->etEdad.get_text(), this->etNombre.get_text(),
-                    this->etGenero.get_text(), this->etPasaporte.get_text(), this->etPassword.get_text(), new Pais(this->etNacionalidad.get_text()));
-            cout << client->toString() << endl;
-            this->claseGrande->registrarCliente(client);
-            Gtk::MessageDialog dialogo(
-                    *this,
-                    "Se registro correctamente",
-                    false,
-                    Gtk::MESSAGE_INFO
-                    );
-            dialogo.run();
-            this->hide();
+            if (stoi(this->etEdad.get_text())>=18) {
+                Client* client = new Client(this->etEdad.get_text(), this->etNombre.get_text(),
+                        this->etGenero.get_text(), this->etPasaporte.get_text(), this->etPassword.get_text(), new Pais(this->etNacionalidad.get_text()));
+                this->claseGrande->registrarCliente(client);
+                Gtk::MessageDialog dialogo(
+                        *this,
+                        "Se registro correctamente",
+                        false,
+                        Gtk::MESSAGE_INFO
+                        );
+                dialogo.run();
+                this->hide();
+
+            } else {
+                Gtk::MessageDialog dialogo(
+                        *this,
+                        "Error al registrar",
+                        false,
+                        Gtk::MESSAGE_INFO
+                        );
+                dialogo.set_secondary_text("Su edad debe ser mayor de 18 años");
+                dialogo.run();
+
+            }
         } else {
             Gtk::MessageDialog dialogo(
                     *this,

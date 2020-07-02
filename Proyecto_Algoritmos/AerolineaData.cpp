@@ -124,5 +124,8 @@ list<Aerolinea*>* AerolineaData::getAerolineas() const {
     return aerolineas;
 }
 
+void AerolineaData::eliminarAerolinea(){
+    this->aerolineas->pop_front();
+}
 
 AerolineaData* AerolineaData::instance = 0;

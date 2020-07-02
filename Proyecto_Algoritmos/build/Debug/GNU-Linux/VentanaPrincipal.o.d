@@ -1145,9 +1145,11 @@ build/Debug/GNU-Linux/VentanaPrincipal.o: VentanaPrincipal.cpp \
  /usr/include/gtkmm-3.0/gtkmm/volumebutton.h VentanaRegistrar.h \
  VentanaReservar.h VentanaItinerarios.h ClaseGrande.h Aerolinea.h \
  Itinerario.h Avion.h Pais.h AerolineaBusiness.h AerolineaData.h Grafo.h \
- Vertice.h Client.h Compra.h VentanaAdmin.h VentanaGestionar.h Drawing.h \
- Arista.h VentanaDibujo.h WindowLogin.h WindowConfig.h ActualizarVuelo.h \
- DeleteWindow.h WindowFlights.h WindowDelete.h
+ Vertice.h Client.h Compra.h VentanaAdmin.h VentanaGestionar.h \
+ WindowAddNewAirline.h Validaciones.h WindowUpdateAirlane.h \
+ WindowUpdateItinerarie.h Drawing.h Arista.h VentanaDibujo.h \
+ WindowLogin.h WindowConfig.h ActualizarVuelo.h DeleteWindow.h \
+ WindowFlights.h WindowDelete.h
 
 VentanaPrincipal.h:
 
@@ -3566,6 +3568,14 @@ Compra.h:
 VentanaAdmin.h:
 
 VentanaGestionar.h:
+
+WindowAddNewAirline.h:
+
+Validaciones.h:
+
+WindowUpdateAirlane.h:
+
+WindowUpdateItinerarie.h:
 
 Drawing.h:
 

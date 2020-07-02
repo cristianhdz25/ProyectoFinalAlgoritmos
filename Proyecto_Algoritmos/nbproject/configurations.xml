@@ -36,10 +36,13 @@
         <itemPath>VentanaPrincipal.h</itemPath>
         <itemPath>VentanaRegistrar.h</itemPath>
         <itemPath>VentanaReservar.h</itemPath>
+        <itemPath>WindowAddNewAirline.h</itemPath>
         <itemPath>WindowConfig.h</itemPath>
         <itemPath>WindowDelete.h</itemPath>
         <itemPath>WindowFlights.h</itemPath>
         <itemPath>WindowLogin.h</itemPath>
+        <itemPath>WindowUpdateAirlane.h</itemPath>
+        <itemPath>WindowUpdateItinerarie.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f5" displayName="Utility" projectFiles="true">
         <itemPath>Validaciones.h</itemPath>
@@ -83,10 +86,13 @@
         <itemPath>VentanaPrincipal.cpp</itemPath>
         <itemPath>VentanaRegistrar.cpp</itemPath>
         <itemPath>VentanaReservar.cpp</itemPath>
+        <itemPath>WindowAddNewAirline.cpp</itemPath>
         <itemPath>WindowConfig.cpp</itemPath>
         <itemPath>WindowDelete.cpp</itemPath>
         <itemPath>WindowFlights.cpp</itemPath>
         <itemPath>WindowLogin.cpp</itemPath>
+        <itemPath>WindowUpdateAirlane.cpp</itemPath>
+        <itemPath>WindowUpdateItinerarie.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f4" displayName="Main" projectFiles="true">
         <itemPath>Main.cpp</itemPath>
@@ -238,6 +244,10 @@
       </item>
       <item path="Vertice.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="WindowAddNewAirline.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="WindowAddNewAirline.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="WindowConfig.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="WindowConfig.h" ex="false" tool="3" flavor2="0">
@@ -253,6 +263,14 @@
       <item path="WindowLogin.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="WindowLogin.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WindowUpdateAirlane.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="WindowUpdateAirlane.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WindowUpdateItinerarie.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="WindowUpdateItinerarie.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -379,6 +397,10 @@
       </item>
       <item path="Vertice.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="WindowAddNewAirline.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="WindowAddNewAirline.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="WindowConfig.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="WindowConfig.h" ex="false" tool="3" flavor2="0">
@@ -394,6 +416,14 @@
       <item path="WindowLogin.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="WindowLogin.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WindowUpdateAirlane.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="WindowUpdateAirlane.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WindowUpdateItinerarie.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="WindowUpdateItinerarie.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

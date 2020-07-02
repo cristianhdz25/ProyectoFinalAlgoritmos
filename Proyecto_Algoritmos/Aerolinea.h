@@ -12,6 +12,7 @@ public:
     Aerolinea(string nombre);
     virtual ~Aerolinea();
     
+    void eliminarItinerario();
     void subirItinerario();
     string mostrarItinerario();
     string mostrarItinerarios();

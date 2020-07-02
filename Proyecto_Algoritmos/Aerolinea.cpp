@@ -19,6 +19,12 @@ void Aerolinea::subirItinerario(){
     this->itinerarios.push(aux);
 }//subirItinerarie
 
+void Aerolinea::eliminarItinerario(){
+     if(this->itinerarios.empty())
+        return;
+      this->itinerarios.pop();
+}
+
 string Aerolinea::mostrarItinerario() {
     if(!this->itinerarios.empty())
         return this->itinerarios.front()->toString2();
