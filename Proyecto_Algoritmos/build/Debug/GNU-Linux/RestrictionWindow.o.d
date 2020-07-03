@@ -1,5 +1,6 @@
-build/Debug/GNU-Linux/VentanaAdmin.o: VentanaAdmin.cpp VentanaAdmin.h \
- /usr/include/gtkmm-3.0/gtkmm.h /usr/include/glibmm-2.4/glibmm.h \
+build/Debug/GNU-Linux/RestrictionWindow.o: RestrictionWindow.cpp \
+ RestrictionWindow.h /usr/include/gtkmm-3.0/gtkmm.h \
+ /usr/include/glibmm-2.4/glibmm.h \
  /usr/lib/x86_64-linux-gnu/glibmm-2.4/include/glibmmconfig.h \
  /usr/include/glibmm-2.4/glibmm/thread.h /usr/include/glib-2.0/glib.h \
  /usr/include/glib-2.0/glib/galloca.h /usr/include/glib-2.0/glib/gtypes.h \
@@ -1141,15 +1142,11 @@ build/Debug/GNU-Linux/VentanaAdmin.o: VentanaAdmin.cpp VentanaAdmin.h \
  /usr/include/gtkmm-3.0/gtkmm/treestore.h \
  /usr/include/gtkmm-3.0/gtkmm/uimanager.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
- /usr/include/gtkmm-3.0/gtkmm/volumebutton.h VentanaGestionar.h \
- AerolineaBusiness.h AerolineaData.h Aerolinea.h Itinerario.h Avion.h \
- Pais.h Grafo.h Vertice.h Arista.h ClaseGrande.h Client.h Compra.h \
- RestriccionData.h WindowAddNewAirline.h Validaciones.h \
- WindowUpdateAirlane.h WindowUpdateItinerarie.h RestrictionWindow.h \
- UsuarioAdministradorBusiness.h UsuarioAdministradorData.h \
- UsuarioAdministrador.h
+ /usr/include/gtkmm-3.0/gtkmm/volumebutton.h ClaseGrande.h Aerolinea.h \
+ Itinerario.h Avion.h Pais.h AerolineaBusiness.h AerolineaData.h Grafo.h \
+ Vertice.h Arista.h Client.h Compra.h RestriccionData.h
 
-VentanaAdmin.h:
+RestrictionWindow.h:
 
 /usr/include/gtkmm-3.0/gtkmm.h:
 
@@ -3535,11 +3532,7 @@ VentanaAdmin.h:
 
 /usr/include/gtkmm-3.0/gtkmm/volumebutton.h:
 
-VentanaGestionar.h:
-
-AerolineaBusiness.h:
-
-AerolineaData.h:
+ClaseGrande.h:
 
 Aerolinea.h:
 
@@ -3549,32 +3542,18 @@ Avion.h:
 
 Pais.h:
 
+AerolineaBusiness.h:
+
+AerolineaData.h:
+
 Grafo.h:
 
 Vertice.h:
 
 Arista.h:
 
-ClaseGrande.h:
-
 Client.h:
 
 Compra.h:
 
 RestriccionData.h:
-
-WindowAddNewAirline.h:
-
-Validaciones.h:
-
-WindowUpdateAirlane.h:
-
-WindowUpdateItinerarie.h:
-
-RestrictionWindow.h:
-
-UsuarioAdministradorBusiness.h:
-
-UsuarioAdministradorData.h:
-
-UsuarioAdministrador.h:

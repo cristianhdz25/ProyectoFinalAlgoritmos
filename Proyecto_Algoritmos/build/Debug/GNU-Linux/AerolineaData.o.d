@@ -1142,7 +1142,7 @@ build/Debug/GNU-Linux/AerolineaData.o: AerolineaData.cpp AerolineaData.h \
  /usr/include/gtkmm-3.0/gtkmm/treestore.h \
  /usr/include/gtkmm-3.0/gtkmm/uimanager.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
- /usr/include/gtkmm-3.0/gtkmm/volumebutton.h
+ /usr/include/gtkmm-3.0/gtkmm/volumebutton.h Arista.h RestriccionData.h
 
 AerolineaData.h:
 
@@ -3541,3 +3541,7 @@ Vertice.h:
 /usr/include/gtkmm-3.0/gtkmm/viewport.h:
 
 /usr/include/gtkmm-3.0/gtkmm/volumebutton.h:
+
+Arista.h:
+
+RestriccionData.h:

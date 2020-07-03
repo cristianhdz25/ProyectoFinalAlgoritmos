@@ -12,8 +12,10 @@ ClaseGrande::ClaseGrande() {
     this->aerolineas = this->aerolineaBusiness->getAerolineas();
     this->listaCliente = new vector<Client*>();
     this->listaCompra = new vector<Compra*>();
-
+    
+    this->restriccionData = RestriccionData::getInstance();
     this->grafo = Grafo::getInstance();
+   
 }//constructor
 
 ClaseGrande* ClaseGrande::getInstance() {
@@ -29,12 +31,25 @@ ClaseGrande* ClaseGrande::getInstance() {
 ClaseGrande::~ClaseGrande() {
 }
 
+void ClaseGrande::usuarioReset() {
+    this->usuarioActual==NULL;
+}//UsuarioReset
+
 //Método para registrar una aerolinea
 
 void ClaseGrande::registrarAerolinea(Aerolinea* aerolinea) {
     this->aerolineaBusiness->registrarAerolinea(aerolinea);
     this->aerolineas = this->aerolineaBusiness->getAerolineas();
+
 }//registrarAerolinea
+
+void ClaseGrande::agregarItinerarioActualizado(Itinerario* itinerario) {
+    this->aerolineaBusiness->registrarItinerario(itinerario);
+}
+
+bool ClaseGrande::existe(Aerolinea* aerolinea) {
+    this->aerolineaBusiness->existe(aerolinea);
+}
 
 //método para registrar un itinerario
 
@@ -70,18 +85,24 @@ void ClaseGrande::registrarCliente(Client* client) {
     this->listaCliente->push_back(client);
 
     this->usuarioActual = client;
+    this->listaCliente->push_back(usuarioActual);
 }//registrarCliente
+
+void ClaseGrande::agregarItinerario(Itinerario* itinerario) {
+    this->aerolineas->front()->agregarItinerarioNuevo(itinerario);
+}
+
 
 Client* ClaseGrande::searchClient(string passport, string password) {
     if (!this->listaCliente->empty()) {
         for (int i = 0; i<this->listaCliente->size(); i++) {
             if (this->listaCliente->at(i)->GetNumPassport() == passport && this->listaCliente->at(i)->GetPassword() == password) {
                 return this->listaCliente->at(i);
-            }
-        }
-    }
+            }//if
+        }//for
+    }//if
     return NULL;
-}
+}//for
 
 void ClaseGrande::registrarCompra() {
     this->usuarioActual->SetTravel(this->aerolineas->front()->getItinerarios().front());
@@ -107,14 +128,23 @@ list<Aerolinea*>* ClaseGrande::getAerolineas() {
 }
 
 bool ClaseGrande::comprobarRestriccionDelQueCompraElTiquete() {
-    for (int i = 0; i<this->aerolineas->front()->getItinerarios().front()->getDestino()->getRestricciones().size(); i++) {
-        if (this->aerolineas->front()->getItinerarios().front()->getDestino()->getRestricciones().at(i)->getNombre() == this->usuarioActual->GetNationality()->getNombre()) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-}
+
+    for (int i = 0; i<this->restriccionData->getRegistroRestricciones().size(); i++) {
+        for (int j = 0; j <this->restriccionData->getRegistroRestricciones().at(i)->getRestricciones()->size(); j++) {
+            if (this->restriccionData->getRegistroRestricciones().at(i)->getRestricciones()->at(j)->getNombre() ==
+                    this->usuarioActual->GetNationality()->getNombre()) {
+
+                cout << "true" << endl;
+                return true;
+            }//if
+
+        }//for
+
+    }//for
+    cout << "false" << endl;
+    return false;
+
+}//comprobarRestriccion
 
 void ClaseGrande::asignarItinerario(){
     this->usuarioActual->SetTravel(this->aerolineas->front()->getItinerarios().front());

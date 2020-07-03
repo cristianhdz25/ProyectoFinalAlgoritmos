@@ -21,7 +21,7 @@ WindowFlights::WindowFlights()
 m_Button_Quit("Salir") {
     set_title("Vuelos");
     set_border_width(5);
-    set_default_size(480, 350);
+    set_default_size(600, 350);
 
     this->claseGrande = ClaseGrande::getInstance();
     this->aerolineas = this->claseGrande->getAerolineas();
@@ -49,18 +49,25 @@ m_Button_Quit("Salir") {
 
     //Fill the TreeView's model
     Gtk::TreeModel::Row row;
+    this->curr_time = time(NULL);
+    this->tm_local = localtime(&this->curr_time);
+    int hora=(this->tm_local->tm_hour);
     for (int i = 0; i < this->aerolineas->size(); i++) {
         Aerolinea* temp = this->aerolineas->front();
         queue<Itinerario*> itinerarios = this->aerolineas->front()->getItinerarios();
-        queue<Itinerario*> aux = itinerarios;
-        for (int k = 0; k < itinerarios.size(); k++) {
+        queue<Itinerario*> aux = this->aerolineas->front()->getItinerarios();
+        for (int k = 0; k < aux.size()+1; k++) {
             row = *(m_refTreeModel->append());
-            row[m_Columns.m_col_time] = aux.front()->getHora();
+            row[m_Columns.m_col_time] = to_string(aux.front()->getHoraSalida())+" a "+to_string(aux.front()->getHoraLlegada());
             row[m_Columns.m_col_origin] = aux.front()->getOrigen()->getNombre();
             row[m_Columns.m_col_destination] = aux.front()->getDestino()->getNombre();
             row[m_Columns.m_col_plane] = aux.front()->getAvion()->getNamePlane();
             row[m_Columns.m_col_spaces] = aux.front()->getAvion()->getQuantity();
             row[m_Columns.m_col_airline] = temp->getNombre();
+            if(aux.front()->getHoraSalida()<= hora && aux.front()->getHoraLlegada()>hora)
+                row[m_Columns.m_col_state]="EN EL AIRE";
+            else
+                row[m_Columns.m_col_state]="NO HA SALIDO";
             aux.pop();
         }
         this->aerolineas->pop_front();
@@ -73,6 +80,7 @@ m_Button_Quit("Salir") {
     m_TreeView.append_column("Avion", m_Columns.m_col_plane);
     m_TreeView.append_column("Espacios", m_Columns.m_col_spaces);
     m_TreeView.append_column("Aerolinea", m_Columns.m_col_airline);
+    m_TreeView.append_column("Estado", m_Columns.m_col_state);
 
 
     for (guint i = 0; i < 2; i++) {

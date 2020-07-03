@@ -25,9 +25,14 @@ void Aerolinea::eliminarItinerario(){
       this->itinerarios.pop();
 }
 
+void Aerolinea::agregarItinerario(Itinerario* itinerario) {
+    this->itinerarios.push(itinerario);
+}
+
+
 string Aerolinea::mostrarItinerario() {
     if(!this->itinerarios.empty())
-        return this->itinerarios.front()->toString2();
+        return this->itinerarios.front()->toString();
     else
         return "No hay";
 }//mostrarItinerario
@@ -45,7 +50,7 @@ string Aerolinea::mostrarItinerarios() {
 }//mostrarItinerarios
 
 
-void Aerolinea::agregarItinerario(Itinerario* itinerario){
+void Aerolinea::agregarItinerarioNuevo(Itinerario* itinerario){
     this->itinerarios.push(itinerario);
 }//agregarItinerario
 
@@ -71,6 +76,5 @@ string Aerolinea::toString(){
 
 Itinerario* Aerolinea::getItinerario() {
     Itinerario* itinerario=this->itinerarios.front();
-    this->subirItinerario();
     return itinerario;
 }

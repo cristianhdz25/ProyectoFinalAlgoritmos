@@ -1,16 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   VentanaPrincipal.h
- * Author: cristia
- *
- * Created on 3 de junio de 2020, 10:18 PM
- */
-
 #ifndef VENTANAPRINCIPAL_H
 #define VENTANAPRINCIPAL_H
 #include <gtkmm.h>
@@ -25,7 +12,7 @@
 #include "DeleteWindow.h"
 #include "WindowFlights.h"
 #include "WindowDelete.h"
-
+#include "ClaseGrande.h"
 class VentanaPrincipal : public Gtk::Window {
 public:
 
@@ -63,7 +50,9 @@ private:
     ActualizarVuelo* actualizarVuelo;
     WindowDelete* deleteWindow;
     WindowFlights * windowFlights;
+    ClaseGrande* claseGrande;
 };
 
 #endif /* VENTANAPRINCIPAL_H */
+
 

@@ -26,6 +26,10 @@ public:
     
     list<Aerolinea*>* getAerolineas() const;
     
+    void registrarItinerario(Itinerario* itinerario);
+  
+    bool existe(Aerolinea* aerolinea);
+    
 private:
     AerolineaData* aerolineaData;
 };

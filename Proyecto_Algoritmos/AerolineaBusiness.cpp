@@ -14,16 +14,24 @@
 #include "AerolineaBusiness.h"
 
 AerolineaBusiness::AerolineaBusiness() {
-    this->aerolineaData=AerolineaData::getInstance();
+    this->aerolineaData = AerolineaData::getInstance();
 }
 
 AerolineaBusiness::~AerolineaBusiness() {
 }
 
-void AerolineaBusiness::registrarAerolinea(Aerolinea* aerolinea){
+void AerolineaBusiness::registrarItinerario(Itinerario* itinerario) {
+    this->aerolineaData->registrarItinerario(itinerario);
+}
+
+bool AerolineaBusiness::existe(Aerolinea* aerolinea) {
+    return this->aerolineaData->existe(aerolinea);
+}
+
+void AerolineaBusiness::registrarAerolinea(Aerolinea* aerolinea) {
     this->aerolineaData->registrarAerolinea(aerolinea);
 }//registrarAerolinea
 
-list<Aerolinea*>* AerolineaBusiness::getAerolineas() const{
+list<Aerolinea*>* AerolineaBusiness::getAerolineas() const {
     return this->aerolineaData->getAerolineas();
 }

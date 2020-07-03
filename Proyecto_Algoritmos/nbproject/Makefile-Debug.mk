@@ -49,6 +49,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/Itinerario.o \
 	${OBJECTDIR}/Main.o \
 	${OBJECTDIR}/Pais.o \
+	${OBJECTDIR}/RestriccionData.o \
+	${OBJECTDIR}/RestrictionWindow.o \
 	${OBJECTDIR}/UsuarioAdministrador.o \
 	${OBJECTDIR}/UsuarioAdministradorBusiness.o \
 	${OBJECTDIR}/UsuarioAdministradorData.o \
@@ -163,6 +165,16 @@ ${OBJECTDIR}/Pais.o: Pais.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Pais.o Pais.cpp
+
+${OBJECTDIR}/RestriccionData.o: RestriccionData.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/RestriccionData.o RestriccionData.cpp
+
+${OBJECTDIR}/RestrictionWindow.o: RestrictionWindow.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/RestrictionWindow.o RestrictionWindow.cpp
 
 ${OBJECTDIR}/UsuarioAdministrador.o: UsuarioAdministrador.cpp
 	${MKDIR} -p ${OBJECTDIR}

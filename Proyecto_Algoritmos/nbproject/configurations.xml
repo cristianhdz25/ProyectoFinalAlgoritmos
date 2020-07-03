@@ -9,7 +9,22 @@
         <itemPath>UsuarioAdministradorBusiness.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f4" displayName="Data" projectFiles="true">
+        <logicalFolder name="f1" displayName="Domain" projectFiles="true">
+          <itemPath>Aerolinea_1.h</itemPath>
+          <itemPath>Arista_1.h</itemPath>
+          <itemPath>Avion_1_1.h</itemPath>
+          <itemPath>Avion_2.h</itemPath>
+          <itemPath>ClaseGrande_1.h</itemPath>
+          <itemPath>Client_1.h</itemPath>
+          <itemPath>Compra_1.h</itemPath>
+          <itemPath>Grafo_1.h</itemPath>
+          <itemPath>Itinerario_1.h</itemPath>
+          <itemPath>Pais_1.h</itemPath>
+          <itemPath>UsuarioAdministrador_1.h</itemPath>
+          <itemPath>Vertice_1.h</itemPath>
+        </logicalFolder>
         <itemPath>AerolineaData.h</itemPath>
+        <itemPath>RestriccionData.h</itemPath>
         <itemPath>UsuarioAdministradorData.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="Domain" projectFiles="true">
@@ -29,6 +44,7 @@
         <itemPath>ActualizarVuelo.h</itemPath>
         <itemPath>DeleteWindow.h</itemPath>
         <itemPath>Drawing.h</itemPath>
+        <itemPath>RestrictionWindow.h</itemPath>
         <itemPath>VentanaAdmin.h</itemPath>
         <itemPath>VentanaDibujo.h</itemPath>
         <itemPath>VentanaGestionar.h</itemPath>
@@ -61,6 +77,7 @@
       </logicalFolder>
       <logicalFolder name="f5" displayName="Data" projectFiles="true">
         <itemPath>AerolineaData.cpp</itemPath>
+        <itemPath>RestriccionData.cpp</itemPath>
         <itemPath>UsuarioAdministradorData.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Domain" projectFiles="true">
@@ -79,6 +96,7 @@
       <logicalFolder name="f1" displayName="GUI" projectFiles="true">
         <itemPath>ActualizarVuelo.cpp</itemPath>
         <itemPath>Drawing.cpp</itemPath>
+        <itemPath>RestrictionWindow.cpp</itemPath>
         <itemPath>VentanaAdmin.cpp</itemPath>
         <itemPath>VentanaDibujo.cpp</itemPath>
         <itemPath>VentanaGestionar.cpp</itemPath>
@@ -156,25 +174,39 @@
       </item>
       <item path="AerolineaData.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Aerolinea_1.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Arista.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Arista.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Arista_1.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Avion.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Avion.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Avion_1_1.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Avion_2.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="ClaseGrande.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ClaseGrande.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ClaseGrande_1.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Client.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Client.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Client_1.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Compra.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Compra.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Compra_1.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="DeleteWindow.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -186,15 +218,29 @@
       </item>
       <item path="Grafo.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Grafo_1.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Itinerario.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Itinerario.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Itinerario_1.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Pais.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Pais.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Pais_1.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RestriccionData.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RestriccionData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RestrictionWindow.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RestrictionWindow.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="UsuarioAdministrador.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -207,6 +253,8 @@
       <item path="UsuarioAdministradorData.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="UsuarioAdministradorData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="UsuarioAdministrador_1.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Validaciones.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -243,6 +291,8 @@
       <item path="Vertice.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Vertice.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Vertice_1.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="WindowAddNewAirline.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -309,25 +359,39 @@
       </item>
       <item path="AerolineaData.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Aerolinea_1.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Arista.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Arista.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Arista_1.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Avion.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Avion.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Avion_1_1.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Avion_2.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="ClaseGrande.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ClaseGrande.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ClaseGrande_1.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Client.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Client.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Client_1.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Compra.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Compra.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Compra_1.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="DeleteWindow.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -339,15 +403,29 @@
       </item>
       <item path="Grafo.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Grafo_1.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Itinerario.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Itinerario.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Itinerario_1.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Pais.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Pais.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Pais_1.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RestriccionData.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RestriccionData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RestrictionWindow.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RestrictionWindow.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="UsuarioAdministrador.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -360,6 +438,8 @@
       <item path="UsuarioAdministradorData.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="UsuarioAdministradorData.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="UsuarioAdministrador_1.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Validaciones.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -396,6 +476,8 @@
       <item path="Vertice.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Vertice.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Vertice_1.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="WindowAddNewAirline.cpp" ex="false" tool="1" flavor2="0">
       </item>

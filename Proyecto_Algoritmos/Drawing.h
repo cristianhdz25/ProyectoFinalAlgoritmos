@@ -5,6 +5,8 @@
 #include "Vertice.h"
 #include "Grafo.h"
 #include "Arista.h"
+#include <stdio.h>      /* puts, printf */
+#include <time.h> 
 
 using namespace std;
 
@@ -17,10 +19,12 @@ protected:
     void draw_text(const Cairo::RefPtr<Cairo::Context>& cr, int posX, int posY, string text);
     void initPosiciones();
 private:
+    tm *tm_local;
+    time_t curr_time;
     Vertice* vertice;
     Grafo* grafo;
     vector<Arista*> * aristas;
-    int x,y;
+    int x,y,hora;
 };
 
 #endif /* DRAWING_H */

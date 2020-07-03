@@ -1144,8 +1144,9 @@ build/Debug/GNU-Linux/VentanaGestionar.o: VentanaGestionar.cpp \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
  /usr/include/gtkmm-3.0/gtkmm/volumebutton.h AerolineaBusiness.h \
  AerolineaData.h Aerolinea.h Itinerario.h Avion.h Pais.h Grafo.h \
- Vertice.h ClaseGrande.h Client.h Compra.h WindowAddNewAirline.h \
- Validaciones.h WindowUpdateAirlane.h WindowUpdateItinerarie.h
+ Vertice.h Arista.h ClaseGrande.h Client.h Compra.h RestriccionData.h \
+ WindowAddNewAirline.h Validaciones.h WindowUpdateAirlane.h \
+ WindowUpdateItinerarie.h RestrictionWindow.h
 
 VentanaGestionar.h:
 
@@ -3549,11 +3550,15 @@ Grafo.h:
 
 Vertice.h:
 
+Arista.h:
+
 ClaseGrande.h:
 
 Client.h:
 
 Compra.h:
+
+RestriccionData.h:
 
 WindowAddNewAirline.h:
 
@@ -3562,3 +3567,5 @@ Validaciones.h:
 WindowUpdateAirlane.h:
 
 WindowUpdateItinerarie.h:
+
+RestrictionWindow.h:

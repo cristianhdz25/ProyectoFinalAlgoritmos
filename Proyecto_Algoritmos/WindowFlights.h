@@ -42,6 +42,7 @@ protected:
             add(m_col_plane);
             add(m_col_spaces);
             add(m_col_airline);
+            add(m_col_state);
         }
 
         Gtk::TreeModelColumn<Glib::ustring> m_col_time;
@@ -50,12 +51,15 @@ protected:
         Gtk::TreeModelColumn<Glib::ustring> m_col_plane;
         Gtk::TreeModelColumn<int> m_col_spaces;
         Gtk::TreeModelColumn<Glib::ustring> m_col_airline;
+        Gtk::TreeModelColumn<Glib::ustring> m_col_state;
     };
 
     ModelColumns m_Columns;
 
     //Child widgets:
     list<Aerolinea*>* aerolineas;
+    tm *tm_local;
+    time_t curr_time;
     ClaseGrande * claseGrande;
     Gtk::Box m_VBox;
     Gtk::ScrolledWindow m_ScrolledWindow;

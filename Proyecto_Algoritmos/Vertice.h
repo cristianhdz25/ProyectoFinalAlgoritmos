@@ -18,7 +18,7 @@ public:
     Vertice(Pais* pais);
     Vertice();
     Pais* pais;
-    vector<Vertice*> listaAristas;
+    vector<Vertice*> listaVertices;
     vector<int> listaPesos;
     void draw(const Cairo::RefPtr<Cairo::Context>& cr);
     void setPosY(int posY);
@@ -26,9 +26,10 @@ public:
     void setPosX(int posX);
     int getPosX() const;
     string toString();
+    
 private:
-    int posX=0;
-    int posY=0;
+    int posX;
+    int posY;
 };
 
 #endif /* VERTICE_H */

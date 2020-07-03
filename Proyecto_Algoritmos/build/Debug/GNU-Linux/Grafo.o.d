@@ -1141,7 +1141,7 @@ build/Debug/GNU-Linux/Grafo.o: Grafo.cpp Grafo.h Vertice.h \
  /usr/include/gtkmm-3.0/gtkmm/treestore.h \
  /usr/include/gtkmm-3.0/gtkmm/uimanager.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
- /usr/include/gtkmm-3.0/gtkmm/volumebutton.h Pais.h
+ /usr/include/gtkmm-3.0/gtkmm/volumebutton.h Pais.h Arista.h
 
 Grafo.h:
 
@@ -3532,3 +3532,5 @@ Vertice.h:
 /usr/include/gtkmm-3.0/gtkmm/volumebutton.h:
 
 Pais.h:
+
+Arista.h:

@@ -1,32 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   Pais.cpp
- * Author: cristia
- * 
- * Created on 16 de junio de 2020, 10:50 PM
- */
-
 #include "Pais.h"
 #include <string> 
 #include <iostream>
 #include <iosfwd>
 #include <sstream>
+#include <vector>
 
 Pais::Pais(string nombre) {
     this->nombre = nombre;
-    this->restricciones;
+    this->restricciones=new vector<Pais*>();
 }
 
-void Pais::setRestricciones(vector<Pais*> restricciones) {
+void Pais::setRestricciones(vector<Pais*>* restricciones) {
     this->restricciones = restricciones;
 }
 
-vector<Pais*> Pais::getRestricciones() const{
+vector<Pais*>* Pais::getRestricciones() const{
     return restricciones;
 }
 

@@ -354,7 +354,7 @@ build/Debug/GNU-Linux/WindowAddNewAirline.o: WindowAddNewAirline.cpp \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
  /usr/include/gtkmm-3.0/gtkmm/volumebutton.h Itinerario.h Avion.h Pais.h \
  ClaseGrande.h Aerolinea.h AerolineaBusiness.h AerolineaData.h Grafo.h \
- Vertice.h Client.h Compra.h Validaciones.h
+ Vertice.h Arista.h Client.h Compra.h RestriccionData.h Validaciones.h
 
 WindowAddNewAirline.h:
 
@@ -1092,8 +1092,12 @@ Grafo.h:
 
 Vertice.h:
 
+Arista.h:
+
 Client.h:
 
 Compra.h:
+
+RestriccionData.h:
 
 Validaciones.h:

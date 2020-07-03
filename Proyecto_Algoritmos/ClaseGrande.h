@@ -8,12 +8,13 @@
 #include "AerolineaBusiness.h"
 #include "Client.h"
 #include "Compra.h"
+#include "RestriccionData.h"
 
 using namespace std;
 
 class ClaseGrande {
 public:
-    
+
     static ClaseGrande* getInstance(); //constructor singleton
     virtual ~ClaseGrande();
 
@@ -37,6 +38,10 @@ public:
     Client* getUsuarioActual() const;
     void registrarCompra();
     void asignarItinerario();
+    void usuarioReset();
+    void agregarItinerario(Itinerario* itinerario);
+    void agregarItinerarioActualizado(Itinerario* itinerario);
+    bool existe(Aerolinea* aerolinea);
 private:
     ClaseGrande();
     list<Aerolinea*>* aerolineas;
@@ -44,9 +49,12 @@ private:
     static ClaseGrande* instance;
     vector<Client*>* listaCliente;
     Grafo* grafo;
-    Client* usuarioActual;
+    Client* usuarioActual = NULL;
     vector<Compra*>* listaCompra;
     Compra* compra;
+    Pais* pais1;
+    vector<Pais*> tempRestriccion;
+    RestriccionData* restriccionData;
 };
 
 #endif /* CLASEGRANDE_H */

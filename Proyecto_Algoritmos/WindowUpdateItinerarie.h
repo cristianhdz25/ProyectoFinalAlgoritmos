@@ -26,17 +26,20 @@ public:
     void clickedUpItineraries();
     void clickedBorrar();
     void clickedCancelar();
+    void clickedAdd();
+  
 private:
     Gtk::Fixed fixedActualizarItinerario;
-    Gtk::Label lblName, lblSalida, lblDestination, lblSchedule,
+    Gtk::Label lblName, lblSalida, lblDestination, lblHoraSalida,lblHoraLlegada,
     lblItinerario, lblAvion, lblEspacios;
-    Gtk::Entry etName, etSalida, etDestination, etSchedule,
+    Gtk::Entry etName, etSalida, etDestination, etHoraSalida,etHoraLlegada,
     etItinerario, etAvion, etEspacios;
     Gtk::Button btCancel, btSubir,
-    btSubirItinerario, btnActualizar, btnBorrar;
+    btSubirItinerario, btnActualizar, btnBorrar,btnAnadir;
 
     ClaseGrande * claseGrande;
     Validaciones valid;
+    RestriccionData* restriccionData;
 
 };
 

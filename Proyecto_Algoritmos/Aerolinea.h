@@ -24,6 +24,7 @@ public:
     void setNombre(string nombre);
     string getNombre() const;
     string toString();
+    void agregarItinerarioNuevo(Itinerario* itinerario);
 private:
     string nombre;
     queue<Itinerario*> itinerarios;

@@ -6,23 +6,16 @@
 
 using namespace std;
 
-Itinerario::Itinerario(Pais* origen, Pais* destino, string hora, Avion * avion) {
+Itinerario::Itinerario(Pais* origen, Pais* destino, int horaSalida, int horaLlegada, Avion * avion) {
     this->avion = avion;
     this->origen = origen;
-    this->destino = destino;    
-    this->hora = hora;
+    this->destino = destino;
+    this->horaSalida = horaSalida;
+    this->horaLlegada = horaLlegada;
 }//constructor
 
 Itinerario::~Itinerario() {
 
-}
-
-void Itinerario::setHora(string hora) {
-    this->hora = hora;
-}
-
-string Itinerario::getHora() const {
-    return hora;
 }
 
 void Itinerario::setDestino(Pais* destino) {
@@ -47,17 +40,34 @@ void Itinerario::setAvion(Avion* avion) {
 
 Avion* Itinerario::getAvion() const {
     return avion;
-}//toString
+}
+
+void Itinerario::setHoraSalida(int horaSalida) {
+    this->horaLlegada = horaSalida;
+}
+
+int Itinerario::getHoraSalida() const {
+    return horaSalida;
+}
+
+void Itinerario::setHoraLlegada(int horaLlegada) {
+    this->horaLlegada = horaLlegada;
+}
+
+int Itinerario::getHoraLlegada() const {
+    return horaLlegada;
+}
 
 string Itinerario::toString() {
     stringstream s;
 
-    s << this->origen->toString() << "-" << this->destino->toString() <<" -> " << this->hora << "|" << this->avion->toString();
+    s << this->origen->toString() << "-" << this->destino->toString() << " -> " <<this->horaSalida<<" a "<< this->horaLlegada << "-" << this->avion->toString();
     return s.str();
 }
+
 string Itinerario::toString2() {
     stringstream s;
-    s << this->origen->toString() << "-" << this->destino->toString() <<" -> " << this->hora;
+    s << this->origen->toString() << "-" << this->destino->toString() << " -> " << this->horaSalida<<" a "<<this->horaLlegada;
     return s.str();
 }
 

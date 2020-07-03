@@ -5,6 +5,8 @@
 
 Vertice::Vertice(Pais* pais) {
     this->pais = pais;
+    this->posX=0;
+    this->posY=0;
 }//constructor
 
 Vertice::Vertice() {

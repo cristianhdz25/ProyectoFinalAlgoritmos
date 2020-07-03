@@ -1143,7 +1143,7 @@ build/Debug/GNU-Linux/WindowFlights.o: WindowFlights.cpp WindowFlights.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
  /usr/include/gtkmm-3.0/gtkmm/volumebutton.h Aerolinea.h Itinerario.h \
  Avion.h Pais.h ClaseGrande.h AerolineaBusiness.h AerolineaData.h Grafo.h \
- Vertice.h Client.h Compra.h
+ Vertice.h Arista.h Client.h Compra.h RestriccionData.h
 
 WindowFlights.h:
 
@@ -3549,6 +3549,10 @@ Grafo.h:
 
 Vertice.h:
 
+Arista.h:
+
 Client.h:
 
 Compra.h:
+
+RestriccionData.h:

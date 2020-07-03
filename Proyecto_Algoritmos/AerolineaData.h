@@ -29,7 +29,8 @@ public:
     void setAerolineas(list<Aerolinea*>* aerolineas);
     void eliminarAerolinea();
     list<Aerolinea*>* getAerolineas() const;
-    
+    bool existe(Aerolinea* aerolinea);
+    void registrarItinerario(Itinerario* itinerario);
 private:
     AerolineaData();
     Aerolinea* aerolinea;

@@ -35,6 +35,10 @@ void VentanaGestionar::init() {
     this->imageMenuUpdateAirline.set_label("Actualizar Aerolinea");
     this->imageMenuUpdateAirline.signal_activate().connect(sigc::mem_fun(*this, &VentanaGestionar::clickedUpdateAirline));
     this->subMenuArchivo.append(this->imageMenuUpdateAirline);
+    
+    this->imiAddRestriction.set_label("Añadir Restricción");
+    this->imiAddRestriction.signal_activate().connect(sigc::mem_fun(*this, &VentanaGestionar::clickedAddRestriction));
+    this->subMenuArchivo.append(this->imiAddRestriction);
 
     this->windowNewAirline = 0;
     this->windowUpdateAirlane = 0;
@@ -45,35 +49,26 @@ void VentanaGestionar::init() {
 }//init
 
 void VentanaGestionar::clickedNewAirline() {
-    if (this->windowNewAirline != 0)
-        return;
 
     this->windowNewAirline = new WindowAddNewAirline();
-    this->windowNewAirline->signal_hide().connect(sigc::mem_fun(*this, &VentanaGestionar::aboutWinClose));
     this->windowNewAirline->show();
 }//clickedNewAirline
 
 void VentanaGestionar::clickedUpdateAirline() {
-    if (this->windowUpdateAirlane != 0)
-        return;
 
     this->windowUpdateAirlane = new WindowUpdateAirlane();
-    this->windowUpdateAirlane->signal_hide().connect(sigc::mem_fun(*this, &VentanaGestionar::aboutWinClose));
     this->windowUpdateAirlane->show();
 }//clickedUpdateAirline
 
 void VentanaGestionar::clickedUpdateItinerarie() {
-    if (this->windowUpdateItinerarie != 0)
-        return;
 
     this->windowUpdateItinerarie = new WindowUpdateItinerarie();
-    this->windowUpdateItinerarie->signal_hide().connect(sigc::mem_fun(*this, &VentanaGestionar::aboutWinClose));
     this->windowUpdateItinerarie->show();
 }//clickedUpdateItinerarie
 
-void VentanaGestionar::aboutWinClose() {
-    this->windowNewAirline = 0;
-    this->windowUpdateAirlane = 0;
-    this->windowUpdateItinerarie = 0;
-}//aboutWinClose
+
+void VentanaGestionar::clickedAddRestriction(){
+    this->restrictionWindow=new RestrictionWindow();
+    this->restrictionWindow->show();
+}
 

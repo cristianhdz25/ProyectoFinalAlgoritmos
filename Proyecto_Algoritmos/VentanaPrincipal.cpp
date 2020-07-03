@@ -1,4 +1,3 @@
-
 #include "VentanaPrincipal.h"
 #include <bits/stl_tempbuf.h>
 #include "iostream"
@@ -8,6 +7,7 @@
 
 VentanaPrincipal::VentanaPrincipal() {
     this->set_size_request(600, 600);
+    this->claseGrande = ClaseGrande::getInstance();
     init();
 }//constructor
 
@@ -92,30 +92,37 @@ void VentanaPrincipal::init() {
 
 void VentanaPrincipal::mostrarVentanaRegistrar() {
 
-    if (this->ventanaRegistrar != 0)
-        return;
+
 
     this->ventanaRegistrar = new VentanaRegistrar();
-    this->ventanaRegistrar->signal_hide().connect(sigc::mem_fun(*this, &VentanaPrincipal::aboutWinClose));
+
     this->ventanaRegistrar->show();
 }//mostrarVentanaRegistrar
 
 void VentanaPrincipal::showWindowLogin() {
-    if (this->windowLogin != 0)
-        return;
 
     this->windowLogin = new WindowLogin();
-    this->windowLogin->signal_hide().connect(sigc::mem_fun(*this, &VentanaPrincipal::aboutWinClose));
+
     this->windowLogin->show();
 }
 
 void VentanaPrincipal::showWindowConfig() {
-    if (this->windowConfig != 0)
-        return;
+    if (this->claseGrande->getUsuarioActual() != NULL) {
 
-    this->windowConfig = new WindowConfig();
-    this->windowConfig->signal_hide().connect(sigc::mem_fun(*this, &VentanaPrincipal::aboutWinClose));
-    this->windowConfig->show();
+        this->windowConfig = new WindowConfig();
+
+        this->windowConfig->show();
+
+    } else {
+        Gtk::MessageDialog dialogo(
+                *this,
+                "NO se puede hacer esta acción sin iniciar sesión",
+                false,
+                Gtk::MESSAGE_INFO
+                );
+        dialogo.run();
+
+    }//else
 }
 
 void VentanaPrincipal::exit() {
@@ -125,59 +132,102 @@ void VentanaPrincipal::exit() {
 //Gestion
 
 void VentanaPrincipal::showWindowReserve() {
-    if (this->ventanaReservar != 0)
-        return;
 
-    this->ventanaReservar = new VentanaReservar();
-    this->ventanaReservar->signal_hide().connect(sigc::mem_fun(*this, &VentanaPrincipal::aboutWinClose));
-    this->ventanaReservar->show();
+    if (this->claseGrande->getUsuarioActual() != NULL) {
+        this->ventanaReservar = new VentanaReservar();
+        this->ventanaReservar->show();
+
+    } else {
+        Gtk::MessageDialog dialogo(
+                *this,
+                "NO se puede hacer esta acción sin iniciar sesión",
+                false,
+                Gtk::MESSAGE_INFO
+                );
+        dialogo.run();
+
+    }//else
 }
 
 void VentanaPrincipal::showWindowFlights() {
-    if (this->windowFlights != 0)
-        return;
 
-    this->windowFlights = new WindowFlights();
-    this->windowFlights->signal_hide().connect(sigc::mem_fun(*this, &VentanaPrincipal::aboutWinClose));
-    this->windowFlights->show();
+    if (this->claseGrande->getUsuarioActual() != NULL) {
+
+        this->windowFlights = new WindowFlights();
+        this->windowFlights->show();
+    } else {
+        Gtk::MessageDialog dialogo(
+                *this,
+                "NO se puede hacer esta acción sin iniciar sesión",
+                false,
+                Gtk::MESSAGE_INFO
+                );
+        dialogo.run();
+
+    }//else
+
 }
 
 void VentanaPrincipal::showWindowDelete() {
-    if (this->deleteWindow != 0)
-        return;
+    if (this->claseGrande->getUsuarioActual() != NULL) {
 
-    this->deleteWindow = new WindowDelete();
-    this->deleteWindow->signal_hide().connect(sigc::mem_fun(*this, &VentanaPrincipal::aboutWinClose));
-    this->deleteWindow->show();
+        this->deleteWindow = new WindowDelete();
+        this->deleteWindow->show();
+    } else {
+        Gtk::MessageDialog dialogo(
+                *this,
+                "NO se puede hacer esta acción sin iniciar sesión",
+                false,
+                Gtk::MESSAGE_INFO
+                );
+        dialogo.run();
+
+    }//else
+
 }//showWindowDelete
 
 void VentanaPrincipal::showWindowUpdate() {
-    if (this->actualizarVuelo != 0)
-        return;
+    if (this->claseGrande->getUsuarioActual() != NULL) {
+        this->actualizarVuelo = new ActualizarVuelo();
+        this->actualizarVuelo->show();
+    } else {
+        Gtk::MessageDialog dialogo(
+                *this,
+                "NO se puede hacer esta acción sin iniciar sesión",
+                false,
+                Gtk::MESSAGE_INFO
+                );
+        dialogo.run();
 
-    this->actualizarVuelo = new ActualizarVuelo();
-    this->actualizarVuelo->signal_hide().connect(sigc::mem_fun(*this, &VentanaPrincipal::aboutWinClose));
-    this->actualizarVuelo->show();
+    }//else
+
 }
 
 //Administracion
 
 void VentanaPrincipal::clickedOpenAdmin() {
-    if (this->ventanaAdmin != 0)
-        return;
+   
+        this->ventanaAdmin = new VentanaAdmin();
+        this->ventanaAdmin->show();
+  
 
-    this->ventanaAdmin = new VentanaAdmin();
-    this->ventanaAdmin->signal_hide().connect(sigc::mem_fun(*this, &VentanaPrincipal::aboutWinClose));
-    this->ventanaAdmin->show();
 }//clickedOpenAdmin
 
 void VentanaPrincipal::mostrarVentanaVuelos() {
-    if (this->ventanaDibujo != 0)
-        return;
+    if (this->claseGrande->getUsuarioActual() != NULL) {
+        this->ventanaDibujo = new VentanaDibujo();
+        this->ventanaDibujo->show();
+    } else {
+        Gtk::MessageDialog dialogo(
+                *this,
+                "NO se puede hacer esta acción sin iniciar sesión", 
+                false,
+                Gtk::MESSAGE_INFO
+                );
+        dialogo.run();
 
-    this->ventanaDibujo = new VentanaDibujo();
-    this->ventanaDibujo->signal_hide().connect(sigc::mem_fun(*this, &VentanaPrincipal::aboutWinClose));
-    this->ventanaDibujo->show();
+    }//else
+
 }//mostrarVuelo
 
 void VentanaPrincipal::aboutWinClose() {

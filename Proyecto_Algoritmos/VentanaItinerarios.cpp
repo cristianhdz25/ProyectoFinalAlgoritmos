@@ -48,25 +48,38 @@ void VentanaItinerarios::init() {
 }//init
 
 void VentanaItinerarios::onButtonClickedAceptar() {
-    if(this->claseGrande->comprobarRestriccionDelQueCompraElTiquete() == 0){    
-      this->claseGrande->registrarCompra();
-      this->claseGrande->asignarItinerario();
-      Gtk::MessageDialog dialogo(
+
+    if (this->claseGrande->getAerolineas()->front()->getItinerarios().front()->getAvion()->getQuantity() == 0) {
+
+        Gtk::MessageDialog dialogo(
+                *this,
+                "No quedan espacios para este vuelo",
+                false,
+                Gtk::MESSAGE_INFO
+                );
+        dialogo.run();
+    } else {
+
+        if (this->claseGrande->comprobarRestriccionDelQueCompraElTiquete() == 0) {
+            this->claseGrande->registrarCompra();
+            this->claseGrande->asignarItinerario();
+            Gtk::MessageDialog dialogo(
                     *this,
                     "Se ha reservado con exito",
                     false,
                     Gtk::MESSAGE_INFO
                     );
             dialogo.run();
-    this->hide();   
-    }else {
-          Gtk::MessageDialog dialogo(
+            this->hide();
+        } else {
+            Gtk::MessageDialog dialogo(
                     *this,
                     "Su nacionalidad le restringe esta accion",
                     false,
                     Gtk::MESSAGE_INFO
                     );
             dialogo.run();
+        }
     }
 }
 

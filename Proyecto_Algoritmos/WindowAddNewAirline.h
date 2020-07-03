@@ -21,6 +21,7 @@
 #include "ClaseGrande.h"
 #include "Grafo.h"
 #include "Validaciones.h"
+#include "RestriccionData.h"
 
 using namespace std;
 
@@ -32,6 +33,7 @@ public:
     void clickedActualizar();
     void clickedAddtinerarie();
     void clickedAddAirline();
+    void existe(Aerolinea* aerolinea);
 private:
     Gtk::MenuBar menuBar;
     Gtk::MenuItem menuArchivo;
@@ -39,9 +41,9 @@ private:
     Gtk::ImageMenuItem menuNewAirline, menuActualizar;
     Gtk::Fixed fixedAirline;
 
-    Gtk::Label lblName, lblSalida, lblDestination, lblSchedule,
+    Gtk::Label lblName, lblSalida, lblDestination, lblHoraSalida,lblHoraLlegada,
     lblItinerario, lblAvion, lblEspacios, lblPeso;
-    Gtk::Entry etName, etSalida, etDestination, etSchedule,
+    Gtk::Entry etName, etSalida, etDestination, etHoraSalida,etHoraLlegada,
     etItinerario, etAvion, etEspacios, etPeso;
     Gtk::Button btAdd, btnAddItinerarie, btCancel, btSubir,
     btSubirItinerario, btnActulizar;
@@ -51,6 +53,7 @@ private:
     ClaseGrande * claseGrande;
     Grafo * grafo;
     Validaciones valid;
+    RestriccionData* restriccionData;
 };
 
 #endif /* WINDOWADDNEWAIRLINE_H */

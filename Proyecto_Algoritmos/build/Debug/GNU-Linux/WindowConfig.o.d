@@ -1143,8 +1143,8 @@ build/Debug/GNU-Linux/WindowConfig.o: WindowConfig.cpp WindowConfig.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
  /usr/include/gtkmm-3.0/gtkmm/volumebutton.h ClaseGrande.h Aerolinea.h \
  Itinerario.h Avion.h Pais.h AerolineaBusiness.h AerolineaData.h Grafo.h \
- Vertice.h Client.h Compra.h VentanaRegistrar.h VentanaReservar.h \
- VentanaItinerarios.h Validaciones.h
+ Vertice.h Arista.h Client.h Compra.h RestriccionData.h \
+ VentanaRegistrar.h VentanaReservar.h VentanaItinerarios.h Validaciones.h
 
 WindowConfig.h:
 
@@ -3550,9 +3550,13 @@ Grafo.h:
 
 Vertice.h:
 
+Arista.h:
+
 Client.h:
 
 Compra.h:
+
+RestriccionData.h:
 
 VentanaRegistrar.h:
 
